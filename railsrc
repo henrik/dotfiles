@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# Ruby on Rails console.
+
+# http://plasti.cx/2009/09/30/more-about-logging-directly-to-script-console
+# Show/hide logging.
+
+def log_on
+  puts "== Logging to console."
+  set_logger_to Logger.new(STDOUT)
+end
+ 
+def log_off
+  puts "== Logging to log file."
+  set_logger_to RAILS_DEFAULT_LOGGER
+end
+
+def set_logger_to(logger)
+  def logger.flush; end unless logger.respond_to?(:flush)
+  ActiveRecord::Base.logger = logger
+  ActionController::Base.logger = logger
+  ActiveRecord::Base.clear_all_connections!
+  nil
+end
