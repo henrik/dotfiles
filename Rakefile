@@ -23,6 +23,7 @@ task :install do
       print "? "
       if STDIN.gets.match(/^y/i)
         info_rm "Removing file #{destination}."
+        FileUtils.rm(destination)
       else
         next
       end
