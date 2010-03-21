@@ -1,0 +1,9 @@
+--sort-files
+--color
+--context=1
+--follow
+--group
+--type-add=ruby=.haml,.rake,.rsel
+--type-add=markdown=.md,.mdown,.markdown
+--type-add=cucumber=.feature
+#--all
