@@ -20,3 +20,10 @@ If e.g. `~/.dotfiles/gitconfig` contains `<.replace github-token>` then
 So if you want to make changes to that file, make them in `~/dotfiles/gitconfig` and then run `rake install` again.
 
 Changes to symlinked files without `<.replace>` bits do not require a `rake install` on every change as they're symlinked.
+
+
+## Extras:
+
+The `extras` directory contains additional configuration files that are not dotfiles:
+
+ * `Henrik.terminal` is a settings file (theme + key bindings) for the OS X Terminal.app.
