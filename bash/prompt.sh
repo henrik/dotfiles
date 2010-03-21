@@ -3,7 +3,8 @@
 
 # henrik@Nyx ~/.dotfiles[master*]$ 
 
-# MacPorts git bash completion
+# MacPorts git bash completion.
+# Required for the prompt. Also provides autocompletion of git commands and branch names.
 if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 fi
