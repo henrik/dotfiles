@@ -8,7 +8,7 @@ Checkout this repo into `~/.dotfiles`, then install them:
     
 This rake task will not replace existing files, but it will replace existing symlinks.
 
-The dotfiles will be symlinked, e.g. `~/.bashrc` symlinked to `~/.dotfiles/bashrc`.
+The dotfiles will be symlinked, e.g. `~/.bash_profile` symlinked to `~/.dotfiles/bash_profile`.
 
 ### <.replace>
 
