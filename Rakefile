@@ -22,14 +22,14 @@ task :install do
       error "#{destination} exists. Will not automatically overwrite a non-symlink. Overwrite (y/n)?"
       print "? "
       if STDIN.gets.match(/^y/i)
-        info_rm "Removing file #{destination}."
-        FileUtils.rm(destination)
+        info_rm "Removing #{destination}."
+        FileUtils.rm_rf(destination)
       else
         next
       end
     end
     
-    contents = File.read(source)
+    contents = File.read(source) rescue ""
     
     if contents.include?('<.replace ')
 
@@ -55,4 +55,5 @@ task :install do
     end
 
   end
+
 end
