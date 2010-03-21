@@ -1,0 +1,17 @@
+[user]
+	name = Henrik N
+	email = henrik@nyh.se
+[core]
+	excludesfile = /Users/henrik/.gitignore
+	ignorecase = false
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+[branch "master"]
+	merge = master
+[alias]
+	gay = shortlog -s -n
+[github]
+	user = henrik
+	token = <.replace github-token>
