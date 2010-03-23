@@ -15,3 +15,5 @@
 [github]
 	user = henrik
 	token = <.replace github-token>
+[push]
+	default = current
