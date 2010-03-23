@@ -8,6 +8,7 @@ alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && rake install; cd -'
 
 # Shell
+alias c='clear'
 alias ls='ls -G'  # color
 alias cdd='cd -'  # back to last directory
 alias ..='cd ..'
