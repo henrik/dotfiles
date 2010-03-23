@@ -16,8 +16,8 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
-# Ruby/Rails
-alias sc="script/console"
+# Ruby on Rails
+alias sc="[ -f script/cconsole ] && script/cconsole || script/console"  # cconsole is for MRI console (boots faster) in JRuby projects.
 alias ss="script/server"
 alias at="script/autospec -f -c"
 alias cu='script/cucumber features -b -s -f progress'
