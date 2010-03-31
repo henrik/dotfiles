@@ -10,6 +10,7 @@ alias redot='cd ~/.dotfiles && rake install; cd -'
 # Shell
 alias c='clear'
 alias ls='ls -G'  # color
+alias la='ls -al'
 alias cdd='cd -'  # back to last directory
 alias ..='cd ..'
 alias ...='cd ../..'
