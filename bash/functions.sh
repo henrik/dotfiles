@@ -15,3 +15,12 @@ function cdgem {
 function pwf {
   echo "$PWD/$1"
 }
+
+# create directory and cd to it.
+#
+#     henrik@Nyx /tmp$ dir foo/bar/baz
+#     henrik@Nyx /tmp/foo/bar/baz$
+#
+function dir {
+  mkdir -p "$1" && cd "$1"
+}
