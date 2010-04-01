@@ -1,1 +1,19 @@
 .DS_Store
+
+# iPhone development
+# http://www.adminmyserver.com/articles/gitignore-for-iphone-xcode-development
+
+# Build products
+build
+*.[oa]
+
+# Temp nibs and swap files
+*~.nib
+*.swp
+*~
+
+# User-specific Xcode stuff
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspectivev3
