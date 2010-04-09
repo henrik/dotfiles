@@ -12,6 +12,7 @@
 	merge = master
 [alias]
 	gay = shortlog -s -n
+	standup = shortlog --since=yesterday
 [github]
 	user = henrik
 	token = <.replace github-token>
