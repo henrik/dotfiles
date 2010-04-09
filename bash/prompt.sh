@@ -5,9 +5,7 @@
 
 # MacPorts git bash completion.
 # Required for the prompt. Also provides autocompletion of git commands and branch names.
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-fi
+. ~/.dotfiles/bash/lib/git-completion.bash
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\e[1;33m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]$ '
