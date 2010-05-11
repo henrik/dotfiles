@@ -18,9 +18,9 @@ function pwf {
 
 # create directory and cd to it.
 #
-#     henrik@Nyx /tmp$ dir foo/bar/baz
+#     henrik@Nyx /tmp$ mkcd foo/bar/baz
 #     henrik@Nyx /tmp/foo/bar/baz$
 #
-function dir {
+function mkcd {
   mkdir -p "$1" && cd "$1"
 }
