@@ -25,7 +25,7 @@ function mkcd {
   mkdir -p "$1" && cd "$1"
 }
 
-# Open the .xcodeproj file that is in the working directory (typically in Xcode).
+# Open the .xcodeproj file from the working directory (typically in Xcode).
 #
 #     henrik@Nyx ~/Code/iPhone/MyApp$ xc
 #     # equivalent to:
