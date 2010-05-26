@@ -48,6 +48,12 @@ alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
 
+# Xcode versioning
+# http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
+alias xv="agvtool what-version; agvtool what-marketing-version"  # Show versions.
+alias xvbump="agvtool bump -all"  # Bump build number.
+alias xvset="agvtool new-marketing-version"  # Set user-visible version: xvset 2.0
+
 # Servers
 alias grace='sudo apachectl graceful'
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
