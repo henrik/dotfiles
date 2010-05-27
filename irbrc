@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require "rubygems"
+require "ftools"
 
 # http://pablotron.org/software/wirble/
 # Colorizes output, adds history etc.
