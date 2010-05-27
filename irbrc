@@ -27,3 +27,8 @@ def bench(repetitions=100, &block)
   end
   nil
 end
+
+# Pre-defined hash and array to experiment with.
+# http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123847#123847
+HASH = { :one => 1, :two => 2, :three => 3, :four => 4, :five => 5 } unless defined?(HASH)
+ARRAY = %w[one two three four five] unless defined?(ARRAY)
