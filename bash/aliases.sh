@@ -2,6 +2,9 @@
 alias a="cd ~/Sites/auktion"
 alias i="cd ~/Code/iPhone/AK"
 
+# TODO dir
+alias todo='mate ~/Dropbox/TODO'
+
 # Management
 alias dots="mate ~/.dotfiles"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
