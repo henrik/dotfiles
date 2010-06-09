@@ -52,6 +52,7 @@ alias got="git checkout -"
 alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
+alias gam="git commit --amend"
 
 # Xcode versioning
 # http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
