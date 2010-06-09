@@ -27,6 +27,7 @@ alias ss="script/server"
 alias at="script/autospec -f -c"
 alias cu='script/cucumber features -b -s -f progress'
 alias cuf='script/cucumber features -b -s -t @focus'
+alias mig='rake db:migrate'
 
 # JRuby
 alias jake="jruby --headless -S rake"

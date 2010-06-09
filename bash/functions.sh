@@ -34,3 +34,12 @@ function mkcd {
 function xc {
   open `ls | grep .xcodeproj`
 }
+
+
+# Generate a Ruby on Rails migration, then open the generated file.
+#
+#     henrik@Nyx /myproject$ migg add_fooed_at_to_bars fooed_at:datetime
+
+function migg {
+  script/generate migration $@ | ruby -e 'x = ARGF.read; puts x; path = x[/create\s+(.+)/, 1]; system("open", path)'
+}
