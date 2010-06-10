@@ -27,6 +27,7 @@ alias ss="script/server"
 alias at="script/autospec -f -c"
 alias cu='script/cucumber features -b -s -f progress'
 alias cuf='script/cucumber features -b -s -t @focus'
+alias mig='rake db:migrate'
 
 # JRuby
 alias jake="jruby --headless -S rake"
@@ -51,6 +52,7 @@ alias got="git checkout -"
 alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
+alias gam="git commit --amend"
 
 # Xcode versioning
 # http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
