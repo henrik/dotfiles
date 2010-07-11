@@ -7,6 +7,7 @@ function cdgem {
   cd /Library/Ruby/Gems/1.8/gems/; cd `ls|grep $1|sort|tail -1`
 }
 
+
 # Print working file.
 #
 #     henrik@Henrik ~/.dotfiles[master]$ pwf ackrc 
@@ -16,6 +17,7 @@ function pwf {
   echo "$PWD/$1"
 }
 
+
 # Create directory and cd to it.
 #
 #     henrik@Nyx /tmp$ mkcd foo/bar/baz
@@ -24,6 +26,7 @@ function pwf {
 function mkcd {
   mkdir -p "$1" && cd "$1"
 }
+
 
 # SSH to the given machine and add your id_rsa.pub or id_dsa.pub to authorized_keys.
 #
@@ -35,6 +38,7 @@ function sshkey {
   ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_?sa.pub
   echo "sshkey done."
 }
+
 
 # Open the .xcodeproj file from the working directory (typically in Xcode).
 #
@@ -53,4 +57,16 @@ function xc {
 
 function migg {
   script/generate migration $@ | ruby -e 'x = ARGF.read; puts x; path = x[/create\s+(.+)/, 1]; system("open", path)'
+}
+
+
+# On gf's computer, pause iTunes and disconnect Airfoil from speakers (to free them up for me).
+# Function rather than alias to avoid quote-escaping hell.
+#
+#     henrik@Nyx ~$ hush
+#     hushed.
+
+function hush {
+  ssh heli 'osascript -e "tell app \"iTunes\" to pause" -e "tell app \"Airfoil\" to disconnect from every speaker"'
+  echo "hushed."
 }
