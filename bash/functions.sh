@@ -25,6 +25,17 @@ function mkcd {
   mkdir -p "$1" && cd "$1"
 }
 
+# SSH to the given machine and add your id_rsa.pub or id_dsa.pub to authorized_keys.
+#
+#     henrik@Nyx ~$ sshkey hyper
+#     Password:
+#     sshkey done.
+
+function sshkey {
+  ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_?sa.pub
+  echo "sshkey done."
+}
+
 # Open the .xcodeproj file from the working directory (typically in Xcode).
 #
 #     henrik@Nyx ~/Code/iPhone/MyApp$ xc
