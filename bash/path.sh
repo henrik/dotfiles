@@ -6,6 +6,9 @@ export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 export PATH=/Users/henrik/.homebrew/bin:$PATH
 export MANPATH=/Users/henrik/.homebrew/man:$MANPATH
 
+# Homebrew REE
+export PATH=/usr/local/Cellar/ruby-enterprise-edition/2010.02/bin:$PATH
+
 # MySQL
 export PATH=/usr/local/mysql/bin:$PATH
 
