@@ -49,6 +49,7 @@ alias gpp='git pull && git push'
 alias go="git checkout"
 alias gb="git checkout -b"
 alias got="git checkout -"
+alias gom="git checkout master"
 alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
