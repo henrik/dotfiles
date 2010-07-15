@@ -1,3 +1,9 @@
+# Calls grep with STDIN closed if in a terminal to avoid the "eternal wait" problem.
+# http://gist.github.com/476116
+
+function grep { (tty -s && exec <&-; exec /usr/bin/grep $@); }
+
+
 # cd gem
 #
 #     henrik@Nyx ~$ cdgem activerecord
