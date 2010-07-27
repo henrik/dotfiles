@@ -70,4 +70,4 @@ alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 alias akdb='mysqladmin -u root -f drop ak_dev create ak_dev && mysql -u root ak_dev < ~/Downloads/auction_clean.sql && rake db:migrate'
 alias akdbg='scp sdb:~andreas/akdump/dump/auction_clean.sql ~/Downloads/ && akdb'
 # Use with autologin Greasemonkey script: http://gist.github.com/raw/487186/ccf2c203741c1e39eb45416d02bc58b2728427fc/basefarm_auto.user.js
-alias vpn='open -a Firefox "https://ssl-vpn.sth.basefarm.net/ssl"; sleep 5; killall firefox-bin'
+alias vpn='open -a Firefox "https://ssl-vpn.sth.basefarm.net/ssl"'
