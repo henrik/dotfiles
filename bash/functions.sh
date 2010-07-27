@@ -64,15 +64,3 @@ function xc {
 function migg {
   script/generate migration $@ | ruby -e 'x = ARGF.read; puts x; path = x[/create\s+(.+)/, 1]; system("open", path)'
 }
-
-
-# On gf's computer, pause iTunes and disconnect Airfoil from speakers (to free them up for me).
-# Function rather than alias to avoid quote-escaping hell.
-#
-#     henrik@Nyx ~$ hush
-#     hushed.
-
-function hush {
-  ssh heli 'osascript -e "tell app \"iTunes\" to pause" -e "tell app \"Airfoil\" to disconnect from every speaker"'
-  echo "hushed."
-}

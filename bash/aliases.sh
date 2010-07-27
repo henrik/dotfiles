@@ -65,6 +65,10 @@ alias xvset="agvtool new-marketing-version"  # Set user-visible version: xvset 2
 alias grace='sudo apachectl graceful'
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
+# Home network
+# On gf's computer, quiet music and disconnect Airfoil from speakers (to free them up for me).
+alias hush="cat ~/.bash/lib/hush.scpt | ssh heli osascript; echo hushed."
+
 # Work
 
 alias akdb='mysqladmin -u root -f drop ak_dev create ak_dev && mysql -u root ak_dev < ~/Downloads/auction_clean.sql && rake db:migrate'
