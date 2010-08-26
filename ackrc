@@ -8,3 +8,6 @@
 --type-add=cucumber=.feature
 --type-add=sass=.sass,.scss
 #--all
+
+# Don't include webrat.
+-G^(?!.*test/webrat-)
