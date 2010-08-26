@@ -13,6 +13,7 @@
 [alias]
 	gay = shortlog -s -n
 	standup = shortlog --since=yesterday
+	uncommit = reset --soft HEAD^
 [github]
 	user = henrik
 	token = <.replace github-token>
