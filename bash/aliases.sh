@@ -82,3 +82,8 @@ alias akdbg='scp www-data@sdb:/var/data/auktion/auction_clean.sql ~/Downloads/ &
 alias vpn='open -a Firefox "https://ssl-vpn.sth.basefarm.net/ssl"'
 alias stage='OLD=true BRANCH=master cap staging deploy:migrations'
 alias stagedb='OLD=true BRANCH=master cap staging deploy:import_db'
+
+# Testbot
+alias cpu2='pushd ~/Sites/auktion; rake testbot:runner:set_cpu_cores[2]; popd'
+alias cpu1='pushd ~/Sites/auktion; rake testbot:runner:set_cpu_cores[1]; popd'
+alias cpu0='pushd ~/Sites/auktion; rake testbot:runner:stop; popd'
