@@ -3,8 +3,8 @@ alias a="cd ~/Sites/auktion"
 alias i="cd ~/Code/iPhone/AK"
 alias o="open ."  # OS X, open in Finder
 
-# TODO dir
-alias todo='mate ~/Dropbox/TODO'
+# http://www.hogbaysoftware.com/products/plaintext
+alias text='mate ~/Dropbox/PlainText'
 
 # Management
 alias dots="mate ~/.dotfiles"
