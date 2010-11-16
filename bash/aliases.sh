@@ -27,7 +27,7 @@ alias sc="[ -f script/cconsole ] && script/cconsole || script/console"  # cconso
 alias ss="script/server"
 alias at="script/autospec -f -c"
 alias cu='script/cucumber features -b -s -f progress'
-alias cuf='script/cucumber features -b -s -t @focus'
+alias cuf='rake features:focus'
 alias mig='rake db:migrate'
 
 # JRuby
@@ -76,7 +76,14 @@ alias hush="cat ~/.bash/lib/hush.scpt | ssh heli osascript; echo hushed."
 
 # Work
 
-alias akdb='mysqladmin -u root -f drop ak_dev create ak_dev && mysql -u root ak_dev < ~/Downloads/auction_clean.sql && rake db:migrate'
-alias akdbg='scp sdb:~andreas/akdump/dump/auction_clean.sql ~/Downloads/ && akdb'
+alias akdb='mysqladmin -u root -f drop auktion_development create auktion_development && mysql -u root auktion_development < ~/Downloads/auction_clean.sql && rake db:migrate'
+alias akdbg='scp www-data@sdb:/var/data/auktion/auction_clean.sql ~/Downloads/ && akdb'
 # Use with autologin Greasemonkey script: http://gist.github.com/raw/487186/ccf2c203741c1e39eb45416d02bc58b2728427fc/basefarm_auto.user.js
 alias vpn='open -a Firefox "https://ssl-vpn.sth.basefarm.net/ssl"'
+alias stage='OLD=true BRANCH=master cap staging deploy:migrations'
+alias stagedb='OLD=true BRANCH=master cap staging deploy:import_db'
+
+# Testbot
+alias cpu2='pushd ~/Sites/auktion; rake testbot:runner:set_cpu_cores[2]; popd'
+alias cpu1='pushd ~/Sites/auktion; rake testbot:runner:set_cpu_cores[1]; popd'
+alias cpu0='pushd ~/Sites/auktion; rake testbot:runner:stop; popd'
