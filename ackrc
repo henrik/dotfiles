@@ -4,9 +4,9 @@
 --follow
 --group
 --type-add=ruby=.haml,.rake,.rsel,.builder
---type-add=markdown=.md,.mdown,.markdown
---type-add=cucumber=.feature
---type-add=sass=.sass,.scss
+--type-set=markdown=.md,.mdown,.markdown
+--type-set=cucumber=.feature
+--type-set=sass=.sass,.scss
 #--all
 
 # Don't include webrat.
