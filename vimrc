@@ -1,7 +1,11 @@
 set nocompatible
+set encoding=utf-8
+let mapleader = ","
 
 set number
 set ruler
+set cursorline
+set scrolloff=3  " minimum lines of context
 syntax on
 
 " Whitespace stuff
@@ -9,13 +13,19 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set list listchars=tab:\ \ ,trail:·
+
+set list!
+set listchars=nbsp:·,tab:▸\ ,trail:·
 
 " Searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set gdefault  " global search by default; /g for first match.
+
+nnoremap <leader><leader> :noh<cr>" ,, to un-highlight matches.
+
 
 " Tab completion
 set wildmode=list:longest,list:full
@@ -76,10 +86,6 @@ filetype plugin indent on
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
@@ -97,9 +103,5 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+color blackboard
 
-" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif

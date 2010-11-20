@@ -22,7 +22,7 @@ endif
 set guioptions-=T
 
 " Default gui color scheme
-color molokai
+color blackboard 
 
 " ConqueTerm wrapper
 function StartTerm()
@@ -129,7 +129,3 @@ call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
 
-" Include user's local vim config
-if filereadable(expand("~/.gvimrc.local"))
-  source ~/.gvimrc.local
-endif
