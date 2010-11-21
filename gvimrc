@@ -26,6 +26,8 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
+set guifont=Monaco:h11
+
 " Default gui color scheme
 color blackboard 
 
