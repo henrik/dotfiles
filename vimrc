@@ -4,7 +4,6 @@ let mapleader = ","
 
 set number
 set ruler
-set cursorline
 set scrolloff=3  " minimum lines of context
 syntax on
 

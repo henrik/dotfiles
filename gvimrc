@@ -24,6 +24,9 @@ set guioptions-=T
 " Default gui color scheme
 color blackboard 
 
+" Highlight the current line
+set cursorline
+
 " ConqueTerm wrapper
 function StartTerm()
   execute 'ConqueTerm ' . $SHELL . ' --login'
