@@ -98,6 +98,13 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+" Create a split on the given side.
+" From http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/ via joakimk.
+nmap <leader><left>   :leftabove  vnew<CR>
+nmap <leader><right>  :rightbelow vnew<CR>
+nmap <leader><up>     :leftabove  new<CR>
+nmap <leader><down>   :rightbelow new<CR>
+
 " Use modeline overrides
 set modeline
 set modelines=10
