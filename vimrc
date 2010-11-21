@@ -31,7 +31,7 @@ nnoremap <leader><leader> :noh<cr>" ,, to un-highlight matches.
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
 
-" Status bar
+" Always show status bar
 set laststatus=2
 
 " NERDTree configuration
@@ -40,9 +40,7 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
-
-" ZoomWin configuration
-map <Leader>z :ZoomWin<CR>
+let g:CommandTMatchWindowAtTop=1
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
