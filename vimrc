@@ -41,6 +41,9 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 
+" Ack/Quickfix windows
+map <Leader>q :cclose<CR>
+
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 
