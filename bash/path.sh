@@ -1,5 +1,5 @@
 # MacPorts
-export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 
 # Homebrew
