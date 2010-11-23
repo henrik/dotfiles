@@ -35,7 +35,7 @@ task :install do
 
       info "#{source} has <.replace> placeholders."
 
-      contents.gsub!(/<.replace (.+?)>/) {
+      contents.gsub!(/<\.replace (.+?)>/) {
         begin
           File.read(File.expand_path("~/.#{$1}"))
         rescue => e
