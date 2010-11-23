@@ -8,7 +8,7 @@ set scrolloff=3  " minimum lines of context
 syntax on
 
 " Whitespace stuff
-set nowrap
+set wrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
