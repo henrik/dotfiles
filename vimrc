@@ -91,6 +91,11 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
+" Move by file lines instead of screen lines.
+" http://vim.wikia.com/wiki/Moving_by_screen_lines_instead_of_file_lines
+:noremap <Up> gk
+:noremap <Down> gj
+
 " Unimpaired configuration
 " Bubble single lines
 nmap <C-Up> [e
