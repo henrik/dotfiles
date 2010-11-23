@@ -4,6 +4,6 @@ if test -n "$SSH_CONNECTION"; then
   export GIT_EDITOR='vim'
 else
   # Not over SSH.
-  export EDITOR='mate_wait'
-  export GIT_EDITOR='mate -wl1'
+  export EDITOR='mvim'
+  export GIT_EDITOR='vim'
 fi
