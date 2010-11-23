@@ -8,8 +8,9 @@ set scrolloff=3  " minimum lines of context
 syntax on
 
 " Whitespace stuff
-set nowrap
-set tabstop=2
+" Would use lbr for nicer linebreaks, but can't combine with listchars.
+set wrap
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 
