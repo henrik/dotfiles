@@ -70,6 +70,8 @@ alias xvset="agvtool new-marketing-version"  # Set user-visible version: xvset 2
 alias grace='sudo apachectl graceful'
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
+alias hosts='sudo vim /etc/hosts'
+
 # Home network
 # On gf's computer, quiet music and disconnect Airfoil from speakers (to free them up for me).
 alias hush="cat ~/.bash/lib/hush.scpt | ssh heli osascript; echo hushed."
