@@ -45,6 +45,7 @@ end
 IRB.conf[:PROMPT][:SIMPLE].merge!(:PROMPT_I => lambda {
   "#{[ ENV['RAILS_ENV'] && Rails.env.first(3).upcase, Time.now.strftime("%H:%M:%S") ].compact.join(' ')} >> "
 })
+IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 
 # Load .railsrc for Rails.

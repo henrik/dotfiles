@@ -6,9 +6,6 @@ export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 export PATH=/Users/henrik/.homebrew/bin:$PATH
 export MANPATH=/Users/henrik/.homebrew/man:$MANPATH
 
-# Homebrew REE
-export PATH=/usr/local/Cellar/ruby-enterprise-edition/2010.02/bin:$PATH
-
 # Ubuntu Ruby gem binaries
 export PATH=/var/lib/gems/1.8/bin:$PATH
 
@@ -17,3 +14,6 @@ export PATH=/usr/local/mysql/bin:$PATH
 
 # Jekyll (use dev version, not gem)
 export PATH=/Users/henrik/Code/jekyll/bin:$PATH
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
