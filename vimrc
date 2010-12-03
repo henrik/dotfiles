@@ -118,3 +118,6 @@ set modelines=10
 " Default color scheme
 color blackboard
 
+" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
