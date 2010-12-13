@@ -1,9 +1,9 @@
 # MacPorts
-export PATH=/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 
 # Homebrew
-export PATH=/Users/henrik/.homebrew/bin:$PATH
+export PATH=/Users/henrik/.homebrew/bin:/Users/henrik/.homebrew/sbin:$PATH
 export MANPATH=/Users/henrik/.homebrew/man:$MANPATH
 
 # Ubuntu Ruby gem binaries
