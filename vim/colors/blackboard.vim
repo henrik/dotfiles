@@ -24,8 +24,8 @@ if has("gui_running")
   highlight Pmenu guibg=#84A7C1
 
   "Status line
-  highlight StatusLine      guifg=#eeeeee guibg=#000000
-  highlight StatusLineNC    guifg=#000000 guibg=#eeeeee
+  highlight StatusLine      guifg=#ff8000 guibg=#ffffff
+  highlight StatusLineNC    guifg=#ffffff guibg=#000000
 
   "General Colors
   highlight Comment guifg=#AEAEAE
