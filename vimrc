@@ -54,16 +54,20 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-function s:setupWrapping()
-  set wrap
-  set wm=2
-  set textwidth=72
-endfunction
+if !exists("*s:setupWrapping")
+  function s:setupWrapping()
+    set wrap
+    set wm=2
+    set textwidth=72
+  endfunction
+endif
 
-function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Mm <CR>
-endfunction
+if !exists("*s:setupMarkup")
+  function s:setupMarkup()
+    call s:setupWrapping()
+    map <buffer> <Leader>p :Mm <CR>
+  endfunction
+endif
 
 " make and python use real tabs
 au FileType make                                     set noexpandtab
