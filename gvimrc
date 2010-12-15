@@ -20,11 +20,6 @@ endif
 
 " Start without the toolbar
 set guioptions-=T
-" Get rid of scrollbars
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
 
 set guifont=Monaco:h11
 
