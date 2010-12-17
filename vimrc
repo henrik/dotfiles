@@ -34,6 +34,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc
 " Always show status bar
 set laststatus=2
 
+" Show partially typed command sequences
+set showcmd
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
