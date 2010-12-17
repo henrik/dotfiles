@@ -1,6 +1,14 @@
 set nocompatible
 set encoding=utf-8
 
+" pathogem.vim to load plugin bundles from ~/.vim/bundle
+filetype off
+call pathogen#runtime_append_all_bundles()
+
+" load the plugin and indent settings for the detected filetype
+filetype plugin indent on
+
+
 set number
 set ruler
 set scrolloff=3  " minimum lines of context
@@ -86,10 +94,6 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" load the plugin and indent settings for the detected filetype
-filetype plugin indent on
-
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
