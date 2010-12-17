@@ -57,6 +57,20 @@ if !exists("*s:setupMarkup")
   endfunction
 endif
 
+" OS X only
+" http://vim.wikia.com/wiki/Open_a_web-browser_with_the_URL_in_the_current_line
+if !exists("*OpenURI")
+  function! OpenURI()
+    let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
+    echo s:uri
+    if s:uri != ""
+      exec "!open \"" . s:uri . "\""
+    else
+      echo "No URI found in line."
+    endif
+  endfunction
+endif
+
 " make and python use real tabs
 au FileType make                                     set noexpandtab
 au FileType python                                   set noexpandtab
@@ -118,6 +132,9 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>" Reveal current file
 
 map <leader>T :CommandTFlush<CR>
+
+" Open URL from this line (OS X only).
+map <leader>u :call OpenURI()<CR>
 
 " Ack/Quickfix windows
 map <leader>q :cclose<CR>
