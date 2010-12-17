@@ -1,6 +1,5 @@
 set nocompatible
 set encoding=utf-8
-let mapleader = ","
 
 set number
 set ruler
@@ -24,13 +23,6 @@ set ignorecase
 set smartcase
 set gdefault  " global search by default; /g for first match.
 
-nnoremap <leader><leader> :noh<cr>" ,, to un-highlight matches.
-
-
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc
-
 " Always show status bar
 set laststatus=2
 
@@ -39,17 +31,10 @@ set showcmd
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
-
-" Ack/Quickfix windows
-map <Leader>q :cclose<CR>
-
-" CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -91,9 +76,6 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -106,20 +88,12 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 :noremap k gk
 :noremap j gj
 
-" Unimpaired configuration
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
-
-" Create a split on the given side.
-" From http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/ via joakimk.
-nmap <leader><left>   :leftabove  vsp<CR>
-nmap <leader><right>  :rightbelow vsp<CR>
-nmap <leader><up>     :leftabove  sp<CR>
-nmap <leader><down>   :rightbelow sp<CR>
 
 " Use modeline overrides
 set modeline
@@ -131,3 +105,29 @@ color blackboard
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+
+
+" Leader
+
+let mapleader = ","
+
+" Un-highlight search matches
+nnoremap <leader><leader> :noh<CR>
+
+map <leader>n :NERDTreeToggle<CR>
+map <leader>N :NERDTreeFind<CR>" Reveal current file
+
+map <leader>T :CommandTFlush<CR>
+
+" Ack/Quickfix windows
+map <leader>q :cclose<CR>
+
+" Opens an edit command with the path of the currently edited file filled in
+map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Create a split on the given side.
+" From http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/ via joakimk.
+nmap <leader><left>   :leftabove  vsp<CR>
+nmap <leader><right>  :rightbelow vsp<CR>
+nmap <leader><up>     :leftabove  sp<CR>
+nmap <leader><down>   :rightbelow sp<CR>
