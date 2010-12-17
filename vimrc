@@ -121,12 +121,6 @@ nmap <leader><right>  :rightbelow vsp<CR>
 nmap <leader><up>     :leftabove  sp<CR>
 nmap <leader><down>   :rightbelow sp<CR>
 
-" Ctrl+arrows to jump between splits.
-map <C-left> <C-w><left>
-map <C-right> <C-w><right>
-map <C-up> <C-w><up>
-map <C-down> <C-w><down>
-
 " Use modeline overrides
 set modeline
 set modelines=10
