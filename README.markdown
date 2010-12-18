@@ -2,7 +2,12 @@
 
 ## Install:
 
-Checkout this repo into `~/.dotfiles`, then install them:
+Checkout this repo into `~/.dotfiles`. Then update git submodules:
+
+    git submodule init
+    git submodule update
+
+Then install the dotfiles:
 
     rake install
     
