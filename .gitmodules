@@ -58,3 +58,12 @@
 [submodule "vim/bundle/vim-markdown-preview"]
 	path = vim/bundle/vim-markdown-preview
 	url = git://github.com/robgleeson/vim-markdown-preview.git
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/vim-conque"]
+	path = vim/bundle/vim-conque
+	url = git://github.com/rson/vim-conque.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = git@github.com:henrik/snipmate.vim.git
