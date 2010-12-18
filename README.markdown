@@ -1,16 +1,11 @@
 # My dotfiles
 
-## Install:
+## Install
 
-Checkout this repo into `~/.dotfiles`. Then update git submodules:
-
-    git submodule init
-    git submodule update
-
-Then install the dotfiles:
+Checkout this repo into `~/.dotfiles`. Then install the dotfiles:
 
     rake install
-    
+
 This rake task will not replace existing files, but it will replace existing symlinks.
 
 The dotfiles will be symlinked, e.g. `~/.bash_profile` symlinked to `~/.dotfiles/bash_profile`.
@@ -27,7 +22,25 @@ So if you want to make changes to that file, make them in `~/dotfiles/gitconfig`
 Changes to symlinked files without `<.replace>` bits do not require a `rake install` on every change as they're symlinked.
 
 
-## Extras:
+## Vim
+
+I'm assuming MacVim (`brew install macvim`) and at least Vim 7.
+
+Vim plugins are each their own directory under vim/bundles thanks to [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332).
+
+Most are included in this repository as git submodules, so you need to fetch them after cloning this repository:
+
+    git submodule init
+    git submodule update
+
+The Command-T plugin needs to be compiled:
+
+    cd ~/.vim/bundle/command-t
+    rvm system  # If you use rvm
+    rake make
+
+
+## Extras
 
 The `extras` directory contains additional configuration files that are not dotfiles:
 
