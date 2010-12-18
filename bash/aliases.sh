@@ -4,10 +4,10 @@ alias i="cd ~/Code/iPhone/AK"
 alias o="open ."  # OS X, open in Finder
 
 # http://www.hogbaysoftware.com/products/plaintext
-alias text='mate ~/Dropbox/PlainText'
+alias text='mvim ~/Dropbox/PlainText'
 
 # Management
-alias dots="mate ~/.dotfiles"
+alias dots="mvim ~/.dotfiles"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && rake install; cd -'
 
