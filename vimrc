@@ -4,6 +4,7 @@ set encoding=utf-8
 " pathogem.vim to load plugin bundles from ~/.vim/bundle
 filetype off
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
