@@ -80,7 +80,7 @@ ruby << EOF
       system("open", url)
       VIM::message(url)
     else
-      VIM::command("echo 'No URI found in line.'")
+      VIM::message("No URI found in line.")
     end
   end
 EOF
