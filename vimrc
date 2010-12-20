@@ -45,9 +45,9 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 
-" Remember last location in file
+" Remember last location in file, but not for commit messages.
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+  au BufReadPost * if &filetype !~ 'commit\c' && line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
 
