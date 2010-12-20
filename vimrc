@@ -176,3 +176,7 @@ nmap <leader><left>   :leftabove  vsp<CR>
 nmap <leader><right>  :rightbelow vsp<CR>
 nmap <leader><up>     :leftabove  sp<CR>
 nmap <leader><down>   :rightbelow sp<CR>
+
+" Get rid of all NERDCommenter mappings except one.
+let g:NERDCreateDefaultMappings=0
+map <leader>c <Plug>NERDCommenterToggle
