@@ -110,7 +110,14 @@ set backspace=indent,eol,start
 " Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
 " Command-S is a bad habit when using terminal Vim.
 " We overload a command, but use 'cc' instead anyway.
-:noremap S :w<CR>
+noremap S :w<CR>
+
+" Make Y consistent with C and D - yank to end of line, not full line.
+nnoremap Y y$
+
+" Map Q to something useful (e.g. QQ to hard-break current line).
+" Otherwise Q enters the twilight zone of the 'Ex' mode.
+noremap Q gq
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -118,10 +125,10 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Move by screen lines instead of file lines.
 " http://vim.wikia.com/wiki/Moving_by_screen_lines_instead_of_file_lines
-:noremap <Up> gk
-:noremap <Down> gj
-:noremap k gk
-:noremap j gj
+noremap <Up> gk
+noremap <Down> gj
+noremap k gk
+noremap j gj
 
 " Bubble single lines
 nmap <C-Up> [e
