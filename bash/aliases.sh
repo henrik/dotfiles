@@ -13,14 +13,20 @@ alias redot='cd ~/.dotfiles && rake install; cd -'
 
 # Shell
 alias c='clear'
-alias ls='ls -G'  # color
-alias la='ls -al'
+alias la='ls -alh'
 alias cdd='cd -'  # back to last directory
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+
+# Portable ls with colors
+if ls --color -d . >/dev/null 2>&1; then
+  alias ls='ls --color=auto'  # Linux
+elif ls -G -d . >/dev/null 2>&1; then
+  alias ls='ls -G'  # BSD/OS X
+fi
 
 # Ruby on Rails
 alias sc="[ -f script/cconsole ] && script/cconsole || script/console"  # cconsole is for MRI console (boots faster) in JRuby projects.
