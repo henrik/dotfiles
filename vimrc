@@ -107,6 +107,11 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
+" Command-S is a bad habit when using terminal Vim.
+" We overload a command, but use 'cc' instead anyway.
+:noremap S :w<CR>
+
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
