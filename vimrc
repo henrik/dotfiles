@@ -61,7 +61,7 @@ endif
 
 if !exists("*s:setupMarkup")
   function s:setupMarkup()
-    call s:setupWrapping()
+    "call s:setupWrapping()
     map <buffer> <Leader>p :Mm <CR>
   endfunction
 endif
