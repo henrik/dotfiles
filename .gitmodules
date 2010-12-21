@@ -57,7 +57,7 @@
 	url = git://github.com/taq/vim-rspec.git
 [submodule "vim/bundle/vim-markdown-preview"]
 	path = vim/bundle/vim-markdown-preview
-	url = git://github.com/robgleeson/vim-markdown-preview.git
+	url = git@github.com:henrik/vim-markdown-preview.git
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
