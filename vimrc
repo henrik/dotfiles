@@ -22,8 +22,12 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" Show invisibles.
 set list!
 set listchars=nbsp:·,tab:▸\ ,trail:·
+
+" No pipes in vertical split separators.
+set fillchars=vert:\ 
 
 " Searching
 set hlsearch
@@ -31,6 +35,8 @@ set incsearch
 set ignorecase
 set smartcase
 set gdefault  " global search by default; /g for first match.
+
+set nojoinspaces " 1 space, not 2, when joining sentences.
 
 " Always show status bar
 set laststatus=2
