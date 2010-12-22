@@ -97,18 +97,23 @@ if !exists("*OpenURI")
   endfunction
 endif
 
-" make and python use real tabs
-au FileType make                                     set noexpandtab
-au FileType python                                   set noexpandtab
+if has("autocmd")
+  " make and python use real tabs
+  au FileType make                                     set noexpandtab
+  au FileType python                                   set noexpandtab
 
-" Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
+  " Thorfile, Rakefile and Gemfile are Ruby
+  au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
-" md, markdown, and mk are markdown and define buffer-local preview
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+  " md, markdown, and mk are markdown and define buffer-local preview
+  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
-" Uncomment to have txt files hard-wrap automatically.
-"au BufRead,BufNewFile *.txt call s:setupWrapping()
+  " Automatically load .vimrc source when saved
+  autocmd BufWritePost .vimrc source $MYVIMRC
+
+  " Uncomment to have txt files hard-wrap automatically.
+  "au BufRead,BufNewFile *.txt call s:setupWrapping()
+endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
