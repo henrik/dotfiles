@@ -1,48 +1,48 @@
-set nocompatible
-set encoding=utf-8
+set nocompatible    " Don't sacrifice anything for Vi compatibility.
+set encoding=utf-8  " In case $LANG doesn't have a sensible value.
 
-" pathogem.vim to load plugin bundles from ~/.vim/bundle
+" pathogem.vim lets us keep plugins etc in their own folders under ~/.vim/bundle.
+" http://www.vim.org/scripts/script.php?script_id=2332
+" filetype off and then on again afterwards for ftdetect files to work properly.
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" load the plugin and indent settings for the detected filetype
-filetype plugin indent on
+filetype plugin indent on  " Load plugin and indent settings for the detected filetype.
+syntax on                  " Syntax highlighting.
+color blackboard           " Default color scheme.
+set number                 " Show gutter with line numbers.
+set ruler                  " Show line, column and scroll info in status line.
+set laststatus=2           " Always show status bar.
+set modelines=10           " Use modeline overrides.
+set showcmd                " Show partially typed command sequences.
+set scrolloff=3            " Minimal number of lines to always show above/below the caret.
 
-
-set number
-set ruler
-set scrolloff=3  " minimum lines of context
-syntax on
-
-" Whitespace stuff
+set wrap  " Soft wrap.
 " Would use lbr for nicer linebreaks, but can't combine with listchars.
-set wrap
+
+" 2 spaces indent.
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
 " Show invisibles.
-set list!
 set listchars=nbsp:·,tab:▸\ ,trail:·
+set list!
 
 " No pipes in vertical split separators.
 set fillchars=vert:\ 
 
-" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set gdefault  " global search by default; /g for first match.
+" Searching.
+set hlsearch    " Highlight results.
+set incsearch   " Search-as-you-type.
+set ignorecase  " Case-insensitive…
+set smartcase   " …unless phrase includes uppercase.
+set gdefault    " Global search by default; /g for first-per-row only.
 
-set nojoinspaces " 1 space, not 2, when joining sentences.
+set nojoinspaces                " 1 space, not 2, when joining sentences.
+set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
 
-" Always show status bar
-set laststatus=2
-
-" Show partially typed command sequences
-set showcmd
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
@@ -109,15 +109,9 @@ if has("autocmd")
   " md, markdown, and mk are markdown and define buffer-local preview
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
-  " Automatically load .vimrc source when saved
-  autocmd BufWritePost .vimrc source $MYVIMRC
-
   " Uncomment to have txt files hard-wrap automatically.
   "au BufRead,BufNewFile *.txt call s:setupWrapping()
 endif
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 
 " Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
 " Command-S is a bad habit when using terminal Vim.
@@ -147,14 +141,8 @@ nmap <C-Up> [e
 nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
+
 vmap <C-Down> ]egv
-
-" Use modeline overrides
-set modeline
-set modelines=10
-
-" Default color scheme
-color blackboard
 
 " Directories for swp files
 set backupdir=~/.vim/backup

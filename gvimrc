@@ -14,8 +14,10 @@ if has("gui_macvim")
   " Command-e for ConqueTerm
   map <D-e> :call StartTerm()<CR>
 
-  " Command-/ to toggle comments
-  map <D-/> <plug>NERDCommenterToggle<CR>
+  " Command+w closes tab, not file.
+  " This assumes you've remapped 'Close' to something else in the OS X
+  " Keyboard prefs.
+  map <D-w> :tabclose<CR>
 
   " Accordion splits
   " http://www.reddit.com/r/vim/comments/eiolp/accordion_hopping_through_splits/
