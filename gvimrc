@@ -14,10 +14,19 @@ if has("gui_macvim")
   " Command-e for ConqueTerm
   map <D-e> :call StartTerm()<CR>
 
+  if !exists("*TabClose()")
+    function TabClose()
+      try
+        :tabclose
+      catch /E784/  " Can't close last tab.
+        :qa  " Close it anyway (quit all).
+      endtry
+    endfunction
+  endif
+
   " Command+w closes tab, not file.
-  " This assumes you've remapped 'Close' to something else in the OS X
-  " Keyboard prefs.
-  map <D-w> :tabclose<CR>
+  " This assumes you've remapped 'Close' to something else in the OS X Keyboard prefs.
+  map <D-w> :call TabClose()<CR>
 
   " Accordion splits
   " http://www.reddit.com/r/vim/comments/eiolp/accordion_hopping_through_splits/
