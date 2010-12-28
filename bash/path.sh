@@ -6,10 +6,6 @@ export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 export PATH=~/.homebrew/bin:~/.homebrew/sbin:$PATH
 export MANPATH=~/.homebrew/man:$MANPATH
 
-# Get the Homebrew MacVim version of vim on the command-line too.
-# Brew doesn't have a plain Vim recipe and the OS X system Vim doesn't come with Ruby support.
-export PATH=~/.homebrew/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS:$PATH
-
 # Ubuntu Ruby gem binaries
 export PATH=/var/lib/gems/1.8/bin:$PATH
 
@@ -21,3 +17,6 @@ export PATH=~/Code/jekyll/bin:$PATH
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+# To get the GUI-less Vim from MacVim:
+# ln -s ~/.homebrew/bin/mvim ~/.homebrew/bin/vim
