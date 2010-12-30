@@ -6,11 +6,12 @@ function grep { (tty -s && exec <&-; $(which grep) $@); }
 
 # cd gem
 #
-#     henrik@Nyx ~$ cdgem activerecord
-#     henrik@Nyx /Library/Ruby/Gems/1.8/gems/activerecord-3.0.0.beta$
+#     henrik@Nyx ~$ cdgem thor
+#     henrik@Nyx ~/.rvm/gems/ree-1.8.7-2010.02/gems/thor-0.14.6$
+
 #
 function cdgem {
-  cd /Library/Ruby/Gems/1.8/gems/; cd `ls|grep $1|sort|tail -1`
+  cd `rvm gemdir`/gems; cd `ls|grep $1|sort|tail -1`
 }
 
 
