@@ -30,8 +30,7 @@ Vim plugins are each their own directory under vim/bundles thanks to [Pathogen](
 
 Most are included in this repository as git submodules, so you need to fetch them after cloning this repository:
 
-    git submodule init
-    git submodule update
+    git submodule init --update
 
 The Command-T plugin needs to be compiled:
 
