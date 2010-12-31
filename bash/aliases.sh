@@ -9,7 +9,7 @@ alias text='mvim ~/Dropbox/PlainText'
 # Management
 alias dots="mvim ~/.dotfiles"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
-alias redot='cd ~/.dotfiles && rake install; cd -'
+alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 
 # Shell
 alias c='clear'
