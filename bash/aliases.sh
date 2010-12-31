@@ -29,7 +29,7 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 
 # Ruby on Rails
-alias sc="[ -f script/cconsole ] && script/cconsole || script/console"  # cconsole is for MRI console (boots faster) in JRuby projects.
+alias sc="script/console"
 alias ss="script/server"
 alias at="script/autospec -f -c"
 alias cu='script/cucumber features -b -s -f progress'
@@ -42,12 +42,10 @@ alias jem="sudo jruby --headless -S gem"
 
 # Git
 alias gl="git log"
-alias glm="git log | mate"
 alias gs="git status"
 alias gw="git show"
 alias gd="git diff"  # What's changed but not yet added?
 alias gdc="git diff --cached"  # What's added but not yet committed?
-alias gdm="git diff | mate"
 alias gc="git commit -a -m"
 alias gco="git commit -m"  # "only"
 alias gca="git add . && git commit -a -m"  # "all"
@@ -61,10 +59,6 @@ alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
 alias gam="git commit --amend"
-
-# TextMate
-alias m="mate"
-alias mm="mate ."
 
 # Xcode versioning
 # http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
