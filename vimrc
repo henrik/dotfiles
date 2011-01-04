@@ -182,3 +182,17 @@ nmap <leader><down>   :rightbelow sp<CR>
 " Get rid of all NERDCommenter mappings except one.
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
+
+
+" Define some stuff only when launched in this given project.
+if getcwd() == "/Users/henrik/Sites/auktion"
+  " :Loc to open locales in splits in a tab.
+  if !exists("*EditLocales")
+    function! EditLocales()
+      tabe config/locales/fi.yml
+      vsp  config/locales/en.yml
+      vsp  config/locales/sv.yml
+    endfunction
+  endif
+  command Loc call EditLocales()
+endif
