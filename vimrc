@@ -57,20 +57,16 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-if !exists("*s:setupWrapping")
-  function s:setupWrapping()
-    set wrap
-    set wm=2
-    set textwidth=72
-  endfunction
-endif
+function! s:setupWrapping()
+  set wrap
+  set wm=2
+  set textwidth=72
+endfunction
 
-if !exists("*s:setupMarkup")
-  function s:setupMarkup()
-    "call s:setupWrapping()
-    map <buffer> <Leader>p :Mm <CR>
-  endfunction
-endif
+function! s:setupMarkup()
+  "call s:setupWrapping()
+  map <buffer> <Leader>p :Mm <CR>
+endfunction
 
 " OS X only due to use of `open`. Adapted from
 " http://vim.wikia.com/wiki/Open_a_web-browser_with_the_URL_in_the_current_line
@@ -92,11 +88,9 @@ ruby << EOF
   end
 EOF
 
-if !exists("*OpenURI")
-  function! OpenURI()
-    :ruby open_uri
-  endfunction
-endif
+function! OpenURI()
+  :ruby open_uri
+endfunction
 
 if has("autocmd")
   " make and python use real tabs
@@ -187,12 +181,10 @@ map <leader>c <Plug>NERDCommenterToggle
 " Define some stuff only when launched in this given project.
 if getcwd() == "/Users/henrik/Sites/auktion"
   " :Loc to open locales in splits in a tab.
-  if !exists("*EditLocales")
-    function! EditLocales()
-      tabe config/locales/fi.yml
-      vsp  config/locales/en.yml
-      vsp  config/locales/sv.yml
-    endfunction
-  endif
+  function! EditLocales()
+    tabe config/locales/fi.yml
+    vsp  config/locales/en.yml
+    vsp  config/locales/sv.yml
+  endfunction
   command Loc call EditLocales()
 endif
