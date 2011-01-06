@@ -194,10 +194,10 @@ function! RubyRun()
   redir END
   new
   put=m
+" Fix Ctrl+M linefeeds.
+  %s///
 " Fix extraneous leading blank lines.
   1,2d
-" Fix Ctrl+M linefeeds.
-  silent %! col -b
   " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
   set ft=ruby-runner
   " Make it a scratch (temporary) buffer.
