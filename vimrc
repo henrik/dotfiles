@@ -165,8 +165,10 @@ map <leader>u :call OpenURI()<CR>
 
 " Ack/Quickfix windows
 map <leader>q :cclose<CR>
-map - :cprev<CR> :norm! zz<CR>" Previous fix and center line.
-map + :cnext<CR> :norm! zz<CR>" Next fix and center line.
+" Previous fix and center line.
+map - :cprev<CR> zz
+" Next fix and center line.
+map + :cnext<CR> zz
 
 " Opens an edit command with the path of the currently edited file filled in
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
