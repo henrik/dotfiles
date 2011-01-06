@@ -183,6 +183,34 @@ let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
 
 
+" <C-r> to trigger and also to close the scratch buffer.
+" TODO: <LocalLeader>r? Reuse split? Pluginize? Handle gets if possible?
+
+function! RubyRun()
+  redir => m
+  silent w ! ruby
+  redir END
+  new
+  put=m
+" Fix extraneous leading blank lines.
+  1,2d
+" Fix Ctrl+M linefeeds.
+  silent %! col -b
+  " TODO: Reuse split?
+  " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
+  set ft=ruby-runner
+  " Make a scratch (temporary) buffer.
+  set buftype=nofile
+  set bufhidden=hide
+  setlocal noswapfile
+endfunction
+
+if has("autocmd") && has("gui_macvim")
+  au! FileType ruby map <buffer> <D-r> :call RubyRun()<CR>
+  au! FileType ruby-runner map <buffer> <D-r> ZZ
+endif
+
+
 " Define some stuff only when launched in this given project.
 if getcwd() == "/Users/henrik/Sites/auktion"
   " :Loc to open locales in splits in a tab.
