@@ -207,8 +207,9 @@ function! RubyRun()
 endfunction
 
 if has("autocmd") && has("gui_macvim")
-  au! FileType ruby map <buffer> <D-r> :call RubyRun()<CR>
-  au! FileType ruby-runner map <buffer> <D-r> ZZ
+  au FileType ruby map <buffer> <D-r> :call RubyRun()<CR>
+  au FileType ruby imap <buffer> <D-r> <Esc>:call RubyRun()<CR>
+  au FileType ruby-runner map <buffer> <D-r> ZZ
 endif
 
 
