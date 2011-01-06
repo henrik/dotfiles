@@ -129,6 +129,9 @@ noremap <Up> gk
 noremap <Down> gj
 noremap k gk
 noremap j gj
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
 
 " Bubble single lines
 nmap <C-Up> [e
