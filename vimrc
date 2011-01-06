@@ -196,10 +196,9 @@ function! RubyRun()
   1,2d
 " Fix Ctrl+M linefeeds.
   silent %! col -b
-  " TODO: Reuse split?
   " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
   set ft=ruby-runner
-  " Make a scratch (temporary) buffer.
+  " Make it a scratch (temporary) buffer.
   set buftype=nofile
   set bufhidden=hide
   setlocal noswapfile
