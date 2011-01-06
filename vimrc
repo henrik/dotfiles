@@ -195,7 +195,7 @@ function! RubyRun()
   new
   put=m
 " Fix Ctrl+M linefeeds.
-  %s///
+  silent %s///
 " Fix extraneous leading blank lines.
   1,2d
   " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
