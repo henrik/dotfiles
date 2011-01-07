@@ -74,6 +74,11 @@ function! s:CdIfDirectory(directory)
     wincmd p
     bd
   endif
+
+  if explicitDirectory
+    wincmd p
+  endif
+
 endfunction
 
 " NERDTree utility function
