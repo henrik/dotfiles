@@ -155,6 +155,11 @@ function! Remove(file)
   call s:UpdateNERDTree()
 endfunction
 
+function! Mkdir(file)
+  execute "!mkdir -p " . a:file
+  call s:UpdateNERDTree()
+endfunction
+
 function! Edit(file)
   if exists("b:NERDTreeRoot")
     wincmd p
@@ -178,3 +183,4 @@ call s:DefineCommand("cd", "ChangeDirectory")
 call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
+call s:DefineCommand("mkdir", "Mkdir")
