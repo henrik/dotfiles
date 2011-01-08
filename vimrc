@@ -176,6 +176,12 @@ nnoremap <leader><leader> :noh<CR>
 map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>" Reveal current file
 
+" Print highlighting scope at the current position.
+" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+map <leader>S :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 map <leader>T :CommandTFlush<CR>
 
 " Open URL from this line (OS X only).
