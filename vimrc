@@ -18,6 +18,21 @@ set modelines=10           " Use modeline overrides.
 set showcmd                " Show partially typed command sequences.
 set scrolloff=3            " Minimal number of lines to always show above/below the caret.
 
+" Statusline.
+" %< truncation point
+" \  space
+" %f relative path to file
+" %m modified flag [+] (modified), [-] (unmodifiable) or nothing
+" %r readonly flag [RO]
+" %y filetype [ruby]
+" %= split point for left and right justification
+" %-14.( %)  block of fixed width 14 characters
+" %l current line
+" %c current column
+" %V current virtual column as -{num} if different from %c
+" %P percentage through buffer
+set statusline=%<\ %f\ %m%r%y\ %=%-14.(%l,%c%V%)\ %P\ 
+
 set wrap  " Soft wrap.
 " Would use lbr for nicer linebreaks, but can't combine with listchars.
 
