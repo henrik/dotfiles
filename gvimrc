@@ -14,19 +14,22 @@ if has("gui_macvim")
   " Command-e for ConqueTerm
   map <D-e> :call StartTerm()<CR>
 
-  if !exists("*TabClose()")
-    function TabClose()
-      try
-        :tabclose
-      catch /E784/  " Can't close last tab.
-        :qa  " Close it anyway (quit all).
-      endtry
-    endfunction
-  endif
+  function! TabClose()
+    try
+      :tabclose
+    catch /E784/  " Can't close last tab.
+      :qa  " Close it anyway (quit all).
+    endtry
+  endfunction
 
   " Command+w closes tab, not file.
-  " This assumes you've remapped 'Close' to something else in the OS X Keyboard prefs.
+  macmenu &File.Close key=<nop>
   map <D-w> :call TabClose()<CR>
+
+  " Terminal.app shortcuts for tab navigation.
+  macmenu &File.New\ Tab key=<D-T>
+  macmenu Window.Select\ Next\ Tab key=<D-S-Right>
+  macmenu Window.Select\ Previous\ Tab key=<D-S-Left>
 
   " Accordion splits
   " http://www.reddit.com/r/vim/comments/eiolp/accordion_hopping_through_splits/
@@ -48,7 +51,7 @@ color blackboard
 set cursorline
 
 " ConqueTerm wrapper
-function StartTerm()
+function! StartTerm()
   execute 'ConqueTerm ' . $SHELL . ' --login'
   setlocal listchars=tab:\ \ 
 endfunction
@@ -58,7 +61,7 @@ autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 
 
 " If the parameter is a directory, cd into it
-function s:CdIfDirectory(directory)
+function! s:CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)
   let directory = explicitDirectory || empty(a:directory)
 
@@ -71,10 +74,15 @@ function s:CdIfDirectory(directory)
     wincmd p
     bd
   endif
+
+  if explicitDirectory
+    wincmd p
+  endif
+
 endfunction
 
 " NERDTree utility function
-function s:UpdateNERDTree(...)
+function! s:UpdateNERDTree(...)
   let stay = 0
 
   if(exists("a:1"))
@@ -98,11 +106,11 @@ function s:UpdateNERDTree(...)
 endfunction
 
 " Utility functions to create file commands
-function s:CommandCabbr(abbreviation, expansion)
+function! s:CommandCabbr(abbreviation, expansion)
   execute 'cabbrev ' . a:abbreviation . ' <c-r>=getcmdpos() == 1 && getcmdtype() == ":" ? "' . a:expansion . '" : "' . a:abbreviation . '"<CR>'
 endfunction
 
-function s:FileCommand(name, ...)
+function! s:FileCommand(name, ...)
   if exists("a:1")
     let funcname = a:1
   else
@@ -112,13 +120,13 @@ function s:FileCommand(name, ...)
   execute 'command -nargs=1 -complete=file ' . a:name . ' :call ' . funcname . '(<f-args>)'
 endfunction
 
-function s:DefineCommand(name, destination)
+function! s:DefineCommand(name, destination)
   call s:FileCommand(a:destination)
   call s:CommandCabbr(a:name, a:destination)
 endfunction
 
 " Public NERDTree-aware versions of builtin functions
-function ChangeDirectory(dir, ...)
+function! ChangeDirectory(dir, ...)
   execute "cd " . a:dir
   let stay = exists("a:1") ? a:1 : 1
 
@@ -129,12 +137,12 @@ function ChangeDirectory(dir, ...)
   endif
 endfunction
 
-function Touch(file)
+function! Touch(file)
   execute "!touch " . a:file
   call s:UpdateNERDTree()
 endfunction
 
-function Remove(file)
+function! Remove(file)
   let current_path = expand("%")
   let removed_path = fnamemodify(a:file, ":p")
 
@@ -147,7 +155,12 @@ function Remove(file)
   call s:UpdateNERDTree()
 endfunction
 
-function Edit(file)
+function! Mkdir(file)
+  execute "!mkdir -p " . a:file
+  call s:UpdateNERDTree()
+endfunction
+
+function! Edit(file)
   if exists("b:NERDTreeRoot")
     wincmd p
   endif
@@ -170,3 +183,4 @@ call s:DefineCommand("cd", "ChangeDirectory")
 call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
+call s:DefineCommand("mkdir", "Mkdir")

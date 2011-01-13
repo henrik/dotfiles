@@ -18,6 +18,21 @@ set modelines=10           " Use modeline overrides.
 set showcmd                " Show partially typed command sequences.
 set scrolloff=3            " Minimal number of lines to always show above/below the caret.
 
+" Statusline.
+" %< truncation point
+" \  space
+" %f relative path to file
+" %m modified flag [+] (modified), [-] (unmodifiable) or nothing
+" %r readonly flag [RO]
+" %y filetype [ruby]
+" %= split point for left and right justification
+" %-14.( %)  block of fixed width 14 characters
+" %l current line
+" %c current column
+" %V current virtual column as -{num} if different from %c
+" %P percentage through buffer
+set statusline=%<\ %f\ %m%r%y\ %=%-14.(%l,%c%V%)\ %P\ 
+
 set wrap  " Soft wrap.
 " Would use lbr for nicer linebreaks, but can't combine with listchars.
 
@@ -57,20 +72,16 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-if !exists("*s:setupWrapping")
-  function s:setupWrapping()
-    set wrap
-    set wm=2
-    set textwidth=72
-  endfunction
-endif
+function! s:setupWrapping()
+  set wrap
+  set wm=2
+  set textwidth=72
+endfunction
 
-if !exists("*s:setupMarkup")
-  function s:setupMarkup()
-    "call s:setupWrapping()
-    map <buffer> <Leader>p :Mm <CR>
-  endfunction
-endif
+function! s:setupMarkup()
+  "call s:setupWrapping()
+  map <buffer> <Leader>p :Mm <CR>
+endfunction
 
 " OS X only due to use of `open`. Adapted from
 " http://vim.wikia.com/wiki/Open_a_web-browser_with_the_URL_in_the_current_line
@@ -92,11 +103,9 @@ ruby << EOF
   end
 EOF
 
-if !exists("*OpenURI")
-  function! OpenURI()
-    :ruby open_uri
-  endfunction
-endif
+function! OpenURI()
+  :ruby open_uri
+endfunction
 
 if has("autocmd")
   " make and python use real tabs
@@ -135,14 +144,22 @@ noremap <Up> gk
 noremap <Down> gj
 noremap k gk
 noremap j gj
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+" Save a file as root.
+cabbrev w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
 
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
-
 vmap <C-Down> ]egv
+
+" Tab/shift-tab to indent/outdent in visual mode. 
+vmap <Tab> >gv
+vmap <S-Tab> <gv
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -159,6 +176,12 @@ nnoremap <leader><leader> :noh<CR>
 map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>" Reveal current file
 
+" Print highlighting scope at the current position.
+" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+map <leader>S :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 map <leader>T :CommandTFlush<CR>
 
 " Open URL from this line (OS X only).
@@ -166,8 +189,10 @@ map <leader>u :call OpenURI()<CR>
 
 " Ack/Quickfix windows
 map <leader>q :cclose<CR>
-map - :cprev<CR> :norm! zz<CR>" Previous fix and center line.
-map + :cnext<CR> :norm! zz<CR>" Next fix and center line.
+" Previous fix and center line.
+map - :cprev<CR> zz
+" Next fix and center line.
+map + :cnext<CR> zz
 
 " Opens an edit command with the path of the currently edited file filled in
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
@@ -182,3 +207,43 @@ nmap <leader><down>   :rightbelow sp<CR>
 " Get rid of all NERDCommenter mappings except one.
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
+
+
+" <C-r> to trigger and also to close the scratch buffer.
+" TODO: <LocalLeader>r? Reuse split? Pluginize? Handle gets if possible?
+
+function! RubyRun()
+  redir => m
+  silent w ! ruby
+  redir END
+  new
+  put=m
+" Fix Ctrl+M linefeeds.
+  silent %s///
+" Fix extraneous leading blank lines.
+  1,2d
+  " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
+  set ft=ruby-runner
+  " Make it a scratch (temporary) buffer.
+  set buftype=nofile
+  set bufhidden=hide
+  setlocal noswapfile
+endfunction
+
+if has("autocmd") && has("gui_macvim")
+  au FileType ruby map <buffer> <D-r> :call RubyRun()<CR>
+  au FileType ruby imap <buffer> <D-r> <Esc>:call RubyRun()<CR>
+  au FileType ruby-runner map <buffer> <D-r> ZZ
+endif
+
+
+" Define some stuff only when launched in this given project.
+if getcwd() == "/Users/henrik/Sites/auktion"
+  " :Loc to open locales in splits in a tab.
+  function! EditLocales()
+    tabe config/locales/fi.yml
+    vsp  config/locales/en.yml
+    vsp  config/locales/sv.yml
+  endfunction
+  command Loc call EditLocales()
+endif

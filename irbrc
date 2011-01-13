@@ -9,10 +9,17 @@ begin
   require 'wirble'
   Wirble.init
   Wirble.colorize
-rescue LoadError => err
-  warn "Couldn't load Wirble: #{err}"
+rescue LoadError => e
+  warn "Couldn't load Wirble: #{e}"
 end
 
+# http://vimcasts.org/episodes/running-vim-within-irb/
+# Type "vim" or "mvim" in irb to edit in Vim.
+begin
+  require 'interactive_editor'
+rescue LoadError => e
+  warn "Couldn't load interactive_editor: #{e}"
+end
 
 # Quick benchmarking
 # http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123834#123834
