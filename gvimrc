@@ -37,6 +37,11 @@ if has("gui_macvim")
   map <D-Up> <c-w>k<c-w>_
   map <D-Down> <c-w>j<c-w>_
 
+  set macmeta  " <M> binds to Option.
+  " Go to previous/next quickfix file. Also see .vimrc.
+  map <M--> :cpfile<CR> zz
+  map <M-+> :cnfile<CR> zz
+
 endif
 
 " Start without the toolbar

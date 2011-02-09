@@ -193,6 +193,7 @@ map <leader>q :cclose<CR>
 map - :cprev<CR> zz
 " Next fix and center line.
 map + :cnext<CR> zz
+" See .gvimrc for cpf/cnf.
 
 " Opens an edit command with the path of the currently edited file filled in
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
