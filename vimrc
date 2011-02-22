@@ -240,6 +240,15 @@ if has("autocmd") && has("gui_macvim")
   au FileType ruby-runner map <buffer> <D-r> ZZ
 endif
 
+" Quicker filetype setting:
+"   :F html
+" instead of
+"   :set ft=html
+" Can tab-complete filetype.
+command! -nargs=1 -complete=filetype F set filetype=<args>
+
+" Even quicker setting often-used filetypes.
+command! FR set filetype=ruby
 
 " Define some stuff only when launched in this given project.
 if getcwd() == "/Users/henrik/Sites/auktion"
