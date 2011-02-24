@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+#
+# Git commit-msg hook. If your branch name is in the form "t123", automatically
+# adds "Refs #123." to commit messages unless they mention "#123" already.
+# Include "#noref" in the message to avoid this behavior for the current commit.
+# The "#noref" will be stripped from the commit message.
+#
+# By Henrik Nyh <http://henrik.nyh.se> 2009-09-10 under the MIT License.
+#
+#
+# Install:
+#
+# cd your_project
+# curl http://gist.github.com/raw/184711/377c59a5d609df46984298c1b3fb72371befd4c6/commit-msg -o .git/hooks/commit-msg && chmod u+x .git/hooks/commit-msg
+#
+# Or store it centrally and symlink in your projects:
+#
+# curl --create-dirs http://gist.github.com/raw/184711/377c59a5d609df46984298c1b3fb72371befd4c6/commit-msg -o ~/.githooks/commit-msg && chmod u+x ~/.githooks/commit-msg
+# cd your_project
+# ln -s ~/.githooks/commit-msg .git/hooks
+
+
+branchname = `git branch --no-color 2> /dev/null`[/^\* (.+)/, 1]
+ticket_number = branchname.to_s[/\At(\d+)/, 1]
+
+exit unless ticket_number
+
+message_file = ARGV[0]
+message = File.read(message_file)
+
+exit if message.include?("##{ticket_number}")
+
+message.strip!
+
+if message.include?("#noref")
+  message.sub!(/^\s*#noref\s*|\s*#noref/, '')
+else
+  message.sub!(/([^[:punct:]])\z/, "\\1.")  # Add trailing period if missing.
+  message = [message, "Refs ##{ticket_number}."].join(" ")
+end
+
+File.open(message_file, 'w') {|f| f.write message }
