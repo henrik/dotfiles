@@ -36,10 +36,6 @@ alias cu='script/cucumber features -b -s -f progress'
 alias cuf='rake features:focus'
 alias mig='rake db:migrate'
 
-# JRuby
-alias jake="jruby --headless -S rake"
-alias jem="sudo jruby --headless -S gem"
-
 # Git
 alias gl="git log"
 alias gs="git status"
