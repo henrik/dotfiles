@@ -29,8 +29,8 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 
 # Ruby on Rails
-alias sc="script/console"
-alias ss="script/server"
+alias sc="[ -f script/console ] && script/console || rails console"
+alias ss="[ -f script/server ] && script/server || rails server"
 alias at="script/autospec -f -c"
 alias cu='script/cucumber features -b -s -f progress'
 alias cuf='rake features:focus'
