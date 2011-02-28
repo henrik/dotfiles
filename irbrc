@@ -55,7 +55,7 @@ end
 # 12:23:15 >> 
 # DEV 12:23:15 >> 
 IRB.conf[:PROMPT][:SIMPLE].merge!(:PROMPT_I => lambda {
-  "#{[ rails_console? && Rails.env.first(3).upcase, Time.now.strftime("%H:%M:%S") ].compact.join(' ')} >> "
+  "#{[ (rails_console? ? Rails.env.first(3).upcase : nil), Time.now.strftime("%H:%M:%S") ].compact.join(' ')} >> "
 })
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
