@@ -29,16 +29,12 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 
 # Ruby on Rails
-alias sc="script/console"
-alias ss="script/server"
+alias sc="[ -f script/console ] && script/console || rails console"
+alias ss="[ -f script/server ] && script/server || rails server"
 alias at="script/autospec -f -c"
 alias cu='script/cucumber features -b -s -f progress'
 alias cuf='rake features:focus'
 alias mig='rake db:migrate'
-
-# JRuby
-alias jake="jruby --headless -S rake"
-alias jem="sudo jruby --headless -S gem"
 
 # Git
 alias gl="git log"
@@ -89,6 +85,3 @@ alias stagedb='OLD=true BRANCH=master cap staging deploy:import_db'
 alias cpu2='pushd ~/Sites/auktion; rake testbot:runner:set_cpu_cores[2]; popd'
 alias cpu1='pushd ~/Sites/auktion; rake testbot:runner:set_cpu_cores[1]; popd'
 alias cpu0='pushd ~/Sites/auktion; rake testbot:runner:stop; popd'
-
-# LiveReload
-alias lr="nohup /usr/bin/rake livereload &> /dev/null &"

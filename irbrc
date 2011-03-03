@@ -46,14 +46,19 @@ class IRB::Irb
   end
 end
 
+def rails_console?
+  ($0 == 'irb' && ENV['RAILS_ENV']) ||  # Rails 2.
+  $0 == 'script/rails'  # Rails 3.
+end
+
 # E.g.:
 # 12:23:15 >> 
 # DEV 12:23:15 >> 
 IRB.conf[:PROMPT][:SIMPLE].merge!(:PROMPT_I => lambda {
-  "#{[ ENV['RAILS_ENV'] && Rails.env.first(3).upcase, Time.now.strftime("%H:%M:%S") ].compact.join(' ')} >> "
+  "#{[ (rails_console? ? Rails.env.first(3).upcase : nil), Time.now.strftime("%H:%M:%S") ].compact.join(' ')} >> "
 })
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 
 # Load .railsrc for Rails.
-load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV'] 
+load File.dirname(__FILE__) + '/.railsrc' if rails_console?

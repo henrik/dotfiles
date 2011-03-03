@@ -240,6 +240,20 @@ if has("autocmd") && has("gui_macvim")
   au FileType ruby-runner map <buffer> <D-r> ZZ
 endif
 
+" Quicker filetype setting:
+"   :F html
+" instead of
+"   :set ft=html
+" Can tab-complete filetype.
+command! -nargs=1 -complete=filetype F set filetype=<args>
+
+" Even quicker setting often-used filetypes.
+command! FR set filetype=ruby
+
+" Strip trailing whitespace (including that in blank lines).
+" http://vim.wikia.com/wiki/Remove_unwanted_spaces
+command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
+
 
 " Define some stuff only when launched in this given project.
 if getcwd() == "/Users/henrik/Sites/auktion"
