@@ -258,13 +258,16 @@ command! FR set filetype=ruby
 command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
 
-" Define some stuff only when launched in this given project.
-if getcwd() == "/Users/henrik/Sites/auktion"
-  " :Loc to open locales in splits in a tab.
-  function! EditLocales()
+" :Loc to open locales in splits in a tab.
+function! EditLocales()
+  " Special case for this particular project.
+  if getcwd() == "/Users/henrik/Sites/auktion"
     tabe config/locales/fi.yml
     vsp  config/locales/en.yml
     vsp  config/locales/sv.yml
-  endfunction
-  command Loc call EditLocales()
-endif
+  else
+    tabe
+    args config/locales/*.yml | vertical all
+  endif
+endfunction
+command Loc call EditLocales()
