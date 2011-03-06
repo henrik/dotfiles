@@ -217,14 +217,16 @@ map <leader>c <Plug>NERDCommenterToggle
 " TODO: <LocalLeader>r? Reuse split? Pluginize? Handle gets if possible?
 
 function! RubyRun()
+  cd %:p:h  " Use file dir as pwd
   redir => m
   silent w ! ruby
   redir END
+  cd -  " Back to old dir
   new
   put=m
-" Fix Ctrl+M linefeeds.
-  silent %s///
-" Fix extraneous leading blank lines.
+  " Fix Ctrl+M linefeeds.
+  silent! %s/\r//
+  " Fix extraneous leading blank lines.
   1,2d
   " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
   set ft=ruby-runner
@@ -238,6 +240,7 @@ if has("autocmd") && has("gui_macvim")
   au FileType ruby map <buffer> <D-r> :call RubyRun()<CR>
   au FileType ruby imap <buffer> <D-r> <Esc>:call RubyRun()<CR>
   au FileType ruby-runner map <buffer> <D-r> ZZ
+  au FileType ruby-runner map <buffer> q ZZ
 endif
 
 " Quicker filetype setting:
