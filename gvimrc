@@ -1,5 +1,5 @@
-
 if has("gui_macvim")
+
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
 
@@ -31,12 +31,6 @@ if has("gui_macvim")
   macmenu Window.Select\ Next\ Tab key=<D-S-Right>
   macmenu Window.Select\ Previous\ Tab key=<D-S-Left>
 
-  " Accordion splits
-  " http://www.reddit.com/r/vim/comments/eiolp/accordion_hopping_through_splits/
-  set winminheight=0
-  map <D-Up> <c-w>k<c-w>_
-  map <D-Down> <c-w>j<c-w>_
-
   " Go to previous/next quickfix file. Also see .vimrc.
   map <C-D--> :cpfile<CR> zz
   map <C-D-+> :cnfile<CR> zz
@@ -49,10 +43,7 @@ set guioptions-=T
 set guifont=Monaco:h11
 
 " Default gui color scheme
-color blackboard 
-
-" Highlight the current line
-set cursorline
+color blackboard
 
 " ConqueTerm wrapper
 function! StartTerm()
