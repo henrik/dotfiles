@@ -75,15 +75,8 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-function! s:setupWrapping()
-  set wrap
-  set wm=2
-  set textwidth=72
-endfunction
-
 function! s:setupMarkup()
-  "call s:setupWrapping()
-  map <buffer> <Leader>p :Mm <CR>
+  map <buffer> <Leader>p :Mm<CR>
 endfunction
 
 " OS X only due to use of `open`. Adapted from
@@ -107,27 +100,24 @@ ruby << EOF
 EOF
 
 function! OpenURI()
-  :ruby open_uri
+  ruby open_uri
 endfunction
 
 if has("autocmd")
   " make and python use real tabs
-  au FileType make                                     set noexpandtab
-  au FileType python                                   set noexpandtab
+  au FileType make    set noexpandtab
+  au FileType python  set noexpandtab
 
-  " Thorfile, Rakefile and Gemfile are Ruby
-  au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru}    set ft=ruby
+  " These files are also Ruby.
+  au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru}  set ft=ruby
 
   " md, markdown, and mk are markdown and define buffer-local preview
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-
-  " Uncomment to have txt files hard-wrap automatically.
-  "au BufRead,BufNewFile *.txt call s:setupWrapping()
 endif
 
 " Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
 " Command-S is a bad habit when using terminal Vim.
-" We overload a command, but use 'cc' instead anyway.
+" We overload a command, but use 'cc' for that anyway.
 noremap S :w<CR>
 
 " Make Y consistent with C and D - yank to end of line, not full line.
@@ -153,14 +143,14 @@ inoremap <Up> <C-o>gk
 " Save a file as root.
 cabbrev w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
 
-" Bubble single lines
+" Move single lines.
 nmap <C-Up> [e
 nmap <C-Down> ]e
-" Bubble multiple lines
+" Move multiple lines.
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-" Tab/shift-tab to indent/outdent in visual mode. 
+" Tab/shift-tab to indent/outdent in visual mode.
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
@@ -272,4 +262,4 @@ function! EditLocales()
     args config/locales/*.yml | vertical all
   endif
 endfunction
-command Loc call EditLocales()
+command! Loc call EditLocales()
