@@ -79,7 +79,6 @@ alias akdb='mysqladmin -u root -f drop auktion_development create auktion_develo
 alias akdbg='scp www-data@sdb:/var/data/auktion/auction_clean.sql ~/Downloads/ && akdb'
 # Use with autologin Greasemonkey script: http://gist.github.com/raw/487186/ccf2c203741c1e39eb45416d02bc58b2728427fc/basefarm_auto.user.js
 alias vpn='open -a Firefox "https://ssl-vpn.sth.basefarm.net/ssl"'
-alias stage='OLD=true BRANCH=master cap staging deploy:migrations'
 alias stagedb='OLD=true BRANCH=master cap staging deploy:import_db'
 
 # Testbot
