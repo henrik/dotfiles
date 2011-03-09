@@ -131,6 +131,10 @@ nnoremap Y y$
 " Otherwise Q enters the twilight zone of the 'Ex' mode.
 noremap Q gq
 
+" Map gp to select the last pasted text
+" http://vim.wikia.com/wiki/Selecting_your_pasted_text
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
