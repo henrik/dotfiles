@@ -212,7 +212,7 @@ map <leader>c <Plug>NERDCommenterToggle
 
 
 " <C-r> to trigger and also to close the scratch buffer.
-" TODO: <LocalLeader>r? Reuse split? Pluginize? Handle gets if possible?
+" TODO: <LocalLeader>r? Pluginize? Handle gets if possible?
 
 function! RubyRun()
   cd %:p:h  " Use file dir as pwd
@@ -220,7 +220,17 @@ function! RubyRun()
   silent w ! ruby
   redir END
   cd -  " Back to old dir
-  new
+
+  " Reuse or create new buffer. Based on code in Decho
+  " http://www.vim.org/scripts/script.php?script_id=120
+  if exists("t:rrbufnr") && bufwinnr(t:rrbufnr) > 0
+    exe "keepjumps ".bufwinnr(t:rrbufnr)."wincmd W"
+    exe 'normal ggdG'
+  else
+    exe "keepjumps silent! new"
+    let t:rrbufnr=bufnr('%')
+  end
+
   put=m
   " Fix Ctrl+M linefeeds.
   silent! %s/\r//
@@ -229,7 +239,8 @@ function! RubyRun()
   " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
   set ft=ruby-runner
   " Make it a scratch (temporary) buffer.
-  setlocal buftype=nofile bufhidden=hide noswapfile
+  setlocal buftype=nofile bufhidden=wipe noswapfile
+  " Store the buffer number so we can reuse it.
 endfunction
 
 if has("autocmd") && has("gui_macvim")
