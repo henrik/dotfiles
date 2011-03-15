@@ -211,7 +211,9 @@ let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
 
 
-" <C-r> to trigger and also to close the scratch buffer.
+" <C-r> to run the Ruby code from the current buffer into an output buffer.
+" <C-r> in the output buffer to close it again (or q, or ZZ, or :q etc).
+" Or use <C-R> from your source buffer to run but keep focus in that buffer.
 " TODO: <LocalLeader>r? Pluginize? Handle gets if possible?
 
 function! RubyRun()
@@ -245,7 +247,11 @@ endfunction
 
 if has("autocmd") && has("gui_macvim")
   au FileType ruby map <buffer> <D-r> :call RubyRun()<CR>
-  au FileType ruby imap <buffer> <D-r> <Esc>:call RubyRun()<CR>
+  au FileType ruby imap <buffer> <D-r> <Esc><D-r>
+
+  au FileType ruby map <buffer> <D-R> :call RubyRun()<CR> <C-w>w
+  au FileType ruby imap <buffer> <D-R> <Esc><D-R>a
+
   au FileType ruby-runner map <buffer> <D-r> ZZ
   au FileType ruby-runner map <buffer> q ZZ
 endif
