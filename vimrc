@@ -229,9 +229,7 @@ function! RubyRun()
   " Set a filetype so we can define a 'close' mapping with the 'run' mapping.
   set ft=ruby-runner
   " Make it a scratch (temporary) buffer.
-  set buftype=nofile
-  set bufhidden=hide
-  setlocal noswapfile
+  setlocal buftype=nofile bufhidden=hide noswapfile
 endfunction
 
 if has("autocmd") && has("gui_macvim")
