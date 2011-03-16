@@ -166,6 +166,9 @@ vmap <S-Tab> <gv
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+" 'Edit anyway' if swap file exists.
+:au SwapExists * let v:swapchoice = 'e'
+
 
 " Leader
 
