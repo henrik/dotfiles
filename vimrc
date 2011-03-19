@@ -213,9 +213,6 @@ nmap <leader><down>   :rightbelow sp<CR>
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
 
-" Ruby Runner. See that file.
-" TODO: Make a plugin instead.
-so ~/.vim/ruby_runner
 
 " Quicker filetype setting:
 "   :F html

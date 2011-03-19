@@ -82,3 +82,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-ruby-runner"]
+	path = vim/bundle/vim-ruby-runner
+	url = git@github.com:henrik/vim-ruby-runner.git
