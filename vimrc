@@ -79,10 +79,6 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-function! s:setupMarkup()
-  map <buffer> <Leader>p :Mm<CR>
-endfunction
-
 " OS X only due to use of `open`. Adapted from
 " http://vim.wikia.com/wiki/Open_a_web-browser_with_the_URL_in_the_current_line
 " Uses John Gruber's URL regexp: http://daringfireball.net/2010/07/improved_regex_for_matching_urls
@@ -115,9 +111,13 @@ if has("autocmd")
   " These files are also Ruby.
   au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru}  set ft=ruby
 
-  " md, markdown, and mk are markdown and define buffer-local preview
-  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+  " These files are also Markdown.
+  au BufRead,BufNewFile *.{md,mdown,mkd,mkdn} set ft=markdown
+
+  " <D-r> to render Markdown in browser.
+  au FileType markdown map <D-r> :Mm<CR>
 endif
+
 
 " Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
 " Command-S is a bad habit when using terminal Vim.
