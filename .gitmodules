@@ -4,18 +4,21 @@
 [submodule "vim/bundle/vim-indent-object"]
 	path = vim/bundle/vim-indent-object
 	url = git://github.com/michaeljsmith/vim-indent-object.git
+	ignore = untracked
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/textile.vim"]
 	path = vim/bundle/textile.vim
 	url = git://github.com/timcharper/textile.vim.git
+	ignore = untracked
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/bundle/vim-git"]
 	path = vim/bundle/vim-git
 	url = git://github.com/tpope/vim-git.git
+	ignore = untracked
 [submodule "vim/bundle/vim-cucumber"]
 	path = vim/bundle/vim-cucumber
 	url = git://github.com/tpope/vim-cucumber.git
@@ -43,6 +46,7 @@
 [submodule "vim/bundle/zoomWin"]
 	path = vim/bundle/zoomWin
 	url = git://github.com/vim-scripts/ZoomWin.git
+	ignore = untracked
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
@@ -52,6 +56,7 @@
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+	ignore = untracked
 [submodule "vim/bundle/vim-rspec"]
 	path = vim/bundle/vim-rspec
 	url = git://github.com/taq/vim-rspec.git
@@ -61,12 +66,15 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+	ignore = untracked
 [submodule "vim/bundle/vim-conque"]
 	path = vim/bundle/vim-conque
 	url = git://github.com/rson/vim-conque.git
+	ignore = untracked
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git@github.com:henrik/snipmate.vim.git
+	ignore = untracked
 [submodule "vim/bundle/vim-ruby-sinatra"]
 	path = vim/bundle/vim-ruby-sinatra
 	url = git://github.com/hallison/vim-ruby-sinatra.git
@@ -82,6 +90,7 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+	ignore = untracked
 [submodule "vim/bundle/vim-ruby-runner"]
 	path = vim/bundle/vim-ruby-runner
 	url = git@github.com:henrik/vim-ruby-runner.git
