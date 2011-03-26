@@ -115,8 +115,11 @@ if has("autocmd")
   au BufRead,BufNewFile *.{md,mdown,mkd,mkdn} set ft=markdown
 
   " <D-r> to render Markdown in browser.
-  au FileType markdown map <D-r> :Mm<CR>
+  au FileType markdown map <buffer> <D-r> :Mm<CR>
 endif
+
+" Close help windows with just q.
+au FileType HELP map <buffer> q :q<CR>
 
 
 " Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
@@ -167,7 +170,7 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
 " 'Edit anyway' if swap file exists.
-:au SwapExists * let v:swapchoice = 'e'
+au SwapExists * let v:swapchoice = 'e'
 
 
 " Leader
