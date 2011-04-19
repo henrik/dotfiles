@@ -11,7 +11,7 @@
 [branch "master"]
 	merge = master
 [alias]
-	gay = shortlog -s -n
+	who = shortlog -s -n --no-merges
 	standup = shortlog --since=yesterday
 	uncommit = reset --soft HEAD^
 [github]
