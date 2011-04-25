@@ -172,6 +172,9 @@ set directory=~/.vim/backup
 " 'Edit anyway' if swap file exists.
 au SwapExists * let v:swapchoice = 'e'
 
+" Unbreak 'crontab -e' with Vim: http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
+au FileType crontab set nobackup nowritebackup
+
 
 " Leader
 
