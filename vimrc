@@ -134,6 +134,11 @@ nnoremap Y y$
 " Otherwise Q enters the twilight zone of the 'Ex' mode.
 noremap Q gq
 
+nnoremap / /\v
+vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
+
 " Map gp to select the last pasted text
 " http://vim.wikia.com/wiki/Selecting_your_pasted_text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
