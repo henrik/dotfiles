@@ -118,6 +118,7 @@ if has("autocmd")
   au FileType markdown map <buffer> <D-r> :Mm<CR>
 
   au FileType coffee map <buffer> <D-r> :CoffeeRun<CR>
+  au FileType coffee map <buffer> <D-R> :CoffeeCompile<CR>
 endif
 
 " Close help windows with just q.
