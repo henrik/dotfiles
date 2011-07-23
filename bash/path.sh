@@ -26,3 +26,6 @@ fi
 
 # To get the GUI-less Vim from MacVim:
 # ln -s ~/.homebrew/bin/mvim ~/.homebrew/bin/vim
+
+# node.js
+export NODE_PATH=~/.homebrew/lib/node
