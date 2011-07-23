@@ -116,6 +116,8 @@ if has("autocmd")
 
   " <D-r> to render Markdown in browser.
   au FileType markdown map <buffer> <D-r> :Mm<CR>
+
+  au FileType coffee map <buffer> <D-r> :CoffeeRun<CR>
 endif
 
 " Close help windows with just q.
