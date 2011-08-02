@@ -3,7 +3,7 @@
 # http://tammersaleh.com/posts/a-better-rvm-bash-prompt
 # https://rvm.beginrescueend.com/workflow/prompt/
 
-# 17:39 henrik@Nyx ~/.dotfiles[master*]$ 
+# 17:39:15 henrik@Nyx ~/project[ree-1.8.7@project master*]$ 
 
 # MacPorts git bash completion.
 # Required for the prompt. Also provides autocompletion of git commands and branch names.
