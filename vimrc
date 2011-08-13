@@ -180,6 +180,10 @@ set directory=~/.vim/backup
 " 'Edit anyway' if swap file exists.
 au SwapExists * let v:swapchoice = 'e'
 
+" Reload file without prompting if it has changed on disk.
+" Will still prompt if there is unsaved text in the buffer.
+set autoread
+
 " Unbreak 'crontab -e' with Vim: http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
 au FileType crontab set nobackup nowritebackup
 
