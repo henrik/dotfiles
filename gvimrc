@@ -16,11 +16,8 @@ if has("gui_macvim")
   map <D-e> :call StartTerm()<CR>
 
   function! TabClose()
-    try
-      :tabclose
-    catch /E784/  " Can't close last tab.
-      :qa  " Close it anyway (quit all).
-    endtry
+    " Delete all buffers in tabpage.
+    :windo bd
   endfunction
 
   " Command+w closes tab, not file.
