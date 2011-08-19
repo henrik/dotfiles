@@ -2,8 +2,13 @@
 #
 # Git commit-msg hook. If your branch name is in the form "t123", automatically
 # adds "Refs #123." to commit messages unless they mention "#123" already.
-# Include "#noref" in the message to avoid this behavior for the current commit.
-# The "#noref" will be stripped from the commit message.
+# Include "#close" or "#finish" to add "Closes #123."
+#
+# For Pivotal Tracker, branch names like "s123" adds "[#123]".
+# Include "#close" or "#finish" to add "[Finishes #123]".
+#
+# If you include "#noref" in the commit message, nothing will be added to
+# the commit message, and the "#noref" itself will be stripped.
 #
 # By Henrik Nyh <http://henrik.nyh.se> 2009-09-10 under the MIT License.
 #
@@ -11,32 +16,58 @@
 # Install:
 #
 # cd your_project
-# curl http://gist.github.com/raw/184711/377c59a5d609df46984298c1b3fb72371befd4c6/commit-msg -o .git/hooks/commit-msg && chmod u+x .git/hooks/commit-msg
+# curl http://gist.github.com/raw/184711/b8ce3b0192c74fc33a9b796907a5d0bb46087619/commit-msg -o .git/hooks/commit-msg && chmod u+x .git/hooks/commit-msg
 #
 # Or store it centrally and symlink in your projects:
 #
-# curl --create-dirs http://gist.github.com/raw/184711/377c59a5d609df46984298c1b3fb72371befd4c6/commit-msg -o ~/.githooks/commit-msg && chmod u+x ~/.githooks/commit-msg
+# curl --create-dirs http://gist.github.com/raw/184711/b8ce3b0192c74fc33a9b796907a5d0bb46087619/commit-msg -o ~/.githooks/commit-msg && chmod u+x ~/.githooks/commit-msg
 # cd your_project
 # ln -s ~/.githooks/commit-msg .git/hooks
 
+PREFIXES = {
+  # RedMine, Trac etc.
+  "t" => { :reference => "Refs #%s.", :finish => "Closes #%s." },
+  # Pivotal Tracker.
+  "s" => { :reference => "[#%s]",     :finish => "[Finishes #%s]" },
+}
 
-branchname = `git branch --no-color 2> /dev/null`[/^\* (.+)/, 1]
-ticket_number = branchname.to_s[/\At(\d+)/, 1]
+FLAGS = [
+  NOREF  = "noref",
+  CLOSE  = "close",
+  FINISH = "finish"
+]
+CLOSING_FLAGS = [ CLOSE, FINISH ]
 
-exit unless ticket_number
 
-message_file = ARGV[0]
-message = File.read(message_file)
+branchname = `git branch --no-color 2> /dev/null`[/^\* (.+)/, 1].to_s
 
-exit if message.include?("##{ticket_number}")
 
-message.strip!
-
-if message.include?("#noref")
-  message.sub!(/^\s*#noref\s*|\s*#noref/, '')
+if m = branchname.match(/\A(#{Regexp.union(*PREFIXES.keys)})-?(\d+)/)
+  prefix, ticket_number = m.captures
+  finish    = PREFIXES[prefix][:finish] % ticket_number
+  reference = PREFIXES[prefix][:reference] % ticket_number
 else
-  message.sub!(/([^[:punct:]])\z/, "\\1.")  # Add trailing period if missing.
-  message = [message, "Refs ##{ticket_number}."].join(" ")
+  exit
 end
 
+message_file = ARGV[0]
+message = File.read(message_file).strip
+exit if message.include?("##{ticket_number}")
+
+
+# Determine if any of the flags are included. Make a note of which and then remove it.
+message.sub!(/(?:^|\s)#(#{Regexp.union(*FLAGS)})\b/, '')
+flag = $1
+
+message =
+  case flag
+  when NOREF
+    message
+  when *CLOSING_FLAGS
+    [ message, finish ].join(" ")
+  else
+    [ message, reference ].join(" ")
+  end
+
 File.open(message_file, 'w') {|f| f.write message }
+
