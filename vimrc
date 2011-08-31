@@ -256,14 +256,7 @@ command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
 " :Loc to open locales in splits in a tab.
 function! EditLocales()
-  " Special case for this particular project.
-  if getcwd() == "/Users/henrik/Sites/auktion"
-    tabe config/locales/fi.yml
-    vsp  config/locales/en.yml
-    vsp  config/locales/sv.yml
-  else
-    tabe
-    args config/locales/*.yml | vertical all
-  endif
+  tabe
+  args config/locales/*.yml | vertical all
 endfunction
 command! Loc call EditLocales()
