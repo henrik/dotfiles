@@ -1,7 +1,12 @@
 #!/usr/bin/env ruby
 
 require "rubygems"
-require "ftools"
+
+# Require ftools in Ruby 1.8.
+begin
+  require "ftools"
+rescue LoadError
+end
 
 # http://pablotron.org/software/wirble/
 # Colorizes output, adds history etc.
@@ -11,14 +16,6 @@ begin
   Wirble.colorize
 rescue LoadError => e
   warn "Couldn't load Wirble: #{e}"
-end
-
-# http://vimcasts.org/episodes/running-vim-within-irb/
-# Type "vim" or "mvim" in irb to edit in Vim.
-begin
-  require 'interactive_editor'
-rescue LoadError => e
-  warn "Couldn't load interactive_editor: #{e}"
 end
 
 # Quick benchmarking
