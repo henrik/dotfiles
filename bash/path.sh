@@ -29,3 +29,6 @@ fi
 
 # node.js
 export NODE_PATH=~/.homebrew/lib/node
+
+# Barsoom
+[[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
