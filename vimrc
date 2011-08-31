@@ -64,6 +64,8 @@ set backspace=indent,eol,start  " Allow backspacing over everything in insert mo
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
+" Disable menu
+let g:NERDMenuMode=0
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
@@ -72,6 +74,10 @@ let g:CommandTMatchWindowAtTop=1
 " Syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
+
+" Disable align.vim menu
+let g:DrChipTopLvlMenu=""
+
 
 " Remember last location in file, but not for commit messages.
 if has("autocmd")
