@@ -13,6 +13,7 @@
 [alias]
 	who = shortlog -s -n --no-merges
 	standup = shortlog --since=yesterday
+	today = shortlog --since=midnight
 	uncommit = reset --soft HEAD^
 [github]
 	user = henrik
