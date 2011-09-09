@@ -13,7 +13,7 @@ export PATH=/var/lib/gems/1.8/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 
 # Jekyll (use dev version, not gem)
-export PATH=~/Code/jekyll/bin:$PATH
+export PATH=~/Projects/jekyll/bin:$PATH
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
