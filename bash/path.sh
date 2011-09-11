@@ -1,3 +1,6 @@
+# So homebrew /usr/local/bin is preferrable to /usr/bin.
+export PATH=/usr/local/bin:$PATH
+
 # Ubuntu Ruby gem binaries
 export PATH=/var/lib/gems/1.8/bin:$PATH
 
