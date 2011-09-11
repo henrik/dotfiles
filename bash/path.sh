@@ -1,11 +1,3 @@
-# MacPorts
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
-
-# Homebrew
-export PATH=~/.homebrew/bin:~/.homebrew/sbin:$PATH
-export MANPATH=~/.homebrew/man:$MANPATH
-
 # Ubuntu Ruby gem binaries
 export PATH=/var/lib/gems/1.8/bin:$PATH
 
@@ -25,10 +17,7 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 # To get the GUI-less Vim from MacVim:
-# ln -s ~/.homebrew/bin/mvim ~/.homebrew/bin/vim
-
-# node.js
-export NODE_PATH=~/.homebrew/lib/node
+# ln -s /usr/local/bin/mvim ~/usr/local/bin/vim
 
 # Barsoom
 [[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
