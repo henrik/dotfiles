@@ -32,6 +32,7 @@ alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundl
 alias ss="[ -f script/server ] && script/server || rails server"
 alias mig='rake db:migrate'
 alias rsp="bundle exec specjour"
+alias f="foreman start"
 
 # Git
 alias gl="git log"
