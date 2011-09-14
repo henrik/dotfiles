@@ -115,7 +115,7 @@ if has("autocmd")
   au FileType python  set noexpandtab
 
   " These files are also Ruby.
-  au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru}  set ft=ruby
+  au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,Vagrantfile,Guardfile,config.ru}  set ft=ruby
 
   " These files are also Markdown.
   au BufRead,BufNewFile *.{md,mdown,mkd,mkdn} set ft=markdown
