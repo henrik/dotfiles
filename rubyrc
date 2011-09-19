@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+# Shared code for irbrc/pryrc.
+
+module RubyRC
+  extend self
+
+  # Pre-defined hash and array to experiment with.
+  # http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123847#123847
+  HASH = { :one => 1, :two => 2, :three => 3, :four => 4, :five => 5 } unless defined?(HASH)
+  ARRAY = %w[one two three four five] unless defined?(ARRAY)
+
+  # E.g.:
+  # 12:23:15 >> 
+  # DEV 12:23:15 >> 
+  PROMPT = proc { |x|
+    "#{[ (rails_console? ? Rails.env.first(3).upcase : nil), Time.now.strftime("%H:%M:%S") ].compact.join(' ')} #{x} "
+  } unless defined?(PROMPT)
+
+  # Quick benchmarking
+  # http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123834#123834
+  def bench(repetitions=100, &block)
+    require 'benchmark'
+
+    Benchmark.bmbm do |b|
+      b.report {repetitions.times &block}
+    end
+    nil
+  end
+
+  def rails_console?
+    ($0 == 'irb' && ENV['RAILS_ENV']) ||  # Rails 2.
+    $0 == 'script/rails'  # Rails 3.
+  end
+
+end
+
+# Require ftools in Ruby 1.8.
+begin
+  require "ftools"
+rescue LoadError
+end
+
+# Load .railsrc for Rails.
+load File.dirname(__FILE__) + '/.railsrc' if RubyRC.rails_console?
