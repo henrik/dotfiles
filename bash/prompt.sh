@@ -5,7 +5,7 @@
 
 # 17:39:15 henrik@Nyx ~/project[ree-1.8.7@project master*]$ 
 
-# MacPorts git bash completion.
+# git bash completion.
 # Required for the prompt. Also provides autocompletion of git commands and branch names.
 . ~/.dotfiles/bash/lib/git-completion.bash
 
