@@ -44,3 +44,4 @@ The Command-T plugin needs to be compiled:
 The `extras` directory contains additional configuration files that are not dotfiles:
 
  * `Henrik.terminal` is a settings file (theme + key bindings) for the OS X Terminal.app.
+ * On a new Mac, run `~/.dotfiles/extras/os_x_defaults.sh` in the Terminal to change some silly defaults.
