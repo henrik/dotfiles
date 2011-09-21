@@ -184,7 +184,8 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
 " 'Edit anyway' if swap file exists.
-au SwapExists * let v:swapchoice = 'e'
+" Commented out since MacVim started crashing all the time on OS X Lion.
+"au SwapExists * let v:swapchoice = 'e'
 
 " Reload file without prompting if it has changed on disk.
 " Will still prompt if there is unsaved text in the buffer.
