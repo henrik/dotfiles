@@ -30,7 +30,7 @@ if has("gui_macvim")
   macmenu Window.Select\ Previous\ Tab key=<D-S-Left>
 
   " Command-Return for fullscreen
-  macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
+  macmenu Window.Toggle\ Full\ Screen\ Mode key=<C-D-f>
 
   " Go to previous/next quickfix file. Also see .vimrc.
   map <C-D--> :cpfile<CR> zz
