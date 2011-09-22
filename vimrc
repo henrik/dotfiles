@@ -61,7 +61,6 @@ set gdefault    " Global search by default; /g for first-per-row only.
 set nojoinspaces                " 1 space, not 2, when joining sentences.
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
 
-
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
@@ -121,6 +120,9 @@ if has("autocmd")
 
   au FileType coffee map <buffer> <D-r> :CoffeeRun<CR>
   au FileType coffee map <buffer> <D-R> :CoffeeCompile<CR>
+
+  " Unbreak 'crontab -e' with Vim: http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
+  au FileType crontab set nobackup nowritebackup
 endif
 
 " Close help windows with just q.
@@ -164,6 +166,7 @@ inoremap <Up> <C-o>gk
 " Save a file as root.
 cabbrev w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
 
+" These rely on the vim-unimpaired plugin.
 " Move single lines.
 nmap <C-Up> [e
 nmap <C-Down> ]e
@@ -187,9 +190,6 @@ set directory=~/.vim/backup
 " Will still prompt if there is unsaved text in the buffer.
 set autoread
 
-" Unbreak 'crontab -e' with Vim: http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
-au FileType crontab set nobackup nowritebackup
-
 
 " Leader
 
@@ -199,7 +199,8 @@ let mapleader = ","
 nnoremap <leader><leader> :noh<CR>
 
 map <leader>n :NERDTreeToggle<CR>
-map <leader>N :NERDTreeFind<CR>" Reveal current file
+" Reveal current file
+map <leader>N :NERDTreeFind<CR>
 
 " Print highlighting scope at the current position.
 " http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
