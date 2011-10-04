@@ -14,7 +14,7 @@ color blackboard           " Default color scheme.
 set number                 " Show gutter with line numbers.
 set ruler                  " Show line, column and scroll info in status line.
 set laststatus=2           " Always show status bar.
-set modelines=10           " Use modeline overrides.
+set modelines=1            " Use modeline overrides.
 set showcmd                " Show partially typed command sequences.
 set scrolloff=3            " Minimal number of lines to always show above/below the caret.
 
