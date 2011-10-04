@@ -8,6 +8,7 @@
 --type-set=markdown=.md,.mdown,.markdown
 --type-set=cucumber=.feature
 --type-set=sass=.sass,.scss
+--type-set=coffee=.coffee
 #--all
 
 # Don't include webrat.
