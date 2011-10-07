@@ -69,7 +69,7 @@ let g:NERDMenuMode=0
 " Command-T configuration
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
-set wildignore+=*.o,*.obj,.git,tmp
+set wildignore+=*.o,*.obj,.git,tmp,public/uploads
 
 " Disable align.vim menu
 let g:DrChipTopLvlMenu=""
