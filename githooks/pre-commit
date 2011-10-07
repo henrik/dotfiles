@@ -16,11 +16,11 @@
 # Install:
 #
 # cd your_project
-# curl http://gist.github.com/raw/TODO -o .git/hooks/pre-commit && chmod u+x .git/hooks/pre-commit
+# curl https://raw.github.com/henrik/dotfiles/master/githooks/pre-commit -o .git/hooks/pre-commit && chmod u+x .git/hooks/pre-commit
 #
 # Or store it centrally and symlink in your projects:
 #
-# curl --create-dirs http://gist.github.com/raw/TODO -o ~/.githooks/pre-commit && chmod u+x ~/.githooks/pre-commit
+# curl --create-dirs https://raw.github.com/henrik/dotfiles/master/githooks/pre-commit -o ~/.githooks/pre-commit && chmod u+x ~/.githooks/pre-commit
 # cd your_project
 # ln -s ~/.githooks/pre-commit .git/hooks
 
