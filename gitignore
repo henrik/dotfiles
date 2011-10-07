@@ -1,8 +1,5 @@
+# OS X
 .DS_Store
-
-
-# Ruby on Rails
-config/database.yml
 
 # iPhone development
 # http://www.adminmyserver.com/articles/gitignore-for-iphone-xcode-development
