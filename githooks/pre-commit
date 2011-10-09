@@ -4,6 +4,7 @@
 #
 #   * ":focus", used with RSpec/Guard
 #   * "show_page", used to debug request specs
+#   * "console.log", used in JavaScript debugging
 #   * "DO NOT COMMIT!" comments
 #
 # Modify the regexps to suit your needs. The error message shows the full regexp match, or just the first capture group, if there is one.
@@ -28,6 +29,7 @@
 FORBIDDEN = [
   /\W(:focus)\b/,
   /\bshow_page\b/,
+  /\bconsole\.log\b/,
   /\bdo not commit\b/i
 ]
 
