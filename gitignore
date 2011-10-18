@@ -5,7 +5,8 @@
 # http://www.adminmyserver.com/articles/gitignore-for-iphone-xcode-development
 
 # Build products
-build
+# TODO: Make "build" more specific. Collided with CI build scripts.
+#build
 *.[oa]
 
 # Temp nibs and swap files
