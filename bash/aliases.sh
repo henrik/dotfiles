@@ -55,6 +55,10 @@ alias grr="git branch -D"
 alias gcp="git cherry-pick"
 alias gam="git commit --amend"
 
+# Guard
+alias g="guard"
+alias gpdf="VIEW_PDF=true guard"
+
 # Xcode versioning
 # http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
 alias xv="agvtool what-version; agvtool what-marketing-version"  # Show versions.
