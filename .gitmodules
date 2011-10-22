@@ -100,3 +100,6 @@
 [submodule "vim/bundle/vim-yaml-flattener"]
 	path = vim/bundle/vim-yaml-flattener
 	url = git://github.com/henrik/vim-yaml-flattener.git
+[submodule "vim/bundle/CamelCaseMotion"]
+	path = vim/bundle/CamelCaseMotion
+	url = git://github.com/bkad/CamelCaseMotion.git

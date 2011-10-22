@@ -73,7 +73,8 @@ set wildignore+=*.o,*.obj,.git,tmp,public/uploads
 
 " Disable align.vim menu
 let g:DrChipTopLvlMenu=""
-
+" Disable align.vim mapping to ,w= so we can use ,w for CamelCaseMotion.
+map <nop> <Plug>AM_w=
 
 " Remember last location in file, but not for commit messages.
 if has("autocmd")
