@@ -103,3 +103,6 @@
 [submodule "vim/bundle/CamelCaseMotion"]
 	path = vim/bundle/CamelCaseMotion
 	url = git://github.com/bkad/CamelCaseMotion.git
+[submodule "vim/bundle/argtextobj.vim"]
+	path = vim/bundle/argtextobj.vim
+	url = https://github.com/vim-scripts/argtextobj.vim
