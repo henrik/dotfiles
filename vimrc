@@ -18,6 +18,9 @@ set modelines=1            " Use modeline overrides.
 set showcmd                " Show partially typed command sequences.
 set scrolloff=3            " Minimal number of lines to always show above/below the caret.
 
+" Don't beep.
+set visualbell
+
 " Autocompleting filenames should prompt, not autopick at ambiguity.
 set wildmode=longest,list
 
