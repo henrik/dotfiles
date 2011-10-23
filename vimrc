@@ -37,7 +37,7 @@ set wildmode=longest,list
 " %c current column
 " %V current virtual column as -{num} if different from %c
 " %P percentage through buffer
-set statusline=%#warningmsg#%*%<\ %f\ %m%r%y\ %=%-14.(%l,%c%V%)\ %P\ 
+set statusline=%#warningmsg#%{SyntasticStatuslineFlag()}%*%<\ %f\ %m%r%y\ %=%-14.(%l,%c%V%)\ %P\ 
 
 set wrap  " Soft wrap.
 " Would use lbr for nicer linebreaks, but can't combine with listchars.
@@ -73,6 +73,10 @@ let g:NERDMenuMode=0
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 set wildignore+=*.o,*.obj,.git,tmp,public/uploads
+
+" Syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
 
 " Disable align.vim menu
 let g:DrChipTopLvlMenu=""
