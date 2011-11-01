@@ -27,7 +27,7 @@
 
 
 FORBIDDEN = [
-  /\W(:focus)\b/,
+  /[\s,](:focus)\b/,
   /\bshow_page\b/,
   /\bconsole\.log\b/,
   /\bconsole\.debug\b/,
