@@ -56,8 +56,8 @@ alias gcp="git cherry-pick"
 alias gam="git commit --amend"
 
 # Guard
-alias g="guard"
-alias gpdf="VIEW_PDF=true guard"
+alias g="bundle exec guard"
+alias gpdf="VIEW_PDF=true bundle exec guard"
 
 # Xcode versioning
 # http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
