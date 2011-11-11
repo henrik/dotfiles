@@ -269,3 +269,9 @@ function! EditLocales()
   args config/locales/*.yml | vertical all
 endfunction
 command! Loc call EditLocales()
+
+" :Reveal to reveal in OS X Finder.
+function! RevealInFinder()
+  :silent! ! open -R %
+endfunction
+command! Reveal call RevealInFinder()
