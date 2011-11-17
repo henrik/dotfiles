@@ -1,4 +1,4 @@
-# So Homebrew /usr/local/bin is preferrable to /usr/bin.
+# So homebrew /usr/local/bin is preferrable to /usr/bin.
 export PATH=/usr/local/bin:$PATH
 
 # Ubuntu Ruby gem binaries
@@ -24,9 +24,3 @@ fi
 
 # Barsoom
 [[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
-
-# Trying out custom build of MacVim.
-# https://github.com/b4winckler/macvim/wiki/Building
-export VIM_APP_DIR=~/Projects/macvim/src/MacVim/build/Release
-# The Homebrew version of CLI "mvim" hard-codes VIM_APP_DIR, so use the one from this dir instead.
-export PATH=~/Projects/macvim/src/MacVim:$PATH
