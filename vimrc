@@ -275,3 +275,7 @@ function! RevealInFinder()
   :silent! ! open -R %
 endfunction
 command! Reveal call RevealInFinder()
+
+" Snippets that are too long for .vimrc, too short for plugins.
+
+source ~/.vim/shorts/focus_toggle.vim
