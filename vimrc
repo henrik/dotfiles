@@ -263,19 +263,8 @@ command! W w
 command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
 
-" :Loc to open locales in splits in a tab.
-function! EditLocales()
-  tabe
-  args config/locales/*.yml | vertical all
-endfunction
-command! Loc call EditLocales()
-
-" :Reveal to reveal in OS X Finder.
-function! RevealInFinder()
-  :silent! ! open -R %
-endfunction
-command! Reveal call RevealInFinder()
-
 " Snippets that are too long for .vimrc, too short for plugins.
 
+source ~/.vim/shorts/reveal_in_finder.vim
 source ~/.vim/shorts/focus_toggle.vim
+source ~/.vim/shorts/edit_rails_locales.vim

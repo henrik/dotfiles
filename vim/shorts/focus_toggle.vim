@@ -16,11 +16,11 @@
 "
 " With a visual selection, <leader>f removes :focus but doesn't dare try to add them.
 
-function! FocusRemove()
+function! s:FocusRemove()
   silent! s/\v[, ]\s*:focus\s*( do| \{|,)/\1/
 endfunction
 
-function! FocusToggle()
+function! s:FocusToggle()
   try
     s/\v[, ]\s*:focus\s*( do| \{|,)/\1/
   catch /E486:/  " Pattern not found
@@ -29,5 +29,5 @@ function! FocusToggle()
   endtry
 endfunction
 
-nnoremap <leader>f :call FocusToggle()<CR>
-vnoremap <leader>f :call FocusRemove()<CR>
+nnoremap <leader>f :call <SID>FocusToggle()<CR>
+vnoremap <leader>f :call <SID>FocusRemove()<CR>
