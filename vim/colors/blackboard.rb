@@ -51,9 +51,10 @@ vim_colors "blackboard" do
   IncSearch :fg => black, :bg => light_orange, :gui => "NONE"
   Search :fg => black, :bg => pale_orange
   PreProc :fg => bright_orange
+  Special :fg => light_orange  # Ruby string interpolation, NERDTree.
 
   # StatusLine
-  StatusLine  :fg => black, :bg => pale_yellow, :gui => "italic"
+  StatusLine  :fg => white, :bg => bright_orange, :gui => "italic"
   StatusLineNC  :fg => black, :bg => white, :gui => "NONE"
 
   #Invisible character colors

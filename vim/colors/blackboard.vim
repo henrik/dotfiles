@@ -35,7 +35,8 @@ hi Function               guifg=#FF5600 ctermfg=202  gui=NONE cterm=NONE
 hi IncSearch              guifg=#000000 ctermfg=16   guibg=#F0B016 ctermbg=214  gui=NONE cterm=NONE
 hi Search                 guifg=#000000 ctermfg=16   guibg=#FAD680 ctermbg=222  gui=NONE cterm=NONE
 hi PreProc                guifg=#FF5600 ctermfg=202  gui=NONE cterm=NONE
-hi StatusLine             guifg=#000000 ctermfg=16   guibg=#FFFFAF ctermbg=229  gui=ITALIC cterm=NONE
+hi Special                guifg=#F0B016 ctermfg=214  gui=NONE cterm=NONE
+hi StatusLine             guifg=#FFFFFF ctermfg=231  guibg=#FF5600 ctermbg=202  gui=ITALIC cterm=NONE
 hi StatusLineNC           guifg=#000000 ctermfg=16   guibg=#FFFFFF ctermbg=231  gui=NONE cterm=NONE
 hi NonText                guifg=#4A4A59 ctermfg=239  gui=NONE cterm=NONE
 hi SpecialKey             guifg=#4A4A59 ctermfg=239  gui=NONE cterm=NONE
