@@ -244,6 +244,8 @@ nmap <leader><down>   :rightbelow sp<CR>
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
 
+" Y yanks to OS X pasteboard.
+map Y "*y
 
 " Quicker filetype setting:
 "   :F html
