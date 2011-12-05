@@ -143,14 +143,15 @@ au FileType HELP map <buffer> q :q<CR>
 " We overload a command, but use 'cc' for that anyway.
 noremap S :w<CR>
 
-" Make Y consistent with C and D - yank to end of line, not full line.
-nnoremap Y y$
-
 " Map Q and gQ to something useful instead of the weird 'Ex' mode.
 " Save some keypresses when closing a window.
 noremap Q :q<CR>
 " Close a full tab page.
 noremap gQ :windo bd<CR>
+
+" Y yanks to OS X pasteboard.
+map Y "*y
+
 
 nnoremap / /\v
 vnoremap / /\v
@@ -249,9 +250,6 @@ nmap <leader><down>   :rightbelow sp<CR>
 " Get rid of all NERDCommenter mappings except one.
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
-
-" Y yanks to OS X pasteboard.
-map Y "*y
 
 " Quicker filetype setting:
 "   :F html
