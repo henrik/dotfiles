@@ -172,6 +172,10 @@ noremap j gj
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
+" Shift + left/right to switch tabs.
+noremap <S-Left> :tabp<CR>
+noremap <S-Right> :tabn<CR>
+
 " Save a file as root.
 cabbrev w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
 
