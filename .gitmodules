@@ -34,9 +34,6 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = git@github.com:henrik/ack.vim.git
-[submodule "vim/bundle/vim-align"]
-	path = vim/bundle/vim-align
-	url = git://github.com/tsaleh/vim-align.git
 [submodule "vim/bundle/AutoClose"]
 	path = vim/bundle/AutoClose
 	url = git://github.com/vim-scripts/AutoClose.git
