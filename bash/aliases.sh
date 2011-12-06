@@ -13,6 +13,7 @@ alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 alias c='clear'
 alias la='ls -alh'
 alias cdd='cd -'  # back to last directory
+alias pag='ps aux | grep '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
