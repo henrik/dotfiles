@@ -76,3 +76,8 @@ alias hosts='sudo vim /etc/hosts'
 # Home network
 # On gf's computer, quiet music and disconnect Airfoil from speakers (to free them up for me).
 alias hush="cat ~/.bash/lib/hush.scpt | ssh heli osascript; echo hushed."
+
+# Work
+# Straight into console-in-screen.
+# Assumes there is only one screen running.
+alias prodc="ssh prod -t screen -RD"
