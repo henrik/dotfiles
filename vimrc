@@ -77,7 +77,8 @@ let g:NERDMenuMode=0
 " Command-T configuration
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
-set wildignore+=*.o,*.obj,.git,tmp,public/uploads
+set wildignore+=*.o,*.obj,.git,tmp
+set wildignore+=public/uploads,db/sphinx
 
 " Syntastic
 let g:syntastic_enable_signs=1
