@@ -200,10 +200,6 @@ vmap <C-Down> ]egv
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-" Un-highlight search matches
-" https://twitter.com/#!/jonbho/status/2194406821
-nnoremap <esc> :noh<return><esc>
-
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
@@ -220,6 +216,9 @@ set autoread
 " Leader
 
 let mapleader = ","
+
+" Un-highlight search matches
+nnoremap <leader><leader> :noh<CR>
 
 map <leader>n :NERDTreeToggle<CR>
 " Reveal current file
