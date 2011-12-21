@@ -280,3 +280,4 @@ command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 source ~/.vim/shorts/reveal_in_finder.vim
 source ~/.vim/shorts/focus_toggle.vim
 source ~/.vim/shorts/edit_rails_locales.vim
+source ~/.vim/shorts/nerdtree_awareness.vim
