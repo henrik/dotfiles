@@ -6,6 +6,8 @@
 command! -nargs=1 -complete=filetype F set filetype=<args>
 
 " Even quicker setting often-used filetypes.
+command! FC set filetype=coffee
+command! FH set filetype=haml
 command! FR set filetype=ruby
 
 " Strip trailing whitespace (including that in blank lines).

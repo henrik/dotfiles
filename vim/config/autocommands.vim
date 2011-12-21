@@ -14,11 +14,15 @@ if has("autocmd")
   " These files are also Markdown.
   au BufRead,BufNewFile *.{md,mdown,mkd,mkdn} set ft=markdown
 
-  " <D-r> to render Markdown in browser.
+  " <Leader>r or <D-r> to render Markdown in browser.
+  au FileType markdown map <buffer> <Leader>r :Mm<CR>
   au FileType markdown map <buffer> <D-r> :Mm<CR>
 
-  " <D-r> to run CoffeeScript, <D-R> to see it compiled.
+  " <Leader>r or <D-r> to run CoffeeScript.
+  au FileType coffee map <buffer> <Leader>r :CoffeeRun<CR>
   au FileType coffee map <buffer> <D-r> :CoffeeRun<CR>
+  " <Leader>R or <D-R> to see CoffeeScript compiled.
+  au FileType coffee map <buffer> <Leader>R :CoffeeCompile<CR>
   au FileType coffee map <buffer> <D-R> :CoffeeCompile<CR>
 
   " Unbreak 'crontab -e' with Vim: http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
