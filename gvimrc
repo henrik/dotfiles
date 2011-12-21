@@ -39,3 +39,6 @@ endif
 set guioptions-=T
 
 set guifont=Monaco:h11
+
+" Disable menus
+let g:DrChipTopLvlMenu=""       " Align.vim
