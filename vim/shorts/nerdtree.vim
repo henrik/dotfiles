@@ -1,3 +1,7 @@
+let NERDTreeIgnore=['\.rbc$', '\~$']
+" Disable menu
+let g:NERDMenuMode=0
+
 " Project Tree
 autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 autocmd FocusGained * call s:UpdateNERDTree()

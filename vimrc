@@ -8,71 +8,42 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-filetype plugin indent on  " Load plugin and indent settings for the detected filetype.
-syntax on                  " Syntax highlighting.
-color blackboard           " Default color scheme.
-set number                 " Show gutter with line numbers.
-set ruler                  " Show line, column and scroll info in status line.
-set laststatus=2           " Always show status bar.
-set modelines=1            " Use modeline overrides.
-set showcmd                " Show partially typed command sequences.
-set scrolloff=3            " Minimal number of lines to always show above/below the caret.
+filetype plugin indent on       " Load plugin and indent settings for the detected filetype.
+syntax on                       " Syntax highlighting.
+color blackboard                " Default color scheme.
 
-" Don't beep.
-set visualbell
+set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
+set fillchars=vert:\            " No pipes in vertical split separators.
+set laststatus=2                " Always show status bar.
+"set lbr                        " Linebreak between words. Not compatible with listchars.
+set listchars=nbsp:·,tab:▸\ ,trail:·  " Configure how invisibles appear.
+set list!                       " Show invisibles.
+set modelines=1                 " Use modeline overrides.
+set nojoinspaces                " 1 space, not 2, when joining sentences.
+set number                      " Show gutter with line numbers.
+set ruler                       " Show line, column and scroll info in status line.
+set scrolloff=3                 " Minimal number of lines to always show above/below the caret.
+set showcmd                     " Show partially typed command sequences.
+set visualbell                  " Don't beep.
+set wildmode=longest,list       " Autocompleting files: prompt, don't autopick.
+set wrap                        " Soft wrap.
 
-" Autocompleting filenames should prompt, not autopick at ambiguity.
-set wildmode=longest,list
+" Indentation.
+set expandtab                   " Replace tabs with spaces.
+set shiftwidth=2                " Spaces used for autoindent and commands like >>.
+set softtabstop=2               " Spaces inserted by <Tab>
 
-" Statusline.
-" %< truncation point
-" \  space
-" %f relative path to file
-" %m modified flag [+] (modified), [-] (unmodifiable) or nothing
-" %r readonly flag [RO]
-" %y filetype [ruby]
-" %= split point for left and right justification
-" %-14.( %)  block of fixed width 14 characters
-" %l current line
-" %c current column
-" %V current virtual column as -{num} if different from %c
-" %P percentage through buffer
-set statusline=%#warningmsg#%{SyntasticStatuslineFlag()}%*%<\ %f\ %m%r%y\ %=%-14.(%l,%c%V%)\ %P\ 
-
-set wrap  " Soft wrap.
-" Would use lbr for nicer linebreaks, but can't combine with listchars.
-
-" 2 spaces indent.
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-
-" Show invisibles.
-set listchars=nbsp:·,tab:▸\ ,trail:·
-set list!
-
-" No pipes in vertical split separators.
-set fillchars=vert:\ 
+" Searching.
+set gdefault                    " Global search by default (/g turns it off).
+set hlsearch                    " Highlight results.
+set incsearch                   " Search-as-you-type.
+set ignorecase                  " Case-insensitive…
+set smartcase                   " …unless phrase includes uppercase.
 
 " iTerm2: change cursor shape in insert mode
 " http://www.iterm2.com/#/section/documentation/escape_codes
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
-" Searching.
-set hlsearch    " Highlight results.
-set incsearch   " Search-as-you-type.
-set ignorecase  " Case-insensitive…
-set smartcase   " …unless phrase includes uppercase.
-set gdefault    " Global search by default; /g for first-per-row only.
-
-set nojoinspaces                " 1 space, not 2, when joining sentences.
-set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
-
-" NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
-" Disable menu
-let g:NERDMenuMode=0
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
@@ -277,7 +248,8 @@ command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
 " Snippets that are too long for .vimrc, too short for plugins.
 
+source ~/.vim/shorts/statusline.vim
 source ~/.vim/shorts/reveal_in_finder.vim
 source ~/.vim/shorts/focus_toggle.vim
 source ~/.vim/shorts/edit_rails_locales.vim
-source ~/.vim/shorts/nerdtree_awareness.vim
+source ~/.vim/shorts/nerdtree.vim
