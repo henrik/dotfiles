@@ -34,9 +34,6 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = git@github.com:henrik/ack.vim.git
-[submodule "vim/bundle/AutoClose"]
-	path = vim/bundle/AutoClose
-	url = git://github.com/vim-scripts/AutoClose.git
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
@@ -75,9 +72,6 @@
 [submodule "vim/bundle/vim-ruby-sinatra"]
 	path = vim/bundle/vim-ruby-sinatra
 	url = git://github.com/hallison/vim-ruby-sinatra.git
-[submodule "vim/bundle/delimitMate"]
-	path = vim/bundle/delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
 [submodule "vim/bundle/vim-indexed-search"]
 	path = vim/bundle/vim-indexed-search
 	url = git://github.com/henrik/vim-indexed-search.git
