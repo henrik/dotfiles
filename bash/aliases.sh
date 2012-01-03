@@ -1,19 +1,20 @@
-# Dirs
-alias o="open ."  # OS X, open in Finder
-
-# http://www.hogbaysoftware.com/products/plaintext
-alias text='vim ~/Dropbox/PlainText'
-
 # Management
 alias dots="vim ~/.dotfiles"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 
+# OS X: open pwd in Finder.
+alias o="open ."
+
+# http://www.hogbaysoftware.com/products/plaintext
+alias text='vim ~/Dropbox/PlainText'
+
 # Shell
 alias c='clear'
 alias la='ls -alh'
 alias cdd='cd -'  # back to last directory
-alias pag='ps aux | grep '
+alias pg='ps aux | grep '
+alias tf='tail -F -n200'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -46,7 +47,6 @@ alias gco="git commit -m"  # "only"
 alias gca="git add --all && git commit -m"  # "all"
 alias gp='git push'
 alias gpp='git pull --rebase && git push'
-alias gppp='git pull && git push'
 alias go="git checkout"
 alias gb="git checkout -b"
 alias got="git checkout -"
