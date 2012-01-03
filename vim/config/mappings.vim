@@ -16,8 +16,12 @@ noremap Q :q<CR>
 " Close a full tab page.
 noremap gQ :windo bd<CR>
 
-" Y yanks to OS X pasteboard.
-map Y "*y
+" Yank to OS X pasteboard.
+noremap <leader>y "*y
+
+" Paste from OS X pasteboard without messing up indent.
+noremap <leader>p :set paste<CR>"*p<CR>:set nopaste<CR>
+noremap <leader>P :set paste<CR>"*P<CR>:set nopaste<CR>
 
 " Default searches to "very magic", more like the world outside Vim.
 nnoremap / /\v
