@@ -1,3 +1,10 @@
+" Use Caps Lock as a quick way to trigger ":", even from insert mode.
+" Requires you to bind Caps Lock to F9 using PCKeyboardHack:
+" http://pqrs.org/macosx/keyremap4macbook/extra.html
+noremap  <F9> :
+inoremap <F9> <esc>:
+cnoremap <F9> <nop>
+
 " Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
 " Command-S is a bad habit when using terminal Vim.
 " We overload a command, but use 'cc' for that anyway.
