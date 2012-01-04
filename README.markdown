@@ -50,20 +50,20 @@ The `extras` directory contains additional configuration files that are not dotf
 
 ## Apps and utilities
 
-I install many of these through the App Store.
+\* means installed through the App Store.
 
  * [1Password](https://agilebits.com/onepassword)
  * [Adium](http://adium.im/)
  * [Airfoil](http://www.rogueamoeba.com/airfoil/) – Stream audio between machines
- * [Alfred](http://www.alfredapp.com/) – Launcher etc
- * [Carousel](http://carousel.mobelux.com/) – Instagram client
- * [Cloud.app](http://getcloudapp.com/) – Quick screenshot uploads
+ * \*[Alfred](http://www.alfredapp.com/) – Launcher etc
+ * \*[Carousel](http://carousel.mobelux.com/) – Instagram client
+ * \*[Cloud.app](http://getcloudapp.com/) – Quick screenshot uploads
  * [Colors](http://mattpatenaude.com/#colors) – Color picker
  * [Crashplan](http://www.crashplan.com/) – Backup
- * [DaisyDisk](http://daisydiskapp.com/) – Disk usage
- * [Divvy](http://mizage.com/#macdivvy) – Window management
+ * \*[DaisyDisk](http://daisydiskapp.com/) – Disk usage
+ * \*[Divvy](http://mizage.com/#macdivvy) – Window management
  * [Dropbox](https://www.dropbox.com)
- * [Fantastical](http://flexibits.com/fantastical) – Calendar UI
+ * \*[Fantastical](http://flexibits.com/fantastical) – Calendar UI
  * [Flickr Uploadr](http://www.flickr.com/tools/uploadr/)
  * [Google Chrome](https://www.google.com/chrome)
  * [iPhoto Library Manager](http://www.fatcatsoftware.com/iplm/)
@@ -73,11 +73,11 @@ I install many of these through the App Store.
  * [Little Snapper](http://www.realmacsoftware.com/littlesnapper/) – UI inspiration bin
  * [Mailplane](http://mailplaneapp.com/)
  * [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/extra.html) – Bind Caps Lock to F9 (see `.vimrc`)
- * [Reeder](http://reederapp.com/)
+ * \*[Reeder](http://reederapp.com/)
  * [SlimBatteryMonitor](http://www.orange-carb.org/SBM/)
  * [SuperDuper](http://www.shirt-pocket.com/SuperDuper/)
  * [Spotify](http://www.spotify.com)
- * [The Unarchiver](http://itunes.apple.com/app/the-unarchiver/id425424353)
+ * \*[The Unarchiver](http://itunes.apple.com/app/the-unarchiver/id425424353)
  * [Transmission](http://www.transmissionbt.com/)
 
 For development, not endorsed:
