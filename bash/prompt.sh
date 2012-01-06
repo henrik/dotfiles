@@ -18,6 +18,13 @@ function __git_prompt {
   __git_ps1 " %s" | sed 's/ \([+*]\{1,\}\)$/\1/'
 }
 
+# Only show username@server over SSH.
+function __name_and_server {
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    echo "`whoami`@`hostname -s` "
+  fi
+}
+
 bash_prompt() {
 
   # regular colors
@@ -43,7 +50,7 @@ bash_prompt() {
   # reset
   local RESET="\[\033[0;37m\]"
 
-  PS1="\t $BY\u@\h $Y\w$G[\$(__rvm_prompt)$G\$(__git_prompt)]$RESET$ "
+  PS1="\t $BY\$(__name_and_server)$Y\w$G[\$(__rvm_prompt)$G\$(__git_prompt)]$RESET$ "
 
 }
 
