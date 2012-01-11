@@ -55,6 +55,7 @@ alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
 alias gam="git commit --amend"
+alias gamm="git commit --all --amend -C HEAD"
 alias gg="git log --grep"
 
 # Guard
