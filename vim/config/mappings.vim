@@ -12,9 +12,9 @@ noremap S :w<CR>
 
 " Map Q and gQ to something useful instead of the weird 'Ex' mode.
 " Save some keypresses when closing a window.
-noremap Q :q<CR>
+noremap q :q<CR>
 " Close a full tab page.
-noremap gQ :windo bd<CR>
+noremap Q :windo bd<CR>
 
 " Yank to OS X pasteboard.
 noremap <leader>y "*y
@@ -57,7 +57,8 @@ map <leader>n :NERDTreeToggle<CR>
 " Reveal current file
 map <leader>N :NERDTreeFind<CR>
 
-map <leader>a :Ack
+" We need the trailing space.
+nnoremap <leader>a :Ack 
 
 " Print highlighting scope at the current position.
 " http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
