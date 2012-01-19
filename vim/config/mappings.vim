@@ -29,7 +29,7 @@ vnoremap / /\v
 nnoremap ? ?\v
 vnoremap ? ?\v
 
-" Map gp to select the last pasted text
+" Select the last pasted text.
 " http://vim.wikia.com/wiki/Selecting_your_pasted_text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
@@ -63,13 +63,11 @@ map <leader>u :call OpenURI()<CR>
 
 " Ack/Quickfix windows
 map <leader>q :cclose<CR>
-" Previous fix and center line.
+" Center line on previous/next fix.
 map - :cprev<CR> zz
-" Next fix and center line.
 map + :cnext<CR> zz
-" Previous file and center line.
+" Center line in previous/next file.
 map g- :cpfile<CR> zz
-" Next file and center line.
 map g+ :cnfile<CR> zz
 
 " Create a split on the given side.
@@ -90,6 +88,10 @@ vmap <C-Down> ]egv
 " Tab/shift-tab to indent/outdent in visual mode.
 vmap <Tab> >gv
 vmap <S-Tab> <gv
+
+" I constantly hit "u" in visual mode when I mean to "y". Use "gu" for those rare occasions.
+vnoremap u <nop>
+vnoremap gu u
 
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>
