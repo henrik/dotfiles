@@ -33,10 +33,6 @@ vnoremap ? ?\v
 " http://vim.wikia.com/wiki/Selecting_your_pasted_text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
 " Move by screen lines instead of file lines.
 " http://vim.wikia.com/wiki/Moving_by_screen_lines_instead_of_file_lines
 noremap <Up> gk
@@ -60,12 +56,6 @@ map <leader>N :NERDTreeFind<CR>
 " We need the trailing space.
 nnoremap <leader>a :Ack 
 
-" Print highlighting scope at the current position.
-" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
-map <leader>S :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
 map <leader>T :CommandTFlush<CR>
 
 " Open URL from this line (OS X only).
@@ -77,10 +67,10 @@ map <leader>q :cclose<CR>
 map - :cprev<CR> zz
 " Next fix and center line.
 map + :cnext<CR> zz
-" See .gvimrc for cpf/cnf.
-
-" Opens an edit command with the path of the currently edited file filled in
-map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" Previous file and center line.
+map g- :cpfile<CR> zz
+" Next file and center line.
+map g+ :cnfile<CR> zz
 
 " Create a split on the given side.
 " From http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/ via joakimk.
@@ -100,3 +90,12 @@ vmap <C-Down> ]egv
 " Tab/shift-tab to indent/outdent in visual mode.
 vmap <Tab> >gv
 vmap <S-Tab> <gv
+
+" In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
+cmap %% <C-R>=expand("%:h") . "/" <CR>
+
+" Print highlighting scope at the current position.
+" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+map <leader>S :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
