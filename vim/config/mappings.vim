@@ -10,8 +10,8 @@ cnoremap <F9> <nop>
 " We overload a command, but use 'cc' for that anyway.
 noremap S :w<CR>
 
-" Map Q and gQ to something useful instead of the weird 'Ex' mode.
-" Save some keypresses when closing a window.
+" Map Q to something useful instead of the weird 'Ex' mode.
+" Close window.
 noremap q :q<CR>
 " Close a full tab page.
 noremap Q :windo bd<CR>
