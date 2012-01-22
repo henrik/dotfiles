@@ -46,7 +46,12 @@ set directory=~/.vim/backup
 
 " Reload file without prompting if it has changed on disk.
 " Will still prompt if there is unsaved text in the buffer.
+" Works in MacVim but not in terminal Vim :/
 set autoread
+
+" Automatically save changes before switching buffer with some
+" commands, like :cnfile (mapped to g+) etc.
+set autowrite
 
 " Leader.
 let mapleader = ","
