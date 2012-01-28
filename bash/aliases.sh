@@ -37,7 +37,7 @@ alias rsp="bundle exec specjour"
 alias f="foreman start"
 
 # Git
-alias gl="git log"
+alias gl="git log --stat"
 alias gs="git status"
 alias gw="git show"
 alias gd="git diff"  # What's changed but not yet added?
