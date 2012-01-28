@@ -31,6 +31,9 @@ if has("autocmd")
   " Close help windows with just q.
   au FileType HELP map <buffer> q :q<CR>
 
+  " Make terminal Vim trigger autoread more often.
+  au WinEnter,BufWinEnter,CursorHold * checktime
+
   " 'Edit anyway' if swap file exists.
   " Commented out since MacVim started crashing all the time on OS X Lion.
   "au SwapExists * let v:swapchoice = 'e'
