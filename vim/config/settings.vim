@@ -1,12 +1,12 @@
 set nocompatible                " Don't sacrifice anything for Vi compatibility.
 set encoding=utf-8              " In case $LANG doesn't have a sensible value.
 
-" pathogem.vim lets us keep plugins etc in their own folders under ~/.vim/bundle.
-" http://www.vim.org/scripts/script.php?script_id=2332
+" Vundle for plugin management.
+" https://github.com/gmarik/vundle
 " filetype off and then on again afterwards for ftdetect files to work properly.
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 filetype plugin indent on       " Load plugin and indent settings for the detected filetype.
 syntax on                       " Syntax highlighting.
