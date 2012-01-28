@@ -1,4 +1,8 @@
+" Install with Vundle:
+"   :BundleInstall
+
 Bundle 'bkad/CamelCaseMotion'
+Bundle 'ervandew/supertab'
 Bundle 'henrik/ack.vim'
 Bundle 'henrik/vim-indexed-search'
 Bundle 'henrik/vim-markdown-preview'
@@ -10,6 +14,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'taq/vim-rspec'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-haml'
@@ -17,20 +22,22 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/argtextobj.vim'
+Bundle 'argtextobj.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 
 " Quarantine - remove if not missed.
-"Bundle 'ervandew/supertab'
 "Bundle 'henrik/snipmate.vim'
 "Bundle 'michaeljsmith/vim-indent-object'
 "Bundle 'timcharper/textile.vim'
 "Bundle 'tpope/vim-cucumber'
-"Bundle 'tpope/vim-endwise'
 "Bundle 'tpope/vim-ragtag'
 "Bundle 'hallison/vim-ruby-sinatra'
-"Bundle 'vim-scripts/ZoomWin'
-"Bundle 'rson/conque'
+"Bundle 'ZoomWin'
+
+
+" :BI to re-source this file and then install bundles.
+cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
+
 
 " Command-T
 let g:CommandTMaxHeight=20
