@@ -1,5 +1,5 @@
 # Management
-alias dots="vim ~/.dotfiles"
+alias dots="cd ~/.dotfiles && vim"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 
@@ -7,7 +7,7 @@ alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 alias o="open ."
 
 # http://www.hogbaysoftware.com/products/plaintext
-alias text='vim ~/Dropbox/PlainText'
+alias text='cd ~/Dropbox/PlainText && vim'
 
 # Shell
 alias c='clear'
