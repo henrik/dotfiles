@@ -23,6 +23,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'argtextobj.vim'
+Bundle 'YankRing.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 
 " Quarantine - remove if not missed.
