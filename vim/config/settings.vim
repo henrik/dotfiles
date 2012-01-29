@@ -7,6 +7,7 @@ set encoding=utf-8              " In case $LANG doesn't have a sensible value.
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+Bundle 'gmarik/vundle'
 
 filetype plugin indent on       " Load plugin and indent settings for the detected filetype.
 syntax on                       " Syntax highlighting.

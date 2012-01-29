@@ -1,8 +1,5 @@
-" Install with Vundle:
-"   :BundleInstall
-
-" Without this, :BundleClean removes Vundle.
-Bundle 'gmarik/vundle'
+" :BI to re-source this file and then install bundles with Vundle.
+cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
 
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'ervandew/supertab'
@@ -25,23 +22,10 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'argtextobj.vim'
-Bundle 'file-line'
-Bundle 'YankRing.vim'
-Bundle 'git://git.wincent.com/command-t.git'
-
-" Quarantine - remove if not missed.
-"Bundle 'michaeljsmith/vim-indent-object'
-"Bundle 'timcharper/textile.vim'
-"Bundle 'tpope/vim-cucumber'
-"Bundle 'tpope/vim-ragtag'
-"Bundle 'hallison/vim-ruby-sinatra'
-"Bundle 'ZoomWin'
-
-
-" :BI to re-source this file and then install bundles.
-cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
-
+Bundle 'vim-scripts/argtextobj.vim'
+Bundle 'vim-scripts/file-line'
+Bundle 'vim-scripts/YankRing.vim'
+Bundle 'wincent/Command-T'
 
 " Command-T
 let g:CommandTMaxHeight=20
