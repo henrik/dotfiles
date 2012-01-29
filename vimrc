@@ -11,4 +11,3 @@ source ~/.vim/shorts/edit_rails_locales.vim
 source ~/.vim/shorts/focus_toggle.vim
 source ~/.vim/shorts/nerdtree.vim
 source ~/.vim/shorts/open_uri.vim
-source ~/.vim/shorts/reveal_in_finder.vim
