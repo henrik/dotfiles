@@ -61,6 +61,7 @@ map <nop> <Plug>AM_w=
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
 
-" YANKRing
+" YankRing
 " Don't map gp and gP.
 let g:yankring_paste_using_g = 0
+let g:yankring_history_dir = '~/.vim/backup'
