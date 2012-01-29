@@ -1,6 +1,9 @@
 " Install with Vundle:
 "   :BundleInstall
 
+" Without this, :BundleClean removes Vundle.
+Bundle 'gmarik/vundle'
+
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'ervandew/supertab'
 Bundle 'henrik/ack.vim'
