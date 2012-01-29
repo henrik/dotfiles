@@ -60,3 +60,7 @@ map <nop> <Plug>AM_w=
 " Get rid of all mappings except one.
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
+
+" YANKRing
+" Don't map gp and gP.
+let g:yankring_paste_using_g = 0

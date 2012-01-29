@@ -29,9 +29,9 @@ vnoremap / /\v
 nnoremap ? ?\v
 vnoremap ? ?\v
 
-" Select the last pasted text.
-" http://vim.wikia.com/wiki/Selecting_your_pasted_text
-nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+" Select the text that was last edited/pasted.
+" http://vimcasts.org/episodes/bubbling-text/
+nmap gV `[v`]
 
 " Move by screen lines instead of file lines.
 " http://vim.wikia.com/wiki/Moving_by_screen_lines_instead_of_file_lines
