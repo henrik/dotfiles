@@ -26,6 +26,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'argtextobj.vim'
+Bundle 'file-line'
 Bundle 'YankRing.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 
