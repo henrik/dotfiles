@@ -28,9 +28,9 @@ I'm assuming MacVim (`brew install macvim`) and at least Vim 7.
 
 Vim plugins are each their own directory under vim/bundles thanks to [Vundle](https://github.com/gmarik/vundle). They're listed in `vim/config/plugins.vim`.
 
-Vundle is included in this repository as a git submodule, so you need to fetch it after cloning this repository:
+Bootstrap by cloning Vundle itself:
 
-    git submodule update --init
+    git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 Then tell Vundle to install the plugins:
 
