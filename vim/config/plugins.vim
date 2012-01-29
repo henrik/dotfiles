@@ -27,7 +27,6 @@ Bundle 'YankRing.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 
 " Quarantine - remove if not missed.
-"Bundle 'henrik/snipmate.vim'
 "Bundle 'michaeljsmith/vim-indent-object'
 "Bundle 'timcharper/textile.vim'
 "Bundle 'tpope/vim-cucumber'
