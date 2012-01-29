@@ -21,3 +21,5 @@
 	token = <.replace github-token>
 [push]
 	default = current
+[web]
+	browser = open
