@@ -2,7 +2,8 @@
 cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
 
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'ervandew/supertab'
+" Temporarily turned off to see if it fixes Vim crashes.
+"Bundle 'ervandew/supertab'
 Bundle 'henrik/ack.vim'
 Bundle 'henrik/vim-indexed-search'
 Bundle 'henrik/vim-markdown-preview'
