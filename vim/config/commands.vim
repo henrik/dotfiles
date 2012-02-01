@@ -9,6 +9,7 @@ command! -nargs=1 -complete=filetype F set filetype=<args>
 command! FC set filetype=coffee
 command! FH set filetype=haml
 command! FR set filetype=ruby
+command! FV set filetype=vim
 
 " Strip trailing whitespace (including that in blank lines).
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces
