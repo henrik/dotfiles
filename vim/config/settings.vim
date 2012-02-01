@@ -1,15 +1,5 @@
-set nocompatible                " Don't sacrifice anything for Vi compatibility.
 set encoding=utf-8              " In case $LANG doesn't have a sensible value.
 
-" Vundle for plugin management.
-" https://github.com/gmarik/vundle
-" filetype off and then on again afterwards for ftdetect files to work properly.
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-filetype plugin indent on       " Load plugin and indent settings for the detected filetype.
 syntax on                       " Syntax highlighting.
 color blackboard                " Default color scheme.
 
