@@ -9,6 +9,7 @@ Bundle 'henrik/vim-open-url'
 Bundle 'henrik/vim-reveal-in-finder'
 Bundle 'henrik/vim-ruby-runner'
 Bundle 'henrik/vim-yaml-flattener'
+Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
@@ -56,3 +57,7 @@ map <leader>cc <Plug>CommentaryLine
 " Don't map gp and gP.
 let g:yankring_paste_using_g = 0
 let g:yankring_history_dir = '~/.vim/backup'
+
+" Buffergator
+let g:buffergator_suppress_keymaps = 1
+map <leader>g :BuffergatorToggle<CR>
