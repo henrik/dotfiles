@@ -50,6 +50,11 @@ map <nop> <Plug>AM_w=
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
 
+" NERDTree
+let NERDTreeIgnore=['\.rbc$', '\~$']
+" Disable menu
+let g:NERDMenuMode=0
+
 " YankRing
 " Don't map gp and gP.
 let g:yankring_paste_using_g = 0
