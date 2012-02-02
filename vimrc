@@ -1,4 +1,5 @@
 set nocompatible                " Don't sacrifice anything for Vi compatibility.
+let mapleader = ","
 
 " Vundle for plugin management.
 " https://github.com/gmarik/vundle

@@ -2,8 +2,6 @@
 cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
 
 Bundle 'bkad/CamelCaseMotion'
-" Temporarily turned off to see if it fixes Vim crashes.
-"Bundle 'ervandew/supertab'
 Bundle 'henrik/ack.vim'
 Bundle 'henrik/vim-indexed-search'
 Bundle 'henrik/vim-markdown-preview'
@@ -14,10 +12,10 @@ Bundle 'henrik/vim-yaml-flattener'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'taq/vim-rspec'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
@@ -45,15 +43,14 @@ let g:syntastic_quiet_warnings=1
 " Disable mapping to ,w= so we can use ,w for CamelCaseMotion.
 map <nop> <Plug>AM_w=
 
-" NERDCommenter
-" Get rid of all mappings except one.
-let g:NERDCreateDefaultMappings=0
-map <leader>c <Plug>NERDCommenterToggle
-
 " NERDTree
 let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
 let g:NERDMenuMode=0
+
+" Commentary.
+map <leader>c <Plug>Commentary
+map <leader>cc <Plug>CommentaryLine
 
 " YankRing
 " Don't map gp and gP.

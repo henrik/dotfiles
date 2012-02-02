@@ -44,9 +44,6 @@ set autoread
 " commands, like :cnfile (mapped to g+) etc.
 set autowrite
 
-" Leader.
-let mapleader = ","
-
 " iTerm2.
 " Change cursor shape in insert mode.
 " http://www.iterm2.com/#/section/documentation/escape_codes
