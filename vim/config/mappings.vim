@@ -54,7 +54,8 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>
 
 " We need the trailing space.
-nnoremap <leader>a :Ack 
+" Using "a" because it used to be :Ack.
+nnoremap <leader>a :GitGrep 
 
 map <leader>T :CommandTFlush<CR>
 

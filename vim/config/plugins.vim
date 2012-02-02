@@ -3,6 +3,7 @@ cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
 
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'henrik/ack.vim'
+Bundle 'henrik/git-grep-vim'
 Bundle 'henrik/vim-indexed-search'
 Bundle 'henrik/vim-markdown-preview'
 Bundle 'henrik/vim-open-url'
