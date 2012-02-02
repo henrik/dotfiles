@@ -60,4 +60,5 @@ let g:yankring_history_dir = '~/.vim/backup'
 
 " Buffergator
 let g:buffergator_suppress_keymaps = 1
+let g:buffergator_sort_regime = 'mru'
 map <leader>g :BuffergatorToggle<CR>
