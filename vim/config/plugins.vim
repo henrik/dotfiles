@@ -1,6 +1,7 @@
 " :BI to re-source this file and then install bundles with Vundle.
 cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
 
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'henrik/ack.vim'
 Bundle 'henrik/git-grep-vim'
