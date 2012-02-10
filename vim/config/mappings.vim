@@ -12,9 +12,9 @@ noremap S :w<CR>
 
 " Map Q to something useful instead of the weird 'Ex' mode.
 " Close window.
-noremap q :q<CR>
+noremap QQ :q<CR>
 " Close a full tab page.
-noremap Q :windo bd<CR>
+noremap QW :windo bd<CR>
 
 " Yank to OS X pasteboard.
 noremap <leader>y "*y
