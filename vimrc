@@ -24,3 +24,4 @@ source ~/.vim/config/mappings.vim
 
 source ~/.vim/shorts/edit_rails_locales.vim
 source ~/.vim/shorts/focus_toggle.vim
+source ~/.vim/shorts/run_html.vim
