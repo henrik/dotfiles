@@ -10,7 +10,11 @@
 . ~/.dotfiles/bash/lib/git-completion.bash
 
 function __rvm_prompt {
-  rvm-prompt i v g s
+  if hash rvm-prompt 2>&- ; then
+    rvm-prompt i v g s
+  else
+    echo "no-rvm"
+  fi
 }
 
 function __git_prompt {
