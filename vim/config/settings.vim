@@ -1,8 +1,8 @@
 set encoding=utf-8              " In case $LANG doesn't have a sensible value.
 
 syntax on                       " Syntax highlighting.
-color blackboard                " Default color scheme.
 set background=dark             " Inquiring plugins want to know.
+color blackboard                " Default color scheme.
 
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
 set fillchars=vert:\            " No pipes in vertical split separators.
