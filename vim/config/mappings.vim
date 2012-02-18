@@ -94,6 +94,10 @@ vmap <S-Tab> <gv
 vnoremap u <nop>
 vnoremap gu u
 
+" Execute selection as Vimscript.
+vnoremap <leader>x y:@"<CR>
+nnoremap <leader>x yy:@"<CR>
+
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>
 
