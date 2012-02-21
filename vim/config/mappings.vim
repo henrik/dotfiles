@@ -10,11 +10,16 @@ cnoremap <F9> <nop>
 " We overload a command, but use 'cc' for that anyway.
 noremap S :w<CR>
 
-" Map Q to something useful instead of the weird 'Ex' mode.
+" Make Q useful and avoid the confusing Ex mode.
+noremap Q <nop>
 " Close window.
 noremap QQ :q<CR>
 " Close a full tab page.
 noremap QW :windo bd<CR>
+" Close all.
+noremap QA :qa<CR>
+" Close, damn you!
+noremap Q! :q!<CR>
 
 " Yank to OS X pasteboard.
 noremap <leader>y "*y
