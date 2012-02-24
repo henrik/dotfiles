@@ -60,6 +60,10 @@ alias gcp="git cherry-pick"
 alias gam="git commit --amend"
 alias gamm="git add --all && git commit --amend -C HEAD"
 alias gg="git log --grep"
+alias gba="git rebase --abort"
+alias gbc="git rebase --continue"
+alias gbcc="git add -A && git rebase --continue"
+alias gbm="git fetch origin master && git rebase master"
 
 # Guard
 alias g="bundle exec guard"
