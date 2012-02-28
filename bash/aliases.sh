@@ -48,6 +48,7 @@ alias gdc="git diff --cached"  # What's added but not yet committed?
 alias gc="git commit -a -m"
 alias gco="git commit -m"  # "only"
 alias gca="git add --all && git commit -m"  # "all"
+alias gcaf="git add --all && git commit --no-verify -m"
 alias gp='git push'
 alias gpp='git pull --rebase && git push'
 alias go="git checkout"
