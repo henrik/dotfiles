@@ -83,13 +83,21 @@ nmap <leader><right>  :rightbelow vsp<CR>
 nmap <leader><up>     :leftabove  sp<CR>
 nmap <leader><down>   :rightbelow sp<CR>
 
+
 " These rely on the vim-unimpaired plugin.
+
+" Unbreak with tmux.
+" http://blog.yjl.im/2010/01/key-control-code-issue-in-between-vim.html
+map [A <C-Up>
+map [B <C-Down>
+
 " Move single lines.
 nmap <C-Up> [e
 nmap <C-Down> ]e
 " Move multiple lines.
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
 
 " Tab/shift-tab to indent/outdent in visual mode.
 vmap <Tab> >gv
