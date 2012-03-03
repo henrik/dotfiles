@@ -4,3 +4,7 @@ set completion-ignore-case on
 # http://www.reddit.com/r/commandline/comments/kbeoe/you_can_make_readline_and_bash_much_more_user/
 Control-j: menu-complete
 Control-k: menu-complete-backward
+
+# opt+left, opt+right
+"\e[1;9D": backward-word
+"\e[1;9C": forward-word
