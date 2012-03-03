@@ -1,10 +1,3 @@
-" Use Caps Lock as a quick way to trigger ":", even from insert mode.
-" Requires you to bind Caps Lock to F9 using PCKeyboardHack:
-" http://pqrs.org/macosx/keyremap4macbook/extra.html
-noremap  <F9> :
-inoremap <F9> <esc>:
-cnoremap <F9> <nop>
-
 " Hit S in command mode to save, as :w<CR> is a mouthful and MacVim
 " Command-S is a bad habit when using terminal Vim.
 " We overload a command, but use 'cc' for that anyway.
@@ -100,19 +93,22 @@ vmap <C-Down> ]egv
 
 
 " Tab/shift-tab to indent/outdent in visual mode.
-vmap <Tab> >gv
-vmap <S-Tab> <gv
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+" Keep selection when indenting/outdenting.
+vnoremap > >gv
+vnoremap < <gv
 
 " I constantly hit "u" in visual mode when I mean to "y". Use "gu" for those rare occasions.
 vnoremap u <nop>
 vnoremap gu u
 
+" In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
+cmap %% <C-R>=expand("%:h") . "/" <CR>
+
 " Execute selection as Vimscript.
 vnoremap <leader>x y:@"<CR>
 nnoremap <leader>x yy:@"<CR>
-
-" In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
-cmap %% <C-R>=expand("%:h") . "/" <CR>
 
 " Print highlighting scope at the current position.
 " http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
