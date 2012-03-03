@@ -82,11 +82,10 @@ The `extras` directory contains additional configuration files that are not dotf
    * [WhatFont](http://chengyinliu.com/whatfont.html)
  * [iPhoto Library Manager](http://www.fatcatsoftware.com/iplm/)
  * [iStat Menus](http://bjango.com/mac/istatmenus/)
- * [iTerm2](http://www.iterm2.com)
+ * [iTerm2](http://www.iterm2.com) - Keyboard shortcuts should be xterm defaults
  * [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/) – Bind right-Option to Enter
  * [Little Snapper](http://www.realmacsoftware.com/littlesnapper/) – UI inspiration bin
  * [Mailplane](http://mailplaneapp.com/)
- * [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/extra.html) – Bind Caps Lock to F9 (see `.vimrc`)
  * \*[Reeder](http://reederapp.com/)
  * [SlimBatteryMonitor](http://www.orange-carb.org/SBM/)
  * [SuperDuper](http://www.shirt-pocket.com/SuperDuper/)

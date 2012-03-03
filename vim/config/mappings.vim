@@ -79,11 +79,6 @@ nmap <leader><down>   :rightbelow sp<CR>
 
 " These rely on the vim-unimpaired plugin.
 
-" Unbreak with tmux.
-" http://blog.yjl.im/2010/01/key-control-code-issue-in-between-vim.html
-map [A <C-Up>
-map [B <C-Down>
-
 " Move single lines.
 nmap <C-Up> [e
 nmap <C-Down> ]e
