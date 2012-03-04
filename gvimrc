@@ -1,3 +1,8 @@
+" Start without the toolbar.
+set guioptions-=T
+
+set guifont=Monaco:h11
+
 if has("gui_macvim")
 
   " Fullscreen takes up entire screen
@@ -29,16 +34,4 @@ if has("gui_macvim")
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<C-D-f>
 
-  " Go to previous/next quickfix file. Also see .vimrc.
-  map <C-D--> :cpfile<CR> zz
-  map <C-D-+> :cnfile<CR> zz
-
 endif
-
-" Start without the toolbar
-set guioptions-=T
-
-set guifont=Monaco:h11
-
-" Disable menus
-let g:DrChipTopLvlMenu=""       " Align.vim
