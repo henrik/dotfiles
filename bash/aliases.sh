@@ -66,8 +66,8 @@ alias gbc="git add -A && git rebase --continue"
 alias gbm="git fetch origin master && git rebase origin/master"
 
 # Guard
-alias g="bundle exec guard"
-alias gpdf="VIEW_PDF=true bundle exec guard"
+alias g="bundle exec guard -i"
+alias gpdf="VIEW_PDF=true bundle exec guard -i"
 
 # Xcode versioning
 # http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
