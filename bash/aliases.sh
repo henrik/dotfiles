@@ -62,6 +62,9 @@ alias gba="git rebase --abort"
 alias gbc="git add -A && git rebase --continue"
 alias gbm="git fetch origin master && git rebase origin/master"
 
+# tmux
+alias ta="tmux attach"
+
 # Guard
 alias g="bundle exec guard -i"
 alias gpdf="VIEW_PDF=true bundle exec guard -i"
