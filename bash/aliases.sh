@@ -10,7 +10,6 @@ alias o="open ."
 alias text='cd ~/Dropbox/PlainText && vim'
 
 # Shell
-alias c='clear'
 alias la='ls -alh'
 alias cdd='cd -'  # back to last directory
 alias pg='ps aux | grep '
@@ -18,8 +17,6 @@ alias tf='tail -F -n200'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
 
 # Portable ls with colors
 if ls --color -d . >/dev/null 2>&1; then
@@ -33,7 +30,6 @@ alias sc="[ -f script/console ] && script/console || bundle exec rails console"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
 alias ss="[ -f script/server ] && script/server || rails server"
 alias mig='rake db:migrate && rake db:test:clone'
-alias rsp="bundle exec specjour"
 # The bare essentials, for slower machines like MacBook Airs.
 alias f="bundle exec foreman start -f=Procfile.lite"
 # Everything, when we need it, or on faster machines.
@@ -70,21 +66,10 @@ alias gbm="git fetch origin master && git rebase origin/master"
 alias g="bundle exec guard -i"
 alias gpdf="VIEW_PDF=true bundle exec guard -i"
 
-# Xcode versioning
-# http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool
-alias xv="agvtool what-version; agvtool what-marketing-version"  # Show versions.
-alias xvbump="agvtool bump -all"  # Bump build number.
-alias xvset="agvtool new-marketing-version"  # Set user-visible version: xvset 2.0
-
 # Servers
-alias grace='sudo apachectl graceful'
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
 alias hosts='sudo vim /etc/hosts'
-
-# Home network
-# On gf's computer, quiet music and disconnect Airfoil from speakers (to free them up for me).
-alias hush="cat ~/.bash/lib/hush.scpt | ssh heli osascript; echo hushed."
 
 # Work
 # Straight into console-in-screen.
