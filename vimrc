@@ -34,3 +34,5 @@ map [1;5A <C-Up>
 map [1;5B <C-Down>
 map [1;2D <S-Left>
 map [1;2C <S-Right>
+cmap [1;2D <S-Left>
+cmap [1;2C <S-Right>
