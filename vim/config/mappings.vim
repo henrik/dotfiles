@@ -27,6 +27,9 @@ vnoremap / /\v
 nnoremap ? ?\v
 vnoremap ? ?\v
 
+" In command-line mode, C-a jumps to beginning (to match C-e).
+cnoremap <C-a> <Home>
+
 " Select the text that was last edited/pasted.
 " http://vimcasts.org/episodes/bubbling-text/
 nmap gV `[v`]
