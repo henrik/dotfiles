@@ -18,8 +18,8 @@ noremap Q! :q!<CR>
 noremap <leader>y "*y
 
 " Paste from OS X pasteboard without messing up indent.
-noremap <leader>p :set paste<CR>"*p<CR>:set nopaste<CR>
-noremap <leader>P :set paste<CR>"*P<CR>:set nopaste<CR>
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+noremap <leader>P :set paste<CR>:put! *<CR>:set nopaste<CR>
 
 " Default searches to "very magic", more like the world outside Vim.
 nnoremap / /\v
