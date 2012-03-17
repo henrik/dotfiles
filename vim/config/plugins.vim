@@ -37,7 +37,7 @@ Bundle 'wincent/Command-T'
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 set wildignore+=*.o,*.obj,.git,tmp
-set wildignore+=public/uploads,db/sphinx
+set wildignore+=public/uploads,db/sphinx,vim/backup
 
 map <leader>T :CommandTFlush<CR>
 
