@@ -4,7 +4,7 @@ def error(text) STDERR.puts "!  #{text}" end
 def info(text, prefix="*") STDOUT.puts "#{prefix}  #{text}" end
 def info_cmd(text) info(text, ">") end
 def info_rm(text) info(text, "x") end
- 
+
 desc "Install dotfiles."
 task :install do
   Dir["*"].each do |file|
@@ -28,9 +28,9 @@ task :install do
         next
       end
     end
-    
+
     contents = File.read(source) rescue ""
-    
+
     if contents.include?('<.replace ')
 
       info "#{source} has <.replace> placeholders."
@@ -48,10 +48,10 @@ task :install do
       info_cmd "wrote file #{destination}"
 
     else
-      
+
       FileUtils.ln_s(source, destination)
       info_cmd "ln -s #{source} #{destination}"
-      
+
     end
 
   end
