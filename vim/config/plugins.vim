@@ -39,6 +39,8 @@ let g:CommandTMatchWindowAtTop=1
 set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx
 
+map <leader>T :CommandTFlush<CR>
+
 " Syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
@@ -52,9 +54,17 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
 let g:NERDMenuMode=0
 
+map <leader>n :NERDTreeToggle<CR>
+map <leader>N :NERDTreeFind<CR>
+
 " Commentary.
 map <leader>c <Plug>Commentary
 map <leader>cc <Plug>CommentaryLine
+
+" Git grep.
+" Using "a" because it used to be :Ack.
+" We need the trailing space.
+nnoremap <leader>a :GitGrep 
 
 " YankRing
 " Don't map gp and gP.
@@ -67,3 +77,4 @@ let g:yankring_zap_keys = 'f F t T / ?'
 let g:buffergator_suppress_keymaps = 1
 let g:buffergator_sort_regime = 'mru'
 
+map <leader>g :BuffergatorToggle<CR>

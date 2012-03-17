@@ -47,16 +47,6 @@ noremap <S-Right> :tabn<CR>
 " Un-highlight search matches
 nnoremap <leader><leader> :noh<CR>
 
-map <leader>n :NERDTreeToggle<CR>
-" Reveal current file
-map <leader>N :NERDTreeFind<CR>
-
-" We need the trailing space.
-" Using "a" because it used to be :Ack.
-nnoremap <leader>a :GitGrep 
-
-map <leader>T :CommandTFlush<CR>
-
 " Open URL from this line (OS X only).
 map <leader>u :call OpenURI()<CR>
 
