@@ -27,12 +27,3 @@ source ~/.vim/shorts/focus_toggle.vim
 source ~/.vim/shorts/prune_buffers.vim
 source ~/.vim/shorts/run_html.vim
 source ~/.vim/shorts/saveas_bang_to_mkdir_p.vim
-
-" Fix some keyboard shortcuts in Vim with screen-256color (=in tmux).
-" http://blog.yjl.im/2010/01/key-control-code-issue-in-between-vim.html
-map [1;5A <C-Up>
-map [1;5B <C-Down>
-map [1;2D <S-Left>
-map [1;2C <S-Right>
-cmap [1;2D <S-Left>
-cmap [1;2C <S-Right>
