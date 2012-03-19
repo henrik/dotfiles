@@ -34,7 +34,7 @@ FORBIDDEN = [
   /\bdo not commit\b/i
 ]
 
-full_diff = `git diff --cached --`
+full_diff = `git diff --cached --`.force_encoding("ASCII-8BIT")
 
 full_diff.scan(%r{^\+\+\+ b/(.+)\n@@.*\n([\s\S]*?)(?:^diff|\z)}).each do |file, diff|
   added = diff.split("\n").select { |x| x.start_with?("+") }.join("\n")
