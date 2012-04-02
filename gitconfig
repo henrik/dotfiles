@@ -19,6 +19,9 @@
 [github]
 	user = henrik
 	token = <.replace github-token>
+[gist]
+	private = yes
+	extension = rb
 [push]
 	default = current
 [web]
