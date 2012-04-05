@@ -24,6 +24,7 @@ source ~/.vim/config/mappings.vim
 
 source ~/.vim/shorts/edit_rails_locales.vim
 source ~/.vim/shorts/focus_toggle.vim
+source ~/.vim/shorts/lab.vim
 source ~/.vim/shorts/prune_buffers.vim
 source ~/.vim/shorts/run_html.vim
 source ~/.vim/shorts/saveas_bang_to_mkdir_p.vim
