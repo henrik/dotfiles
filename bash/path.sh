@@ -19,8 +19,5 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
-# To get the GUI-less Vim from MacVim:
-# ln -s /usr/local/bin/mvim ~/usr/local/bin/vim
-
 # Barsoom
 [[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
