@@ -15,6 +15,11 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 echo "Disable window animations."
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
+# http://bengold.tv/post/21711266050
+echo "Speed up dock show/hide animation."
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+killall Dock
+
 echo "Set a blazingly fast keyboard repeat rate."
 defaults write NSGlobalDomain KeyRepeat -int 0.02
 
@@ -62,7 +67,7 @@ defaults write com.apple.iTunes disablePing -bool true
 
 echo "Changed defaults. Restarting apps…"
 
-echo "Kill affected applications"
-for app in Finder; do killall "$app"; done
+echo "Restart Finder."
+killall Finder
 
-echo "Restarted apps. All done."
+echo "All done."
