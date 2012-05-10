@@ -14,6 +14,7 @@ alias la='ls -alh'
 alias cdd='cd -'  # back to last directory
 alias pg='ps aux | grep '
 alias tf='tail -F -n200'
+alias top='top -ocpu'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
