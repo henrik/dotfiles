@@ -20,6 +20,11 @@ echo "Speed up dock show/hide animation."
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 killall Dock
 
+# http://osxdaily.com/2011/12/12/hide-spotlight-menu-icon-mac-os-x-lion/
+echo "Hide Spotlight icon."
+sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+killall SystemUIServer
+
 echo "Set a blazingly fast keyboard repeat rate."
 defaults write NSGlobalDomain KeyRepeat -int 0.02
 
