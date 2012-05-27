@@ -1,38 +1,9 @@
-" :BI to re-source this file and then install bundles with Vundle.
-cabbrev BI :source ~/.vim/config/plugins.vim<CR> :BundleInstall<CR>
-
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'henrik/ack.vim'
-Bundle 'henrik/git-grep-vim'
-Bundle 'henrik/rename.vim'
-Bundle 'henrik/vim-indexed-search'
-Bundle 'henrik/vim-markdown-preview'
-Bundle 'henrik/vim-open-url'
-Bundle 'henrik/vim-reveal-in-finder'
-Bundle 'henrik/vim-ruby-runner'
-Bundle 'henrik/vim-yaml-flattener'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'taq/vim-rspec'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/argtextobj.vim'
-Bundle 'vim-scripts/file-line'
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'wincent/Command-T'
+" Pathogen.vim.
+" Must turn filetype off and then back on.
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
 
 " Command-T
 let g:CommandTMaxHeight=20

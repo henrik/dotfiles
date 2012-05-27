@@ -1,0 +1,101 @@
+[submodule "vim/bundle/vim-slim"]
+	path = vim/bundle/vim-slim
+	url = http://github.com/bbommarito/vim-slim.git
+[submodule "vim/bundle/CamelCaseMotion"]
+	path = vim/bundle/CamelCaseMotion
+	url = http://github.com/bkad/CamelCaseMotion.git
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = http://github.com/henrik/ack.vim.git
+[submodule "vim/bundle/git-grep-vim"]
+	path = vim/bundle/git-grep-vim
+	url = http://github.com/henrik/git-grep-vim.git
+[submodule "vim/bundle/rename.vim"]
+	path = vim/bundle/rename.vim
+	url = http://github.com/henrik/rename.vim.git
+[submodule "vim/bundle/vim-indexed-search"]
+	path = vim/bundle/vim-indexed-search
+	url = http://github.com/henrik/vim-indexed-search.git
+[submodule "vim/bundle/vim-markdown-preview"]
+	path = vim/bundle/vim-markdown-preview
+	url = http://github.com/henrik/vim-markdown-preview.git
+[submodule "vim/bundle/vim-open-url"]
+	path = vim/bundle/vim-open-url
+	url = http://github.com/henrik/vim-open-url.git
+[submodule "vim/bundle/vim-reveal-in-finder"]
+	path = vim/bundle/vim-reveal-in-finder
+	url = http://github.com/henrik/vim-reveal-in-finder.git
+[submodule "vim/bundle/vim-ruby-runner"]
+	path = vim/bundle/vim-ruby-runner
+	url = http://github.com/henrik/vim-ruby-runner.git
+[submodule "vim/bundle/vim-yaml-flattener"]
+	path = vim/bundle/vim-yaml-flattener
+	url = http://github.com/henrik/vim-yaml-flattener.git
+[submodule "vim/bundle/vim-buffergator"]
+	path = vim/bundle/vim-buffergator
+	url = http://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "vim/bundle/vim-coffee-script"]
+	path = vim/bundle/vim-coffee-script
+	url = http://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/vim-indent-guides"]
+	path = vim/bundle/vim-indent-guides
+	url = http://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = http://github.com/pangloss/vim-javascript.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = http://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = http://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-rspec"]
+	path = vim/bundle/vim-rspec
+	url = http://github.com/taq/vim-rspec.git
+[submodule "vim/bundle/vim-bundler"]
+	path = vim/bundle/vim-bundler
+	url = http://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/vim-commentary"]
+	path = vim/bundle/vim-commentary
+	url = http://github.com/tpope/vim-commentary.git
+[submodule "vim/bundle/vim-endwise"]
+	path = vim/bundle/vim-endwise
+	url = http://github.com/tpope/vim-endwise.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/vim-git"]
+	path = vim/bundle/vim-git
+	url = http://github.com/tpope/vim-git.git
+	ignore = untracked
+[submodule "vim/bundle/vim-haml"]
+	path = vim/bundle/vim-haml
+	url = http://github.com/tpope/vim-haml.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = http://github.com/tpope/vim-markdown.git
+[submodule "vim/bundle/vim-rails"]
+	path = vim/bundle/vim-rails
+	url = http://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = http://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/vim-unimpaired"]
+	path = vim/bundle/vim-unimpaired
+	url = http://github.com/tpope/vim-unimpaired.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = http://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/YankRing.vim"]
+	path = vim/bundle/YankRing.vim
+	url = http://github.com/vim-scripts/YankRing.vim.git
+	ignore = untracked
+[submodule "vim/bundle/argtextobj.vim"]
+	path = vim/bundle/argtextobj.vim
+	url = http://github.com/vim-scripts/argtextobj.vim.git
+[submodule "vim/bundle/file-line"]
+	path = vim/bundle/file-line
+	url = http://github.com/vim-scripts/file-line.git
+[submodule "vim/bundle/Command-T"]
+	path = vim/bundle/Command-T
+	url = http://github.com/wincent/Command-T.git
