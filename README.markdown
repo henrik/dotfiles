@@ -26,15 +26,9 @@ Changes to symlinked files without `<.replace>` bits do not require a `rake inst
 
 I'm assuming MacVim (`brew install macvim`) and at least Vim 7.
 
-Vim plugins are each their own directory under vim/bundles thanks to [Vundle](https://github.com/gmarik/vundle). They're listed in `vim/config/plugins.vim`.
+Install plugins from submodules:
 
-Bootstrap by cloning Vundle itself:
-
-    git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-Then tell Vundle to install the plugins:
-
-    vim +BundleInstall +qall
+    git submodule update --init
 
 The Command-T plugin needs to be compiled:
 
