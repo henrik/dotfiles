@@ -31,6 +31,9 @@ set incsearch                         " Search-as-you-type.
 set ignorecase                        " Case-insensitive…
 set smartcase                         " …unless phrase includes uppercase.
 
+" More persistent command history.
+set history=1000
+
 " Hide away backup and swap files.
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
