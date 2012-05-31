@@ -45,7 +45,7 @@ function is_gitroot() {
 
 # first check if it's a valid path
 if [ ! -d "$1" ]; then
-  echo "Usage: git submodule rm <path>"
+  echo "Usage: git submodule-rm <path>"
   exit
 fi
 
@@ -57,7 +57,7 @@ if is_gitroot; then
     # using ${1%/} to remove trailing slashes
     git config -f .gitmodules --remove-section submodule.${1%/}
     git config -f .git/config --remove-section submodule.${1%/}
-    git rm --cached ${1$/}
+    git rm --cached ${1%/}
   else
     echo "git submodule rm is not recursive yet, aborting."
   fi
