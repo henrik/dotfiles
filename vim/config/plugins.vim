@@ -38,13 +38,6 @@ map <leader>cc <Plug>CommentaryLine
 " We need the trailing space.
 nnoremap <leader>a :GitGrep 
 
-" YankRing
-" Don't map gp and gP.
-let g:yankring_paste_using_g = 0
-let g:yankring_history_dir = '~/.vim/backup'
-" Don't steal '@'
-let g:yankring_zap_keys = 'f F t T / ?'
-
 " Buffergator
 let g:buffergator_suppress_keymaps = 1
 let g:buffergator_sort_regime = 'mru'

@@ -86,10 +86,6 @@
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = http://github.com/vim-ruby/vim-ruby.git
-[submodule "vim/bundle/YankRing.vim"]
-	path = vim/bundle/YankRing.vim
-	url = http://github.com/vim-scripts/YankRing.vim.git
-	ignore = untracked
 [submodule "vim/bundle/argtextobj.vim"]
 	path = vim/bundle/argtextobj.vim
 	url = http://github.com/vim-scripts/argtextobj.vim.git
