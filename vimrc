@@ -18,3 +18,4 @@ source ~/.vim/shorts/prune_buffers.vim
 source ~/.vim/shorts/run_html.vim
 source ~/.vim/shorts/saveas_bang_to_mkdir_p.vim
 source ~/.vim/shorts/remove.vim
+source ~/.vim/shorts/promote_to_let.vim
