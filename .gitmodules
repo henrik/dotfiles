@@ -97,4 +97,4 @@
 	url = http://github.com/wincent/Command-T.git
 [submodule "vim/bundle/vim-qargs"]
 	path = vim/bundle/vim-qargs
-	url = https://github.com/nelstrom/vim-qargs.git
+	url = https://github.com/henrik/vim-qargs.git
