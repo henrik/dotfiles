@@ -81,13 +81,12 @@ The `extras` directory contains additional configuration files that are not dotf
  * [Little Snapper](http://www.realmacsoftware.com/littlesnapper/) – UI inspiration bin
  * [Mailplane](http://mailplaneapp.com/)
  * \*[Reeder](http://reederapp.com/)
- * [SlimBatteryMonitor](http://www.orange-carb.org/SBM/)
  * [SuperDuper](http://www.shirt-pocket.com/SuperDuper/)
  * [Spotify](http://www.spotify.com)
  * \*[The Unarchiver](http://itunes.apple.com/app/the-unarchiver/id425424353)
  * [Transmission](http://www.transmissionbt.com/)
 
-For development, not endorsed:
+For development; not endorsed:
 
  * [Firefox](http://www.mozilla.org/firefox)
  * [VirtualBox](https://www.virtualbox.org/)
