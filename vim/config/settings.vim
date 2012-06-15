@@ -28,11 +28,10 @@ set softtabstop=2                     " Spaces inserted by <Tab>
 set gdefault                          " Global search by default (/g turns it off).
 set hlsearch                          " Highlight results.
 set incsearch                         " Search-as-you-type.
-set ignorecase                        " Case-insensitive…
-set smartcase                         " …unless phrase includes uppercase.
+set ignorecase smartcase              " Case-insensitive unless we include uppercase.
 
 " More persistent command history.
-set history=1000
+set history=10000
 
 " Hide away backup and swap files.
 set backupdir=~/.vim/backup
