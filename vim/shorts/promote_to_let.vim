@@ -12,7 +12,7 @@
 "
 "   let(:foo) { x }
 "
-function! PromoteToLet()
+function! s:PromoteToLet()
   .s/@\?\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
   normal! dd
   silent! normal! ?^\s*\(it\|specify\|before\)\>
@@ -20,4 +20,4 @@ function! PromoteToLet()
   normal! ==
 endfunction
 
-command! -range PromoteToLet execute '<line1>,<line2>call PromoteToLet()'
+command! -range PromoteToLet execute '<line1>,<line2>call <SID>PromoteToLet()'
