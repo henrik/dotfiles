@@ -10,12 +10,6 @@ source ~/.vim/config/commands.vim
 source ~/.vim/config/mappings.vim
 
 " Snippets that are too long for .vimrc, too short for plugins.
-
-source ~/.vim/shorts/edit_rails_locales.vim
-source ~/.vim/shorts/focus_toggle.vim
-source ~/.vim/shorts/lab.vim
-source ~/.vim/shorts/prune_buffers.vim
-source ~/.vim/shorts/run_html.vim
-source ~/.vim/shorts/saveas_bang_to_mkdir_p.vim
-source ~/.vim/shorts/remove.vim
-source ~/.vim/shorts/promote_to_let.vim
+for f in split(glob('~/.vim/shorts/*.vim'), '\n')
+  exe 'source' f
+endfor
