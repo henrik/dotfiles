@@ -1,5 +1,7 @@
 " :Lab to open a Ruby buffer with some content to experiment with stuff.
 
+command! Lab call <SID>Lab()
+
 function! s:Lab()
   tabe
   read ~/.vim/plugin/lab.rb
@@ -10,5 +12,3 @@ function! s:Lab()
   " Close on q.
   map <buffer> q ZZ
 endfunction
-
-command! Lab call <SID>Lab()

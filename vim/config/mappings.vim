@@ -70,16 +70,6 @@ nmap <leader><up>     :leftabove  sp<CR>
 nmap <leader><down>   :rightbelow sp<CR>
 
 
-" These rely on the vim-unimpaired plugin.
-
-" Move single lines.
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Move multiple lines.
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
-
 " Tab/shift-tab to indent/outdent in visual mode.
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
@@ -90,6 +80,9 @@ vnoremap < <gv
 " I constantly hit "u" in visual mode when I mean to "y". Use "gu" for those rare occasions.
 vnoremap u <nop>
 vnoremap gu u
+
+" Because I often accidentally :W when I mean to :w.
+command! W w
 
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>

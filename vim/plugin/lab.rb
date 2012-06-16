@@ -3,24 +3,20 @@
 module Mod
 end
 
-class Super
-
+class Parent
   def hello
-    puts "super hello"
+    puts "Hello from parent!"
   end
-
 end
 
-class SubOne < Super
-
+class ChildOne < Parent
   def hello
-    puts "sub one hello"
+    puts "Hello from child 1!"
     super
   end
-
 end
 
-class SubTwo < Super
+class ChildTwo < Parent
 end
 
-SubOne.new.hello
+ChildOne.new.hello

@@ -37,7 +37,6 @@ set history=10000
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-
 " Reload file without prompting if it has changed on disk.
 " Will still prompt if there is unsaved text in the buffer.
 set autoread
@@ -46,7 +45,6 @@ set autoread
 " 2 secs (the value of updatetime) of pressing nothing.
 set updatetime=2000
 au WinEnter,BufWinEnter,CursorHold * checktime
-
 
 " Automatically save changes before switching buffer with some
 " commands, like :cnfile (mapped to g+) etc.
@@ -63,7 +61,7 @@ if &term =~ '^screen'
   map <Esc>[B <Down>
 endif
 
-" tmux will only forward escape sequences to the terminal if surrounded by a DCS sequence.
+" Different cursor for insert mode in iTerm2, with tmux workaround.
 " https://gist.github.com/1195581
 " http://sourceforge.net/mailarchive/forum.php?thread_name=AANLkTinkbdoZ8eNR1X2UobLTeww1jFrvfJxTMfKSq-L%2B%40mail.gmail.com&forum_name=tmux-users
 
