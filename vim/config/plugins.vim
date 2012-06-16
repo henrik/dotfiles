@@ -26,8 +26,10 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>
 
 " Commentary.
-map <leader>c <Plug>Commentary
-map <leader>cc <Plug>CommentaryLine
+xmap <leader>c <Plug>Commentary
+nmap <leader>c <Plug>Commentary
+nmap <leader>cc <Plug>CommentaryLine
+nmap <leader>cu <Plug>CommentaryUndo
 
 " Git grep.
 " Using "a" because it used to be :Ack.
