@@ -17,10 +17,6 @@ map <leader>T :CommandTFlush<CR>
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 
-" Align.vim
-" Disable mapping to ,w= so we can use ,w for CamelCaseMotion.
-map <nop> <Plug>AM_w=
-
 " NERDTree
 let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
