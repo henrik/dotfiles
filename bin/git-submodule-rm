@@ -11,28 +11,28 @@ function actual_path() {
 }
 
 function is_submodule() {
-    local top_level parent_git module_name
+  local top_level parent_git module_name
 
-    if [ -d "$1" ]; then
-      cd $1
-    else
-      return 1
-    fi
+  if [ -d "$1" ]; then
+    cd $1
+  else
+    return 1
+  fi
 
-    # Find the root of this git repo, then check if its parent dir is also a repo
-    top_level="$(git rev-parse --show-toplevel)"
-    if [ ! actual_path $toplevel ]; then
-      top_level="$(cd $top_level && pwd -P)"
-    fi
+  # Find the root of this git repo, then check if its parent dir is also a repo
+  top_level="$(git rev-parse --show-toplevel)"
+  if [ ! actual_path $toplevel ]; then
+    top_level="$(cd $top_level && pwd -P)"
+  fi
 
-    module_name="$(basename "$top_level")"
-    parent_git="$(cd "$top_level/.." && git rev-parse --show-toplevel 2> /dev/null)"
+  module_name="$(basename "$top_level")"
+  parent_git="$(cd "$top_level/.." && git rev-parse --show-toplevel 2> /dev/null)"
 
-    if [[ -n $parent_git ]]; then
-      return 0
-    else
-      return 1
-    fi
+  if [[ -n $parent_git ]]; then
+    return 0
+  else
+    return 1
+  fi
 }
 
 function is_gitroot() {
@@ -62,5 +62,5 @@ if is_gitroot; then
     echo "git submodule rm is not recursive yet, aborting."
   fi
 else
-  echo "You need to run this command from the toplevel of the working tree."
+  echo "You need to run this command from the top level of the working tree."
 fi
