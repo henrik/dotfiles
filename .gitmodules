@@ -102,3 +102,6 @@
 	path = vim/bundle/vim-yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
 	ignore = untracked
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
