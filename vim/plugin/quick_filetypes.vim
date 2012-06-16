@@ -10,3 +10,4 @@ command! FC set filetype=coffee
 command! FH set filetype=haml
 command! FR set filetype=ruby
 command! FV set filetype=vim
+command! FM set filetype=markdown
