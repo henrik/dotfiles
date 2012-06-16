@@ -98,3 +98,7 @@
 [submodule "vim/bundle/vim-qargs"]
 	path = vim/bundle/vim-qargs
 	url = https://github.com/henrik/vim-qargs.git
+[submodule "vim/bundle/vim-yankstack"]
+	path = vim/bundle/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+	ignore = untracked

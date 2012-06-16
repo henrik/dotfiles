@@ -36,10 +36,18 @@ map <leader>cc <Plug>CommentaryLine
 " Git grep.
 " Using "a" because it used to be :Ack.
 " We need the trailing space.
-nnoremap <leader>a :GitGrep 
+exe "nnoremap <leader>a :GitGrep "
 
 " Buffergator
 let g:buffergator_suppress_keymaps = 1
 let g:buffergator_sort_regime = 'mru'
 
 map <leader>g :BuffergatorToggle<CR>
+
+" Yankstack
+" Plugin must redefine mappings before we do.
+call yankstack#setup()
+" Don't add default keymaps; we'll set our own.
+let g:yankstack_map_keys = 0
+nmap å <Plug>yankstack_substitute_older_paste
+nmap ä <Plug>yankstack_substitute_newer_paste
