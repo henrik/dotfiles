@@ -37,6 +37,24 @@ The Command-T plugin needs to be compiled:
     rake make
 
 
+## tmux
+
+Make it integrate with the OS X system clipboard:
+
+    brew install reattach-to-user-namespace
+
+
+## Ruby
+
+Get colors in irb:
+
+    gem install wirble
+
+Or just use [pry](http://pry.github.com/) instead of irb, for colors and more:
+
+    gem install pry
+
+
 ## Extras
 
 The `extras` directory contains additional configuration files that are not dotfiles:
