@@ -2,7 +2,7 @@
 
 function! s:Lab()
   tabe
-  read ~/.vim/shorts/lab.rb
+  read ~/.vim/plugin/lab.rb
   1d
   set filetype=ruby
   " Make it a scratch (temporary) buffer.
