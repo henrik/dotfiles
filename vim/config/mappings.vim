@@ -69,7 +69,6 @@ nmap <leader><right>  :rightbelow vsp<CR>
 nmap <leader><up>     :leftabove  sp<CR>
 nmap <leader><down>   :rightbelow sp<CR>
 
-
 " Tab/shift-tab to indent/outdent in visual mode.
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
@@ -86,13 +85,3 @@ command! W w
 
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>
-
-" Execute selection as Vimscript.
-vnoremap <leader>x y:@"<CR>
-nnoremap <leader>x yy:@"<CR>
-
-" Print highlighting scope at the current position.
-" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
-map <leader>S :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>

@@ -1,4 +1,5 @@
 " :Lab to open a Ruby buffer with some content to experiment with stuff.
+" By Henrik Nyh <http://henrik.nyh.se> under the MIT license.
 
 command! Lab call <SID>Lab()
 
