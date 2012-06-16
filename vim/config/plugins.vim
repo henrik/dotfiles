@@ -47,5 +47,6 @@ map <leader>g :BuffergatorToggle<CR>
 call yankstack#setup()
 " Don't add default keymaps; we'll set our own.
 let g:yankstack_map_keys = 0
+
 nmap å <Plug>yankstack_substitute_older_paste
 nmap ä <Plug>yankstack_substitute_newer_paste
