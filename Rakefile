@@ -8,7 +8,6 @@ def info_rm(text) info(text, "x") end
 desc "Install dotfiles."
 task :install do
   Dir["*"].each do |file|
-
     source = File.join(Dir.pwd, file)
     basename = File.basename(source)
     next if IGNORE_FILES.include?(basename)
@@ -32,7 +31,6 @@ task :install do
     contents = File.read(source) rescue ""
 
     if contents.include?('<.replace ')
-
       info "#{source} has <.replace> placeholders."
 
       contents.gsub!(/<\.replace (.+?)>/) {
@@ -46,14 +44,9 @@ task :install do
 
       File.open(destination, 'w') {|f| f.write contents }
       info_cmd "wrote file #{destination}"
-
     else
-
       FileUtils.ln_s(source, destination)
       info_cmd "ln -s #{source} #{destination}"
-
     end
-
   end
-
 end
