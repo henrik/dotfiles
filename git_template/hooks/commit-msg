@@ -16,13 +16,16 @@
 # Install:
 #
 # cd your_project
-# curl http://gist.github.com/raw/184711/b8ce3b0192c74fc33a9b796907a5d0bb46087619/commit-msg -o .git/hooks/commit-msg && chmod u+x .git/hooks/commit-msg
+# curl https://raw.github.com/henrik/dotfiles/master/git_template/hooks/commit-msg -o .git/hooks/commit-msg && chmod u+x .git/hooks/commit-msg
 #
 # Or store it centrally and symlink in your projects:
 #
-# curl --create-dirs http://gist.github.com/raw/184711/b8ce3b0192c74fc33a9b796907a5d0bb46087619/commit-msg -o ~/.githooks/commit-msg && chmod u+x ~/.githooks/commit-msg
+# curl --create-dirs -https://raw.github.com/henrik/dotfiles/master/git_template/hooks/commit-msg -o ~/.githooks/commit-msg && chmod u+x ~/.githooks/commit-msg
 # cd your_project
 # ln -s ~/.githooks/commit-msg .git/hooks
+#
+# Or set up a template for all your Git repos:
+# http://www.kernel.org/pub/software/scm/git/docs/git-init.html#_template_directory
 
 PREFIXES = {
   # RedMine, Trac etc.
