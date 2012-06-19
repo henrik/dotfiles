@@ -22,6 +22,8 @@
 [gist]
 	private = yes
 	extension = rb
+[init]
+	templatedir = ~/.git_template
 [push]
 	default = current
 [web]
