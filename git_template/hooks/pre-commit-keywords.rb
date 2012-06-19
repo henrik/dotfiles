@@ -12,22 +12,6 @@
 # To bypass this commit hook (and others), perhaps when defining ":focus" or "show_page" for the first time, commit with the "--no-verify" option.
 #
 # By Henrik Nyh <http://henrik.nyh.se> 2011-10-08 under the MIT License.
-#
-#
-# Install:
-#
-# cd your_project
-# curl https://raw.github.com/henrik/dotfiles/master/git_template/hooks/pre-commit -o .git/hooks/pre-commit && chmod u+x .git/hooks/pre-commit
-#
-# Or store it centrally and symlink in your projects:
-#
-# curl --create-dirs -https://raw.github.com/henrik/dotfiles/master/git_template/hooks/pre-commit -o ~/.githooks/pre-commit && chmod u+x ~/.githooks/pre-commit
-# cd your_project
-# ln -s ~/.githooks/pre-commit .git/hooks
-#
-# Or set up a template for all your Git repos:
-# http://www.kernel.org/pub/software/scm/git/docs/git-init.html#_template_directory
-
 
 FORBIDDEN = [
   /[\s,](:focus)\b/,
