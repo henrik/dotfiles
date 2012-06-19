@@ -1,49 +1,26 @@
-#!/usr/bin/env ruby
+#!/bin/bash
 
-# Git pre-commit hook that prevents accidentally committing things that shouldn't be, like:
+# Runs all executable pre-commit-* hooks and exits after,
+# if any of them was not successful.
 #
-#   * ":focus", used with RSpec/Guard
-#   * "show_page", used to debug request specs
-#   * "console.log" or "console.debug", used in JavaScript debugging
-#   * "DO NOT COMMIT!" comments
-#
-# Modify the regexps to suit your needs. The error message shows the full regexp match, or just the first capture group, if there is one.
-#
-# To bypass this commit hook (and others), perhaps when defining ":focus" or "show_page" for the first time, commit with the "--no-verify" option.
-#
-# By Henrik Nyh <http://henrik.nyh.se> 2011-10-08 under the MIT License.
-#
-#
-# Install:
-#
-# cd your_project
-# curl https://raw.github.com/henrik/dotfiles/master/git_template/hooks/pre-commit -o .git/hooks/pre-commit && chmod u+x .git/hooks/pre-commit
-#
-# Or store it centrally and symlink in your projects:
-#
-# curl --create-dirs -https://raw.github.com/henrik/dotfiles/master/git_template/hooks/pre-commit -o ~/.githooks/pre-commit && chmod u+x ~/.githooks/pre-commit
-# cd your_project
-# ln -s ~/.githooks/pre-commit .git/hooks
-#
-# Or set up a template for all your Git repos:
-# http://www.kernel.org/pub/software/scm/git/docs/git-init.html#_template_directory
+# Based on
+# http://osdir.com/ml/git/2009-01/msg00308.html
 
+data=$(cat)
+exitcodes=()
 
-FORBIDDEN = [
-  /[\s,](:focus)\b/,
-  /\bshow_page\b/,
-  /\bconsole\.log\b/,
-  /\bconsole\.debug\b/,
-  /\bdo not commit\b/i
-]
+# Run each hook, passing through STDIN and storing the exit code.
+# We don't want to bail at the first failure, as the user might
+# then bypass the hooks without knowing about additional issues.
 
-full_diff = `git diff --cached --`.force_encoding("ASCII-8BIT")
+for hook in .git/hooks/pre-commit-*; do
+  test -x "$hook" || continue
+  echo "$data" | "$hook"
+  exitcodes+=($?)
+done
 
-full_diff.scan(%r{^\+\+\+ b/(.+)\n@@.*\n([\s\S]*?)(?:^diff|\z)}).each do |file, diff|
-  added = diff.split("\n").select { |x| x.start_with?("+") }.join("\n")
-  if FORBIDDEN.any? { |re| added.match(re) }
-    puts %{Git hook forbids adding "#{$1 || $&}" to #{file}}
-    puts "To commit anyway, use --no-verify"
-    exit 1
-  end
-end
+# If any exit code isn't 0, bail.
+
+for i in "${exitcodes[@]}"; do
+  [ "$i" == 0 ] || exit $i
+done
