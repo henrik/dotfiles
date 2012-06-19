@@ -39,11 +39,10 @@ FLAGS = [
   CLOSE  = "close",
   FINISH = "finish"
 ]
+
 CLOSING_FLAGS = [ CLOSE, FINISH ]
 
-
 branchname = `git branch --no-color 2> /dev/null`[/^\* (.+)/, 1].to_s
-
 
 if m = branchname.match(/\A(#{Regexp.union(*PREFIXES.keys)})-?(\d+)/)
   prefix, ticket_number = m.captures
@@ -57,8 +56,8 @@ message_file = ARGV[0]
 message = File.read(message_file).strip
 exit if message.include?("##{ticket_number}")
 
-
 # Determine if any of the flags are included. Make a note of which and then remove it.
+
 message.sub!(/(?:^|\s)#(#{Regexp.union(*FLAGS)})\b/, '')
 flag = $1
 
@@ -72,5 +71,4 @@ message =
     [ message, reference ].join(" ")
   end
 
-File.open(message_file, 'w') {|f| f.write message }
-
+File.open(message_file, 'w') { |f| f.write message }
