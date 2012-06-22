@@ -15,7 +15,7 @@
 function! s:PromoteToLet()
   .s/@\?\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
   normal! dd
-  silent! normal! ?^\s*\(it\|specify\|before\)\>
+  silent! exec '?^\s*\(it\|specify\|before\)\>'
   normal! P
   normal! ==
 endfunction
