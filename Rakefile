@@ -5,6 +5,8 @@ def info(text, prefix="*") STDOUT.puts "#{prefix}  #{text}" end
 def info_cmd(text) info(text, ">") end
 def info_rm(text) info(text, "x") end
 
+task :default => :install
+
 desc "Install dotfiles."
 task :install do
   Dir["*"].each do |file|
