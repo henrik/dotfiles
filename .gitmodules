@@ -105,6 +105,9 @@
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "vim/bundle/slimux"]
-	path = vim/bundle/slimux
-	url = https://github.com/henrik/slimux.git
+[submodule "vim/plugin/vimux"]
+	path = vim/plugin/vimux
+	url = https://github.com/benmills/vimux.git
+[submodule "vim/plugin/vim-turbux"]
+	path = vim/plugin/vim-turbux
+	url = https://github.com/jgdavey/vim-turbux.git

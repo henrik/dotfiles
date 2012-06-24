@@ -50,3 +50,12 @@ let g:yankstack_map_keys = 0
 
 nmap å <Plug>yankstack_substitute_older_paste
 nmap ä <Plug>yankstack_substitute_newer_paste
+
+" vimux
+let g:VimuxOrientation = "h"
+let g:VimuxUseNearestPane = 1
+
+" turbux
+let g:no_turbux_mappings = 1
+map <leader>m <Plug>SendTestToTmux
+map <leader>M <Plug>SendFocusedTestToTmux
