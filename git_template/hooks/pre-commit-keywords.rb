@@ -18,6 +18,7 @@ FORBIDDEN = [
   /\bshow_page\b/,
   /\bconsole\.log\b/,
   /\bconsole\.debug\b/,
+  /\bbinding\.pry\b/,
   /\bdo not commit\b/i
 ]
 
