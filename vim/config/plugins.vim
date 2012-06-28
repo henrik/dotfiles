@@ -60,3 +60,7 @@ let g:no_turbux_mappings = 1
 map <leader>m <Plug>SendTestToTmux
 map <leader>M <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec  = 'rspec --drb'
+
+" Blockle
+" ,b is taken by CamelCaseMotion.
+let g:blockle_mapping = '<leader>B'

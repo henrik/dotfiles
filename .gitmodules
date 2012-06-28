@@ -111,3 +111,9 @@
 [submodule "vim/plugin/vim-turbux"]
 	path = vim/plugin/vim-turbux
 	url = https://github.com/jgdavey/vim-turbux.git
+[submodule "vim/bundle/vim-blockle"]
+	path = vim/bundle/vim-blockle
+	url = https://github.com/jgdavey/vim-blockle.git
+[submodule "vim/bundle/vim-matchit"]
+	path = vim/bundle/vim-matchit
+	url = https://github.com/edsono/vim-matchit.git
