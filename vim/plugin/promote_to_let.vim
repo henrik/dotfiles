@@ -14,10 +14,6 @@
 "
 function! s:PromoteToLet()
   .s/@\?\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
-  normal! dd
-  silent! exec '?^\s*\(it\|specify\|before\)\>'
-  normal! P
-  normal! ==
 endfunction
 
-command! -range PromoteToLet execute '<line1>,<line2>call <SID>PromoteToLet()'
+command! -range Let execute '<line1>,<line2>call <SID>PromoteToLet()'
