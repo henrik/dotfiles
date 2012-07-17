@@ -27,6 +27,10 @@ vnoremap / /\v
 nnoremap ? ?\v
 vnoremap ? ?\v
 
+" Repeat last substitution, including flags, with &.
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
 " In command-line mode, C-a jumps to beginning (to match C-e).
 cnoremap <C-a> <Home>
 
