@@ -10,6 +10,7 @@ let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx,vim/backup
+set wildignore+=.themes  " Octopress.
 
 map <leader>T :CommandTFlush<CR>
 
