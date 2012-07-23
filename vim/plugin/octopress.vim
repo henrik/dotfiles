@@ -3,7 +3,11 @@
 "
 " By Henrik Nyh <http://henrik.nyh.se> under the MIT license.
 
-let s:base_url = "http://octopress.dev"
+" Override in ~/.vimrc if you like.
+" But you'll need to modify s:OPbrowse if the path format is different from mine.
+if !exists("g:octopress_url")
+  let g:octopress_url = "http://octopress.dev"
+endif
 
 " :OPonly to generate only the current post.
 command! OPonly call VimuxRunCommand("rake generate_only[".expand("%:t:r")."]")
@@ -28,7 +32,7 @@ nmap <leader>ob :OPbrowse<CR>
 
 
 function! s:OPbrowse()
-  let l:url = s:base_url."/"
+  let l:url = g:octopress_url."/"
   if match(expand("%"), "source/_posts/") == 0
     let l:url .= substitute(expand("%:t:r"), "\\v(\\d{4})-(\\d{2})-\\d{2}-(.+)", "\\1/\\2/\\3/", "")
   endif
