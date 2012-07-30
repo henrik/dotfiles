@@ -13,9 +13,18 @@ endif
 command! OPonly call VimuxRunCommand("rake generate_only[".expand("%:t:r")."]")
 nmap <leader>oo :OPonly<CR>
 
+" :OPgenerate to generate everything.
+command! OPgenerate call VimuxRunCommand("rake generate")
+nmap <leader>ogg :OPgenerate<CR>
+
+" :OPdeploy to deploy.
+command! OPdeploy call VimuxRunCommand("rake deploy")
+nmap <leader>od :OPdeploy<CR>
+
 " :OPgendep to generate everything and deploy.
 command! OPgendep call VimuxRunCommand("rake gen_deploy")
-nmap <leader>og :OPgendep<CR>
+nmap <leader>ogd :OPgendep<CR>
+
 
 " :OPwatch to regenerate changed CSS.
 command! OPwatch call VimuxRunCommand("compass watch")
