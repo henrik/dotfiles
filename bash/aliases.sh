@@ -63,6 +63,9 @@ alias gba="git rebase --abort"
 alias gbc="git add -A && git rebase --continue"
 alias gbm="git fetch origin master && git rebase origin/master"
 
+# Heroku
+alias h="heroku"
+
 # tmux
 alias ta="tmux attach"
 
