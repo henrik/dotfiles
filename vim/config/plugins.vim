@@ -16,7 +16,9 @@ map <leader>T :CommandTFlush<CR>
 
 " Syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_warnings=0
+" Slow, so only run on :SyntasticCheck
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 
 " NERDTree
 let NERDTreeIgnore=['\.rbc$', '\~$']
