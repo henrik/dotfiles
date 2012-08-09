@@ -5,16 +5,6 @@ include RubyRC
 
 require "rubygems"
 
-# http://pablotron.org/software/wirble/
-# Colorizes output, adds history etc.
-begin
-  require 'wirble'
-  Wirble.init
-  Wirble.colorize
-rescue LoadError => e
-  warn "Couldn't load Wirble: #{e}"
-end
-
 # Enable lambda prompts. http://twitter.com/acetoxy/status/26734736005
 class IRB::Irb
   alias :original_prompt :prompt
