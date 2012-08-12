@@ -65,6 +65,7 @@ alias gbm="git fetch origin master && git rebase origin/master"
 
 # Heroku
 alias h="heroku"
+alias hp="git push heroku"
 
 # tmux
 alias ta="tmux attach"
