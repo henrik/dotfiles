@@ -105,11 +105,11 @@
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "vim/plugin/vimux"]
-	path = vim/plugin/vimux
+[submodule "vim/bundle/vimux"]
+	path = vim/bundle/vimux
 	url = https://github.com/benmills/vimux.git
-[submodule "vim/plugin/vim-turbux"]
-	path = vim/plugin/vim-turbux
+[submodule "vim/bundle/vim-turbux"]
+	path = vim/bundle/vim-turbux
 	url = https://github.com/jgdavey/vim-turbux.git
 [submodule "vim/bundle/vim-blockle"]
 	path = vim/bundle/vim-blockle
