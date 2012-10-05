@@ -88,3 +88,5 @@ alias ip='ifconfig en3 | grep inet | grep -v inet6 | cut -c 7-16'
 # Straight into console-in-screen.
 # Assumes there is only one screen running.
 alias prodc="ssh prod -t screen -RD"
+alias rsu="rake spec:unit"
+alias rsua="rake spec:unit:all"
