@@ -60,8 +60,8 @@ let g:VimuxUseNearestPane = 1
 
 " turbux
 let g:no_turbux_mappings = 1
-map <leader>m <Plug>SendTestToTmux
-map <leader>M <Plug>SendFocusedTestToTmux
+map M <Plug>SendTestToTmux
+map m <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec  = 'rspec --drb'
 
 " Blockle
