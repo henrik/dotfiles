@@ -67,3 +67,7 @@ let g:turbux_command_rspec = 'script/turbux_rspec'
 " Blockle
 " ,b is taken by CamelCaseMotion.
 let g:blockle_mapping = '<leader>B'
+
+" Ack.vim
+" Use The Silver Searcher.
+let g:ackprg = 'ag --nogroup --nocolor --column'
