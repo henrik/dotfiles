@@ -81,9 +81,6 @@ alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
 alias hosts='sudo vim /etc/hosts'
 
-# Local IP.
-alias ip='ifconfig en3 | grep inet | grep -v inet6 | cut -c 7-16'
-
 # Work
 # Straight into console-in-screen.
 # Assumes there is only one screen running.
