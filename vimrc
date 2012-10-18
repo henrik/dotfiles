@@ -1,6 +1,3 @@
-" Don't sacrifice anything for Vi compatibility.
-set nocompatible
-
 let mapleader = ","
 
 source ~/.vim/config/plugins.vim
