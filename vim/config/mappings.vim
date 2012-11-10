@@ -21,12 +21,6 @@ noremap <leader>y "*y
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 noremap <leader>P :set paste<CR>:put! *<CR>:set nopaste<CR>
 
-" Default searches to "very magic", more like the world outside Vim.
-nnoremap / /\v
-vnoremap / /\v
-nnoremap ? ?\v
-vnoremap ? ?\v
-
 " Repeat last substitution, including flags, with &.
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
@@ -76,6 +70,7 @@ nmap <leader><down>   :rightbelow sp<CR>
 " Tab/shift-tab to indent/outdent in visual mode.
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
 " Keep selection when indenting/outdenting.
 vnoremap > >gv
 vnoremap < <gv
