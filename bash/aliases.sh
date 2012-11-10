@@ -88,6 +88,6 @@ alias hosts='sudo vim /etc/hosts'
 # Work
 # Straight into console-in-screen.
 # Assumes there is only one screen running.
-alias prodc="ssh prod -t screen -RD"
+alias prodc="ssh pa -t screen -RD"
 alias rsu="rake spec:unit"
 alias rsua="rake spec:unit:all"
