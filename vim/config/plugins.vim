@@ -25,8 +25,9 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
 let g:NERDMenuMode=0
 
+
 map <leader>n :NERDTreeToggle<CR>
-map <leader>N :NERDTreeFind<CR>
+map <leader>N :NERDTreeFindIfFindable<CR>
 
 " Commentary.
 xmap <leader>c <Plug>Commentary
