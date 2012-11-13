@@ -50,12 +50,6 @@ nmap <leader>cu <Plug>CommentaryUndo
 " We need the trailing space.
 exe "nnoremap <leader>a :GitGrep "
 
-" Buffergator
-let g:buffergator_suppress_keymaps = 1
-let g:buffergator_sort_regime = 'mru'
-
-map <leader>g :BuffergatorToggle<CR>
-
 " Yankstack
 " Plugin must redefine mappings before we do.
 call yankstack#setup()
