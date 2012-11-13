@@ -5,14 +5,24 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
-" Command-T
-let g:CommandTMaxHeight=20
-let g:CommandTMatchWindowAtTop=1
+" Ctrl-P, Command-T or whatever.
 set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx,vim/backup
 set wildignore+=.themes  " Octopress.
+"
+" Command-T
+let g:CommandTMaxHeight=20
+let g:CommandTMatchWindowAtTop=1
+" Let's get used to Ctrl+P instead.
+map <leader>t <nop>
+"map <leader>T :CommandTFlush<CR>
 
-map <leader>T :CommandTFlush<CR>
+" Ctrl-P
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_max_height = 20
+let g:ctrlp_show_hidden = 0
+let g:ctrlp_max_files = 0
 
 " Syntastic
 let g:syntastic_enable_signs=1
