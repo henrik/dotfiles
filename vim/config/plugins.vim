@@ -14,8 +14,7 @@ set wildignore+=.themes  " Octopress.
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 " Let's get used to Ctrl+P instead.
-map <leader>t <nop>
-"map <leader>T :CommandTFlush<CR>
+map <leader>t :CtrlP<CR>
 
 " Ctrl-P
 let g:ctrlp_match_window_bottom = 0
