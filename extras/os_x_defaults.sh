@@ -25,6 +25,12 @@ echo "Hide Spotlight icon."
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 killall SystemUIServer
 
+# http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/
+echo "Change screenshot location."
+mkdir -p ~/Desktop/Screenshots
+defaults write com.apple.screencapture location ~/Desktop/Screenshots/
+killall SystemUIServer
+
 echo "Set a blazingly fast keyboard repeat rate."
 defaults write NSGlobalDomain KeyRepeat -int 0.02
 
