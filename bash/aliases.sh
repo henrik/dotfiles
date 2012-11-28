@@ -86,8 +86,12 @@ alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 alias hosts='sudo vim /etc/hosts'
 
 # Work
+
 # Straight into console-in-screen.
 # Assumes there is only one screen running.
 alias prodc="ssh pa -t screen -RD"
+
+# Tests
 alias rsu="rake spec:unit"
 alias rsua="rake spec:unit:all"
+alias rt="rake testbot:spec"
