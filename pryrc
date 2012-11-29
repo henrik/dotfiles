@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-load File.dirname(__FILE__) + '/.rubyrc'
+load File.expand_path("~/.rubyrc")
 include RubyRC
 
 Pry.config.prompt = [
