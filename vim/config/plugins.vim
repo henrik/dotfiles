@@ -22,6 +22,7 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_max_height = 20
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_max_files = 0
+let g:ctrlp_switch_buffer = 0
 
 " Syntastic
 let g:syntastic_enable_signs=1
