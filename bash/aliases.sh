@@ -6,6 +6,8 @@ alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 # OS X: open pwd in Finder.
 alias o="open ."
 
+alias hosts='sudo vim /etc/hosts'
+
 # http://www.hogbaysoftware.com/products/plaintext
 alias text='cd ~/Dropbox/PlainText && vim'
 
@@ -35,6 +37,11 @@ alias mig="rake db:migrate"
 alias f="bundle exec foreman start -f=Procfile.lite"
 # Everything, when we need it, or on faster machines.
 alias ff="bundle exec foreman start"
+
+# Tests
+alias rsu="rake spec:unit"
+alias rsua="rake spec:unit:all"
+alias rt="rake testbot:spec"
 
 # Git
 alias gs="git status"
@@ -80,15 +87,8 @@ alias gpdf="VIEW_PDF=true bundle exec guard -i"
 # Servers
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
-alias hosts='sudo vim /etc/hosts'
-
 # Work
 
 # Straight into console-in-screen.
 # Assumes there is only one screen running.
 alias prodc="ssh pa -t screen -RD"
-
-# Tests
-alias rsu="rake spec:unit"
-alias rsua="rake spec:unit:all"
-alias rt="rake testbot:spec"
