@@ -5,11 +5,13 @@ command! Lab call <SID>Lab()
 
 function! s:Lab()
   tabe
-  read ~/.vim/plugin/lab.rb
-  1d
   set filetype=ruby
   " Make it a scratch (temporary) buffer.
   setlocal buftype=nofile bufhidden=wipe noswapfile
   " Close on q.
   map <buffer> q ZZ
+  let @x = "# encoding: utf-8\n\n"
+  -1put x
+  normal j
+  startinsert
 endfunction
