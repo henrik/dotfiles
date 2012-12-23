@@ -2,6 +2,8 @@
 " https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 
 function! InlineVariable()
+    " Must start at beginning of line
+    normal ^
     " Copy the variable under the cursor into the 'a' register
     :let l:tmp_a = @a
     :normal "ayiw
