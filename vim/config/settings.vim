@@ -12,7 +12,6 @@ set list                              " Show invisibles.
 set modelines=3                       " Use modeline overrides.
 set nojoinspaces                      " 1 space, not 2, when joining sentences.
 set number                            " Show gutter with line numbers.
-set ruler                             " Show line, column and scroll info in status line.
 set scrolloff=3                       " Minimum number of lines to always show above/below the caret.
 set showcmd                           " Show partially typed command sequences.
 set visualbell                        " Don't beep.
