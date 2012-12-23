@@ -8,7 +8,7 @@ set backspace=indent,eol,start        " Allow backspacing over everything in ins
 set fillchars=vert:\                  " No pipes in vertical split separators.
 set laststatus=2                      " Always show status bar.
 set listchars=nbsp:·,tab:▸\ ,trail:·  " Configure how invisibles appear.
-set list!                             " Show invisibles.
+set list                              " Show invisibles.
 set modelines=3                       " Use modeline overrides.
 set nojoinspaces                      " 1 space, not 2, when joining sentences.
 set number                            " Show gutter with line numbers.
