@@ -1,3 +1,12 @@
+" If run on the first line, turns this:
+"
+"   foo = "123"
+"   method(foo)
+"
+" into this:
+"
+"   method(123)
+"
 " Very much based on this one by Gary Bernhardt:
 " https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 
