@@ -46,7 +46,6 @@ alias gca="git add --all && git commit -m"  # "all"
 alias gcaf="git add --all && git commit --no-verify -m"
 alias gcac="gca Cleanup."
 alias gcoc="gco Cleanup."
-alias gp='git push'
 alias gpp='git pull --rebase && git push'
 alias gps='git stash && gpp && git stash pop'
 alias go="git checkout"
