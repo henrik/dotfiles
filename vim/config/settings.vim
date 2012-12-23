@@ -21,7 +21,7 @@ set wrap                              " Soft wrap.
 " Indentation.
 set expandtab                         " Replace tabs with spaces.
 set shiftwidth=2                      " Spaces used for autoindent and commands like >>.
-set softtabstop=2                     " Spaces inserted by <Tab>
+set softtabstop=2                     " Spaces inserted by <Tab>.
 
 " Searching.
 set gdefault                          " Global search by default (/g turns it off).
@@ -46,7 +46,7 @@ set updatetime=2000
 au WinEnter,BufWinEnter,CursorHold * checktime
 
 " Automatically save changes before switching buffer with some
-" commands, like :cnfile (mapped to g+) etc.
+" commands, like :cnfile.
 set autowrite
 
 " Unbreak keyboard shortcuts in tmux.
