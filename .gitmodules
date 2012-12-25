@@ -105,9 +105,6 @@
 [submodule "vim/bundle/vimux"]
 	path = vim/bundle/vimux
 	url = https://github.com/benmills/vimux.git
-[submodule "vim/bundle/vim-turbux"]
-	path = vim/bundle/vim-turbux
-	url = https://github.com/jgdavey/vim-turbux.git
 [submodule "vim/bundle/vim-blockle"]
 	path = vim/bundle/vim-blockle
 	url = https://github.com/jgdavey/vim-blockle.git
@@ -117,3 +114,6 @@
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-turbux"]
+	path = vim/bundle/vim-turbux
+	url = git@github.com:henrik/vim-turbux.git
