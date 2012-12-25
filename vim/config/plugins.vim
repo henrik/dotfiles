@@ -21,6 +21,8 @@ set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx,vim/backup
 set wildignore+=.themes  " Octopress.
 
+map <c-m> :CtrlPMRU<CR>
+
 " Compatibility with colleagues used to Command-T.
 map <leader>t :CtrlP<CR>
 
