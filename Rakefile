@@ -1,9 +1,23 @@
-IGNORE_FILES = ['Rakefile', 'README.markdown', '.gitignore', 'extras']
+DO_NOT_SYMLINK = %w[
+  .gitignore
+  extras
+  Rakefile
+  README.markdown
+]
 
-def error(text) STDERR.puts "!  #{text}" end
-def info(text, prefix="*") STDOUT.puts "#{prefix}  #{text}" end
-def info_cmd(text) info(text, ">") end
-def info_rm(text) info(text, "x") end
+
+def error(text)
+  STDERR.puts "!  #{text}"
+end
+
+def info(text)
+  STDOUT.puts "*  #{text}"
+end
+
+def info_rm(text)
+  STDOUT.puts "x  #{text}"
+end
+
 
 task :default => :install
 
@@ -12,25 +26,26 @@ task :install do
   Dir["*"].each do |file|
     source = File.join(Dir.pwd, file)
     basename = File.basename(source)
-    next if IGNORE_FILES.include?(basename)
+    next if DO_NOT_SYMLINK.include?(basename)
 
-    destination = File.expand_path("~/.#{basename}")
-    if File.symlink?(destination)
-      symlink_to = File.readlink(destination)
-      info_rm "Removing symlink #{destination} --> #{symlink_to}" if symlink_to != source
-      FileUtils.rm(destination)
-    elsif File.exist?(destination)
-      error "#{destination} exists. Will not automatically overwrite a non-symlink. Overwrite (y/n)?"
+    target = File.expand_path("~/.#{basename}")
+
+    if File.symlink?(target)
+      symlink_to = File.readlink(target)
+      info_rm "Removing symlink #{target} --> #{symlink_to}" if symlink_to != source
+      FileUtils.rm(target)
+    elsif File.exist?(target)
+      error "#{target} exists. Will not automatically overwrite a non-symlink. Overwrite (y/n)?"
       print "? "
       if STDIN.gets.match(/^y/i)
-        info_rm "Removing #{destination}."
-        FileUtils.rm_rf(destination)
+        info_rm "Removing #{target}."
+        FileUtils.rm_rf(target)
       else
         next
       end
     end
 
-    FileUtils.ln_s(source, destination)
-    info_cmd "ln -s #{source} #{destination}"
+    FileUtils.ln_s(source, target)
+    info "Creating symlink: #{target} --> #{source}"
   end
 end
