@@ -14,4 +14,3 @@ def log_on
   ActiveRecord::Base.logger.level = 0  # debug (?)
   nil
 end
- 
