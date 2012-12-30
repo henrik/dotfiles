@@ -16,9 +16,6 @@
 	today = shortlog --since=midnight
 	uncommit = reset --soft HEAD^
 	unref = reset --soft HEAD@{1}
-[github]
-	user = henrik
-	token = <.replace github-token>
 [gist]
 	private = yes
 	extension = rb
