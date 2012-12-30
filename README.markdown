@@ -17,17 +17,9 @@ The dotfiles will be symlinked, e.g. `~/.bash_profile` symlinked to `~/.dotfiles
 
 ## Vim
 
-I'm assuming MacVim (`brew install macvim`) and at least Vim 7.
-
 Install plugins from submodules:
 
     git submodule update --init
-
-The Command-T plugin needs to be compiled:
-
-    cd ~/.vim/bundle/command-t
-    rvm system  # If you use rvm
-    rake make
 
 
 ## tmux
@@ -35,17 +27,6 @@ The Command-T plugin needs to be compiled:
 Make it integrate with the OS X system clipboard:
 
     brew install reattach-to-user-namespace
-
-
-## Ruby
-
-Get colors in irb:
-
-    gem install wirble
-
-Or just use [pry](http://pry.github.com/) instead of irb, for colors and more:
-
-    gem install pry
 
 
 ## Extras
