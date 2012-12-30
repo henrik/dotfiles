@@ -1,7 +1,7 @@
 " Quicker filetype setting:
 "   :F html
 " instead of
-"   :set ft=html
+"   :setf html
 " Can tab-complete filetype.
 command! -nargs=1 -complete=filetype F set filetype=<args>
 
