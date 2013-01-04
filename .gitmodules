@@ -116,4 +116,4 @@
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/vim-turbux"]
 	path = vim/bundle/vim-turbux
-	url = git@github.com:henrik/vim-turbux.git
+	url = git://github.com/jgdavey/vim-turbux.git
