@@ -1,20 +1,23 @@
-# OS X
+# OS X.
 .DS_Store
 
-# iPhone development
+# Vim bundles as submodules.
+doc/tags
+
+# iPhone development.
 # http://www.adminmyserver.com/articles/gitignore-for-iphone-xcode-development
 
-# Build products
+# Build products.
 # TODO: Make "build" more specific. Collided with CI build scripts.
 #build
 *.[oa]
 
-# Temp nibs and swap files
+# Temp nibs and swap files.
 *~.nib
 *.swp
 *~
 
-# User-specific Xcode stuff
+# User-specific Xcode stuff.
 *.mode1v3
 *.mode2v3
 *.pbxuser
