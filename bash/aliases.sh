@@ -28,6 +28,9 @@ elif ls -G -d . >/dev/null 2>&1; then
   alias ls='ls -G'  # BSD/OS X
 fi
 
+# I always forget the common options.
+alias rsync?="echo 'rsync -az --progress server:/path/ path (Slashes are significant.)'"
+
 # Ruby on Rails
 alias sc="[ -f script/console ] && script/console || bundle exec rails console"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
