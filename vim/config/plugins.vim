@@ -44,10 +44,10 @@ map <leader>N :NERDTreeFindIfFindable<CR>
 " Rails.vim
 
 " :Rfac item
-autocmd User Rails Rnavcommand factory    spec/factories   -glob=**/* -suffix=_factory.rb
+autocmd User Rails Rnavcommand factory    spec/factories   -suffix=_factory.rb
 
 " :Rfab item
-autocmd User Rails Rnavcommand fabricator spec/fabricators -glob=**/* -suffix=_fabricator.rb
+autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb
 
 " :A on lib/foo.rb -> unit/lib/foo_spec.rb
 autocmd User Rails/lib/* let b:rails_alternate = 'unit/' . rails#buffer().name()[0:-4] . '_spec.rb'
