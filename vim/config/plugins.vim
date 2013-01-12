@@ -41,6 +41,13 @@ let g:NERDMenuMode=0
 map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFindIfFindable<CR>
 
+" Rails.vim
+
+" lib/foo.rb -> unit/lib/foo_spec.rb
+autocmd User Rails/lib/* let b:rails_alternate = 'unit/' . rails#buffer().name()[0:-4] . '_spec.rb'
+" unit/lib/foo_spec.rb -> lib/foo.rb
+autocmd User Rails/unit/lib/* let b:rails_alternate = rails#buffer().name()[5:-9] . '.rb'
+
 " Commentary
 
 xmap <leader>c <Plug>Commentary
