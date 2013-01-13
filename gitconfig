@@ -16,6 +16,7 @@
 	today = shortlog --since=midnight
 	uncommit = reset --soft HEAD^
 	unref = reset --soft HEAD@{1}
+	subs = submodule foreach git pull origin master
 [gist]
 	private = yes
 	extension = rb
