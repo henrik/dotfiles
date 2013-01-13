@@ -89,9 +89,6 @@
 [submodule "vim/bundle/file-line"]
 	path = vim/bundle/file-line
 	url = http://github.com/vim-scripts/file-line.git
-[submodule "vim/bundle/Command-T"]
-	path = vim/bundle/Command-T
-	url = http://github.com/wincent/Command-T.git
 [submodule "vim/bundle/vim-qargs"]
 	path = vim/bundle/vim-qargs
 	url = https://github.com/henrik/vim-qargs.git
