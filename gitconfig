@@ -17,6 +17,7 @@
 	uncommit = reset --soft HEAD^
 	unref = reset --soft HEAD@{1}
 	subs = submodule foreach git pull origin master
+        bhist = recent-branches
 [gist]
 	private = yes
 	extension = rb
