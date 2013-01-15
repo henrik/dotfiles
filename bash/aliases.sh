@@ -84,10 +84,6 @@ alias ta="tmux attach"
 # Then run tcopy to put it in the OS X clipboard (assuming reattach-to-user-namespace).
 alias tcopy="tmux show-buffer | pbcopy"
 
-# Guard
-alias g="bundle exec guard -i"
-alias gpdf="VIEW_PDF=true bundle exec guard -i"
-
 # Servers
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
