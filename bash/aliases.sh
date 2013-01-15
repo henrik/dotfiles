@@ -47,6 +47,7 @@ alias rsua="rake spec:unit:all"
 alias rt="rake testbot:spec"
 
 # Git
+alias g="git"
 alias gs="git status"
 alias gw="git show"
 alias gd="git diff"  # What's changed but not yet added?
