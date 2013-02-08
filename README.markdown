@@ -69,7 +69,6 @@ The `extras` directory contains additional configuration files that are not dotf
  * [iPhoto Library Manager](http://www.fatcatsoftware.com/iplm/)
  * [iStat Menus](http://bjango.com/mac/istatmenus/)
  * [iTerm2](http://www.iterm2.com) - Keyboard shortcuts should be xterm defaults
- * [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/) – Bind right-Option to Enter
  * [Little Snapper](http://www.realmacsoftware.com/littlesnapper/) – UI inspiration bin
  * [Mailplane](http://mailplaneapp.com/)
  * \*[Reeder](http://reederapp.com/)
