@@ -7,9 +7,7 @@
 
 function __rvm_prompt {
   if hash rvm-prompt 2>&- ; then
-    rvm-prompt i v g s
-  else
-    echo "no-rvm"
+    echo " `rvm-prompt i v g s`"
   fi
 }
 
@@ -50,7 +48,7 @@ bash_prompt() {
   # reset
   local RESET="\[\033[0;37m\]"
 
-  PS1="\t $BY\$(__name_and_server)$Y\W$G \$(__rvm_prompt)$G\$(__git_prompt)$RESET$ "
+  PS1="\t $BY\$(__name_and_server)$Y\W$G\$(__rvm_prompt)$G\$(__git_prompt)$RESET$ "
 
 }
 
