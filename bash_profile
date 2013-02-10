@@ -1,3 +1,5 @@
+[[ -s ~/.profile ]] && source ~/.profile
+
 source ~/.bash/path.sh
 source ~/.bash/env.sh
 source ~/.bash/completion.sh
