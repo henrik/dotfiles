@@ -8,6 +8,7 @@ Clone this repo into `~/.dotfiles`:
 
 Then install the dotfiles:
 
+    cd .dotfiles
     rake
 
 This rake task will not replace existing files, but it will replace existing symlinks.
