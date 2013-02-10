@@ -6,4 +6,4 @@ export RBXOPT=-X19
 export HISTCONTROL=ignoredups
 # Pow shouldn't hide errors in non-ASCII apps:
 # https://github.com/37signals/pow/issues/268
-export LANG=sv_SE.UTF-8
+export LANG=en_US.utf8
