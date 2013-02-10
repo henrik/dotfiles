@@ -9,5 +9,5 @@
 if command -v reattach-to-user-namespace >/dev/null; then
   reattach-to-user-namespace -l $SHELL
 else
-  $SHELL
+  $SHELL -l
 fi
