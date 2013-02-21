@@ -33,3 +33,5 @@
 [mergetool "vimdiff"]
 	cmd = vim -d "$LOCAL" "$MERGED" "$REMOTE"
 	trustExitCode = true
+[branch]
+	autosetuprebase = always
