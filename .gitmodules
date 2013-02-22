@@ -1,6 +1,3 @@
-[submodule "vim/bundle/vim-slim"]
-	path = vim/bundle/vim-slim
-	url = http://github.com/bbommarito/vim-slim.git
 [submodule "vim/bundle/CamelCaseMotion"]
 	path = vim/bundle/CamelCaseMotion
 	url = http://github.com/bkad/CamelCaseMotion.git
@@ -117,3 +114,6 @@
 [submodule "vim/bundle/splitjoin.vim"]
 	path = vim/bundle/splitjoin.vim
 	url = git@github.com:AndrewRadev/splitjoin.vim.git
+[submodule "vim/bundle/vim-slim"]
+	path = vim/bundle/vim-slim
+	url = git@github.com:slim-template/vim-slim.git
