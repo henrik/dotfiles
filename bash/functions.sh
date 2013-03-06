@@ -27,10 +27,10 @@ function pwf {
 
 # Create directory and cd to it.
 #
-#     henrik@Nyx /tmp$ mkcd foo/bar/baz
+#     henrik@Nyx /tmp$ mcd foo/bar/baz
 #     henrik@Nyx /tmp/foo/bar/baz$
 #
-function mkcd {
+function mcd {
   mkdir -p "$1" && cd "$1"
 }
 
