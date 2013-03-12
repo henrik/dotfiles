@@ -1,3 +1,11 @@
+# OS X only:
+# "o file.txt" = open file in default app.
+# "o http://example.com" = open URL in default browser.
+# "o" = open pwd in Finder.
+function o {
+  open ${@:-'.'}
+}
+
 # Calls grep with STDIN closed if in a terminal to avoid the "eternal wait" problem.
 # http://gist.github.com/476116
 

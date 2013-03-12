@@ -3,9 +3,6 @@ alias dots="cd ~/.dotfiles && vim"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 
-# OS X: open pwd in Finder.
-alias o="open ."
-
 alias hosts='sudo vim /etc/hosts'
 
 # http://www.hogbaysoftware.com/products/plaintext
