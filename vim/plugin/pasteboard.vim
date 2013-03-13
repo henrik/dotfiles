@@ -32,7 +32,7 @@ function! s:paste_above()
 endfunction
 
 if <SID>is_over_ssh()
-  noremap <leader>y :echoerr "Can't yank to OS X clipboard :("<CR>
+  noremap <leader>y :echoerr "Can't yank to OS X pasteboard :("<CR>
 
   " Paste from OS X pasteboard without messing up indent.
   noremap <leader>p :call <SID>paste_below()<CR>
