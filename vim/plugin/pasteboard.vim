@@ -19,24 +19,12 @@ augroup pasteboard
         \ endif
 augroup END
 
-function! s:paste_below()
-  exe "normal o"
-  call <SID>setup_paste()
-  startinsert
-endfunction
-
-function! s:paste_above()
-  exe "normal O"
-  call <SID>setup_paste()
-  startinsert
-endfunction
-
 if <SID>is_over_ssh()
   noremap <leader>y :echoerr "Can't yank to OS X pasteboard :("<CR>
 
   " Paste from OS X pasteboard without messing up indent.
-  noremap <leader>p :call <SID>paste_below()<CR>
-  noremap <leader>P :call <SID>paste_above()<CR>
+  noremap <leader>p :call <SID>setup_paste()<CR>o
+  noremap <leader>P :call <SID>setup_paste()<CR>O
 else
   " Yank to OS X pasteboard.
   noremap <leader>y "*y
