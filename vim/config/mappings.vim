@@ -14,13 +14,6 @@ noremap QA :qa<CR>
 " Close, damn you!
 noremap Q! :q!<CR>
 
-" Yank to OS X pasteboard.
-noremap <leader>y "*y
-
-" Paste from OS X pasteboard without messing up indent.
-noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-noremap <leader>P :set paste<CR>:put! *<CR>:set nopaste<CR>
-
 " Repeat last substitution, including flags, with &.
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
