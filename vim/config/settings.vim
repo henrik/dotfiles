@@ -29,6 +29,11 @@ set hlsearch                          " Highlight results.
 set incsearch                         " Search-as-you-type.
 set ignorecase smartcase              " Case-insensitive unless we include uppercase.
 
+" Can autocomplete CSS classes etc with dashes.
+" Also changes the "w" small word motion not to stop at dashes,
+" but use https://github.com/henrik/CamelCaseMotion for that.
+set iskeyword+=-
+
 " More persistent command history.
 set history=10000
 

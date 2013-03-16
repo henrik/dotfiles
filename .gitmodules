@@ -1,6 +1,3 @@
-[submodule "vim/bundle/CamelCaseMotion"]
-	path = vim/bundle/CamelCaseMotion
-	url = http://github.com/bkad/CamelCaseMotion.git
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = http://github.com/henrik/ack.vim.git
@@ -117,3 +114,6 @@
 [submodule "vim/bundle/vim-turbux"]
 	path = vim/bundle/vim-turbux
 	url = git@github.com:barsoom/vim-turbux.git
+[submodule "vim/bundle/CamelCaseMotion"]
+	path = vim/bundle/CamelCaseMotion
+	url = git@github.com:henrik/CamelCaseMotion.git
