@@ -1,6 +1,6 @@
 " These rely on the vim-unimpaired plugin.
 
- Move single lines.
+" Move single lines.
 nmap <C-k> [e
 nmap <C-j> ]e
 " Move multiple lines.
