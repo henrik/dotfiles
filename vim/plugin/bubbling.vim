@@ -1,8 +1,8 @@
 " These rely on the vim-unimpaired plugin.
 
 " Move single lines.
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <C-k> [e
+nmap <C-j> ]e
 " Move multiple lines.
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <C-k> [egv
+vmap <C-j> ]egv
