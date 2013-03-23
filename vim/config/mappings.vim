@@ -40,15 +40,6 @@ inoremap <Up> <C-o>gk
 noremap <S-Left> :tabp<CR>
 noremap <S-Right> :tabn<CR>
 
-" Ctrl + arrows to jump between windows.
-" OS X may overload these; uncheck them in OS X prefs.
-" You may also need to map them in iTerm2 prefs to escape
-" sequences [1;5A (up) B (down) C (right) and D (left).
-noremap <C-Up> <C-w><Up>
-noremap <C-Down> <C-w><Down>
-noremap <C-Left> <C-w><Left>
-noremap <C-Right> <C-w><Right>
-
 " Un-highlight search matches
 nnoremap <leader><leader> :noh<CR>
 
