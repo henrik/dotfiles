@@ -26,7 +26,10 @@ endfunction
 
 " Ctrl + arrows to jump between windows.
 " Can also jump to adjacent tmux panes.
-noremap <c-up> :call TmuxWinCmd('k')<cr>
-noremap <c-down> :call TmuxWinCmd('j')<cr>
-noremap <c-right> :call TmuxWinCmd('l')<cr>
-noremap <c-left> :call TmuxWinCmd('h')<cr>
+" OS X may overload these; uncheck them in OS X prefs.
+" You may also need to map them in iTerm2 prefs to escape
+" sequences [1;5A (up) B (down) C (right) and D (left).
+noremap <C-Up> :call TmuxWinCmd('k')<cr>
+noremap <C-Down> :call TmuxWinCmd('j')<cr>
+noremap <C-Right> :call TmuxWinCmd('l')<cr>
+noremap <C-Left> :call TmuxWinCmd('h')<cr>
