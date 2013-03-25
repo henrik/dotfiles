@@ -39,9 +39,8 @@ alias f="bundle exec foreman start -f=Procfile.lite"
 alias ff="bundle exec foreman start"
 
 # Tests
-alias rsu="rake spec:unit"
-alias rsua="rake spec:unit:all"
-alias rt="rake testbot:spec"
+alias rsua="bundle exec rake spec:unit:all"
+alias rsp="rake testbot:spec"
 
 # Git
 alias g="git"
