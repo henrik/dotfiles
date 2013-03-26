@@ -20,14 +20,14 @@ augroup pasteboard
 augroup END
 
 if <SID>is_over_ssh()
-  noremap <leader>y :echoerr "Can't yank to OS X pasteboard :("<CR>
+  vnoremap <leader>y :echoerr "Can't yank to OS X pasteboard :("<CR>
 
   " Paste from OS X pasteboard without messing up indent.
   noremap <leader>p :call <SID>setup_paste()<CR>o
   noremap <leader>P :call <SID>setup_paste()<CR>O
 else
   " Yank to OS X pasteboard.
-  noremap <leader>y "*y
+  vnoremap <leader>y "*y
 
   " Paste from OS X pasteboard without messing up indent.
   noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
