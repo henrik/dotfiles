@@ -38,6 +38,8 @@ alias f="bundle exec foreman start -f=Procfile.lite"
 # Everything, when we need it, or on faster machines.
 alias ff="bundle exec foreman start"
 
+alias be="bundle exec"
+
 # Tests
 alias rsua="bundle exec rake spec:unit:all"
 alias rsp="rake testbot:spec"
