@@ -53,3 +53,7 @@ au WinEnter,BufWinEnter,CursorHold * checktime
 " Automatically save changes before switching buffer with some
 " commands, like :cnfile.
 set autowrite
+
+" Autosave.
+" http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
+au BufLeave,FocusLost * silent! wa
