@@ -102,7 +102,7 @@ map M <Plug>SendTestToTmux
 map m <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec = 'script/turbux_rspec'
 
-" CamelCasemotion
+" CamelCaseMotion
 
 " Make c,w not include the trailing underscore:
 " https://github.com/bkad/CamelCaseMotion/issues/10
