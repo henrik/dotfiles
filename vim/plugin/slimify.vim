@@ -1,5 +1,5 @@
 function! s:SlimifyHaml()
-  silent! ! haml2slim %
+  call system("haml2slim " . shellescape(expand("%")))
   vsp
   exe "e " . expand("%:r") . ".slim"
 endfunction
