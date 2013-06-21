@@ -50,8 +50,8 @@ alias gs="git status"
 alias gw="git show"
 alias gw^="git show HEAD^"
 alias gw^^="git show HEAD^^"
-alias gd="git diff"  # What's changed but not yet added?
-alias gdc="git diff --cached"  # What's added but not yet committed?
+alias gd="git diff-index HEAD -p --color"  # What's changed? Both staged and unstaged.
+alias gdo="git diff --cached"  # What's changed? Only staged (added) changes.
 alias gco="git commit -m"  # "only"
 # for gca ("all"), see functions.sh.
 alias gcaf="git add --all && git commit --no-verify -m"
