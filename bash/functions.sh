@@ -48,19 +48,6 @@ function sshkey {
   echo "sshkey done."
 }
 
-# "SCP home". Lets you scp to a remote server, then do e.g. "cd /sub/dir; scph file.txt" to the same
-# effect as switching to your local machine and running "scp remote:/sub/dir/file.txt ~/Downloads/".
-#
-# The remote must, of course, define this function, and must forward its port 2222 to your local 22,
-# e.g. with this at the top of your local ~/.ssh/config:
-#
-#   RemoteForward 2222 localhost:22
-
-function scph {
-  scp -P2222 $@ henrik@localhost:Downloads/
-}
-
-
 # Open the .xcodeproj file from the working directory (typically in Xcode).
 #
 #     henrik@Nyx ~/Code/iPhone/MyApp$ xc
