@@ -53,7 +53,7 @@ alias gw^^="git show HEAD^^"
 alias gd="git diff"  # What's changed but not yet added?
 alias gdc="git diff --cached"  # What's added but not yet committed?
 alias gco="git commit -m"  # "only"
-alias gca="git add --all && git commit -m"  # "all"
+# for gca ("all"), see functions.sh.
 alias gcaf="git add --all && git commit --no-verify -m"
 alias gcac="gca Cleanup."
 alias gcoc="gco Cleanup."

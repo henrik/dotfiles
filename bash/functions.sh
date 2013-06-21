@@ -3,8 +3,18 @@
 # "o http://example.com" = open URL in default browser.
 # "o" = open pwd in Finder.
 function o {
+
   open ${@:-'.'}
 }
+
+# "git commit all"
+# Commits all changes, deletions and additions.
+# When given an argument, uses that for a message.
+# With no argument, opens an editor that also shows the diff (-v).
+function gca {
+  git add --all && ([ -z "$1" ] && git commit -v || git commit -m "$1")
+}
+
 
 # cd gem
 #
