@@ -44,7 +44,7 @@ function mcd {
 #     sshkey done.
 
 function sshkey {
-  ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_?sa.pub
+  ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_rsa.pub
   echo "sshkey done."
 }
 
