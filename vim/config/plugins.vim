@@ -21,6 +21,8 @@ set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx,vim/backup
 set wildignore+=.themes  " Octopress.
 
+map <C-b> :CtrlPBuffer<CR>
+
 " Syntastic
 
 let g:syntastic_enable_signs=1
