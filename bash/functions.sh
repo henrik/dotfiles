@@ -63,7 +63,7 @@ function mcd {
 #     sshkey done.
 
 function sshkey {
-  ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_rsa.pub
+  ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_?sa.pub  # '?sa' is a glob, not a typo!
   echo "sshkey done."
 }
 
