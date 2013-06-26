@@ -2,6 +2,7 @@
 # "o file.txt" = open file in default app.
 # "o http://example.com" = open URL in default browser.
 # "o" = open pwd in Finder.
+
 function o {
   open ${@:-'.'}
 }
@@ -11,6 +12,7 @@ function o {
 # Commits only what's in the index (what's been "git add"ed).
 # When given an argument, uses that for a message.
 # With no argument, opens an editor that also shows the diff (-v).
+
 function gco {
   [ -z "$1" ] && git commit -v || git commit -m "$1"
 }
@@ -20,6 +22,7 @@ function gco {
 # Commits all changes, deletions and additions.
 # When given an argument, uses that for a message.
 # With no argument, opens an editor that also shows the diff (-v).
+
 function gca {
   git add --all && gco "$1"
 }
@@ -30,7 +33,6 @@ function gca {
 #     henrik@Nyx ~$ cdgem thor
 #     henrik@Nyx ~/.rvm/gems/ree-1.8.7-2010.02/gems/thor-0.14.6$
 
-#
 function cdgem {
   cd `rvm gemdir`/gems; cd `ls|grep $1|sort|tail -1`
 }
@@ -40,7 +42,7 @@ function cdgem {
 #
 #     henrik@Henrik ~/.dotfiles[master]$ pwf ackrc
 #     /Users/henrik/.dotfiles/ackrc
-#
+
 function pwf {
   echo "$PWD/$1"
 }
@@ -50,7 +52,7 @@ function pwf {
 #
 #     henrik@Nyx /tmp$ mcd foo/bar/baz
 #     henrik@Nyx /tmp/foo/bar/baz$
-#
+
 function mcd {
   mkdir -p "$1" && cd "$1"
 }
