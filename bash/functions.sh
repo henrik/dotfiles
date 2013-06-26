@@ -38,7 +38,7 @@ function cdgem {
 
 # Print working file.
 #
-#     henrik@Henrik ~/.dotfiles[master]$ pwf ackrc 
+#     henrik@Henrik ~/.dotfiles[master]$ pwf ackrc
 #     /Users/henrik/.dotfiles/ackrc
 #
 function pwf {
