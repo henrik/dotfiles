@@ -68,11 +68,11 @@ function sshkey {
 }
 
 # Open the .xcodeproj file from the working directory (typically in Xcode).
+# These are equivalent:
 #
-#     henrik@Nyx ~/Code/iPhone/MyApp$ xc
-#     # equivalent to:
-#     open ~/Code/iPhone/MyApp/MyApp.xcodeproj
-#
+#     henrik@Nyx ~/MyApp$ open MyApp.xcodeproj
+#     henrik@Nyx ~/MyApp$ xc
+
 function xc {
   open `ls | grep .xcodeproj`
 }
