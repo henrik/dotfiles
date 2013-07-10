@@ -92,3 +92,6 @@ let g:blockle_mapping = '<leader>B'
 
 " Use The Silver Searcher.
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" vim-coffee-script
+let g:coffee_compile_vert = 1
