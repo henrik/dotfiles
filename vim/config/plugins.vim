@@ -95,3 +95,12 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " vim-coffee-script
 let g:coffee_compile_vert = 1
+
+" vim-tmux-navigator
+
+let g:tmux_navigator_no_mappings = 1
+
+nmap <silent> <C-Left>  :TmuxNavigateLeft<cr>
+nmap <silent> <C-Down>  :TmuxNavigateDown<cr>
+nmap <silent> <C-Up>    :TmuxNavigateUp<cr>
+nmap <silent> <C-Right> :TmuxNavigateRight<cr>
