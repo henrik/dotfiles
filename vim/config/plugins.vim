@@ -18,7 +18,7 @@ let g:ctrlp_switch_buffer = 0
 " Files to skip.
 " Possibly used by other plugins, like Command-T.
 set wildignore+=*.o,*.obj,.git,tmp
-set wildignore+=public/uploads,db/sphinx,vim/backup,*/vendor/appenv/*
+set wildignore+=public/uploads,db/sphinx,vim/backup
 set wildignore+=.themes  " Octopress.
 
 map <C-b> :CtrlPBuffer<CR>
