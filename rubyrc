@@ -34,11 +34,5 @@ module RubyRC
 
 end
 
-# Require ftools in Ruby 1.8.
-begin
-  require "ftools"
-rescue LoadError
-end
-
 # Load .railsrc for Rails.
 load File.dirname(__FILE__) + '/.railsrc' if RubyRC.rails_console?
