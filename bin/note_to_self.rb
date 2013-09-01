@@ -33,10 +33,15 @@ def init
 end
 
 def note_to_self(message)
+  log(message)  # So we have it even if it errors out.
   send_mail(LOGIN, PW, TO, message, message)
   puts "Sent: #{message}"
 rescue StandardError => e
   puts "Error sending: #{e.class.name}: #{e.message}"
+end
+
+def log(message)
+  File.open("/tmp/notes_to_self.txt", "a+") { |f| f.puts message }
 end
 
 def send_mail(login, pw, _to, _subject, _body)
