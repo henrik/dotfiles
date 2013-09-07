@@ -104,3 +104,7 @@ nmap <silent> <C-Left>  :TmuxNavigateLeft<cr>
 nmap <silent> <C-Down>  :TmuxNavigateDown<cr>
 nmap <silent> <C-Up>    :TmuxNavigateUp<cr>
 nmap <silent> <C-Right> :TmuxNavigateRight<cr>
+
+" exercism
+
+map § :ExercismTest<CR>
