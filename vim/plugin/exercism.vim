@@ -13,3 +13,5 @@ function! s:ExercismTest()
 endfunction
 
 command! ExercismTest call <SID>ExercismTest()
+command! ExercismSubmit ! exercism submit %
+command! ExercismOpen ! exercism open
