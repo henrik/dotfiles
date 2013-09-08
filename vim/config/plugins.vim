@@ -108,3 +108,6 @@ nmap <silent> <C-Right> :TmuxNavigateRight<cr>
 " exercism
 
 map § :ExercismTest<CR>
+
+" Shift+§ to run additional tests inlined in the exercise file.
+map ° :! ruby %<CR>
