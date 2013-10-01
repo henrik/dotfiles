@@ -13,7 +13,8 @@ function __rvm_prompt {
 
 function __git_prompt {
   GIT_PS1_SHOWDIRTYSTATE=1
-  __git_ps1 " %s" | sed 's/ \([+*]\{1,\}\)$/\1/'
+  GIT_PS1_PAIR=${GIT_PAIR+"$GIT_PAIR@"}
+  __git_ps1 " $GIT_PS1_PAIR%s" | sed 's/ \([+*]\{1,\}\)$/\1/'
 }
 
 # Only show username@server over SSH.
