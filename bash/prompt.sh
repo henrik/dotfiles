@@ -13,7 +13,7 @@ function __rvm_prompt {
 
 function __git_prompt {
   GIT_PS1_SHOWDIRTYSTATE=1
-  GIT_PS1_PAIR=${GIT_PAIR+"$GIT_PAIR@"}
+  [ `git config user.pair` ] && GIT_PS1_PAIR="`git config user.pair`@"
   __git_ps1 " $GIT_PS1_PAIR%s" | sed 's/ \([+*]\{1,\}\)$/\1/'
 }
 
