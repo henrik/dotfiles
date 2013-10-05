@@ -28,9 +28,6 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = http://github.com/kchmck/vim-coffee-script.git
-[submodule "vim/bundle/vim-indent-guides"]
-	path = vim/bundle/vim-indent-guides
-	url = http://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "vim/bundle/vim-javascript"]
 	path = vim/bundle/vim-javascript
 	url = http://github.com/pangloss/vim-javascript.git
