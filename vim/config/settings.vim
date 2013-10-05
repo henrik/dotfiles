@@ -48,7 +48,7 @@ set autoread
 " must trigger checks. Do so when switching buffers, or after
 " 2 secs (the value of updatetime) of pressing nothing.
 set updatetime=2000
-au WinEnter,BufWinEnter,CursorHold * checktime
+au WinEnter,BufWinEnter,CursorHold * silent! checktime
 
 " Automatically save changes before switching buffer with some
 " commands, like :cnfile.
