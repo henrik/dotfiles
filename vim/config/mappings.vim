@@ -79,3 +79,6 @@ command! W w
 
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>
+
+" Run tests in tmux.
+nmap § :call VimuxRunCommand("rake")<cr>
