@@ -15,6 +15,11 @@ let g:ctrlp_show_hidden = 0
 let g:ctrlp_max_files = 0
 let g:ctrlp_switch_buffer = 0
 
+" Don't let ctrlp change the working directory. Instead it now uses
+" the directory where vim was started. This fixes issues with some
+" projects that has nested git directories.
+let g:ctrlp_working_path_mode = 0
+
 " Files to skip.
 " Possibly used by other plugins, like Command-T.
 set wildignore+=*.o,*.obj,.git,tmp
