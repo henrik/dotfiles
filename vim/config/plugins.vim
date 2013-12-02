@@ -79,7 +79,6 @@ let g:VimuxUseNearestPane = 1
 let g:no_turbux_mappings = 1
 map M <Plug>SendTestToTmux
 map m <Plug>SendFocusedTestToTmux
-let g:turbux_command_rspec = 'script/turbux_rspec'
 
 " CamelCaseMotion
 
