@@ -77,7 +77,7 @@ alias gbm="git fetch origin master && git rebase origin/master"
 # Heroku
 alias h="heroku"
 alias hp="git push heroku"
-alias hm="heroku run rake db:migrate"
+alias hmig="heroku run rake db:migrate"
 alias ho="heroku open"
 alias hc="heroku run console"
 
