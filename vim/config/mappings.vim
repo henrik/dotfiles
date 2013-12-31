@@ -82,6 +82,8 @@ cmap %% <C-R>=expand("%:h") . "/" <CR>
 
 " Run tests in tmux.
 nmap § :call VimuxRunCommand("rake")<cr>
+autocmd BufNewFile,BufRead /Users/henrik/Dropbox/Code/exercism/* nmap § :ExercismTest<cr>
+
 " Tell other tmux pane to ctrl+c.
 " Mapped to 1 because it's next to § which often runs some command.
 nmap <leader>1 :VimuxInterruptRunner<CR>
