@@ -20,11 +20,6 @@ echo "Speed up dock show/hide animation."
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 killall Dock
 
-# http://osxdaily.com/2011/12/12/hide-spotlight-menu-icon-mac-os-x-lion/
-echo "Hide Spotlight icon."
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-killall SystemUIServer
-
 # http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/
 echo "Change screenshot location."
 mkdir -p ~/Desktop/Screenshots
