@@ -16,9 +16,7 @@ export PATH=/usr/local/mysql/bin:$PATH
 # Make autojump's "j" available.
 # brew install autojump
 # https://github.com/joelthelion/autojump
-if command -v brew >/dev/null && [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Barsoom
 [[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
