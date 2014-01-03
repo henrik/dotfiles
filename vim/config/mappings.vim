@@ -11,8 +11,6 @@ noremap QQ :q<CR>
 noremap QW :windo bd<CR>
 " Close all.
 noremap QA :qa<CR>
-" Close, damn you!
-noremap Q! :q!<CR>
 
 " Repeat last substitution, including flags, with &.
 nnoremap & :&&<CR>
