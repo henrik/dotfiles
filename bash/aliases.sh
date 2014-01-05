@@ -80,6 +80,7 @@ alias hp="git push heroku"
 alias hmig="heroku run rake db:migrate"
 alias ho="heroku open"
 alias hc="heroku run console"
+alias hlog="heroku logs -t"
 
 # tmux
 alias ta="tmux attach"
