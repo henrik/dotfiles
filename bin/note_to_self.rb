@@ -4,7 +4,7 @@
 # Command-line tool to mail notes to self with Gmail.
 #
 # Install gems if you haven't:
-#   gem install gmail active_support
+#   gem install gmail activesupport
 #
 # Configure:
 
@@ -17,11 +17,16 @@ PW = File.read(File.expand_path("~/.gmailpw")).chop
 #   source ~/.rvm/scripts/rvm
 #   ~/.bin/note_to_self.rb {query}
 
-# https://github.com/nu7hatch/gmail
-require "gmail"
+begin
+  # https://github.com/nu7hatch/gmail
+  require "gmail"
 
-# To fix Alfred.app encoding :(
-require "active_support/all"
+  # To fix Alfred.app encoding :(
+  require "active_support/all"
+rescue LoadError => e
+  puts e.message
+  exit 1
+end
 
 def init
   message = ARGV.first
