@@ -1,5 +1,8 @@
 [[ -s ~/.profile ]] && source ~/.profile
 
+# Work environment: https://github.com/barsoom/bs
+[[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
+
 source ~/.bash/path.sh
 source ~/.bash/env.sh
 source ~/.bash/completion.sh

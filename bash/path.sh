@@ -19,6 +19,3 @@ export PATH=/usr/local/mysql/bin:$PATH
 if command -v brew >/dev/null && [ -f `brew --prefix`/etc/autojump.sh ]; then
   . `brew --prefix`/etc/autojump.sh
 fi
-
-# Barsoom
-[[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
