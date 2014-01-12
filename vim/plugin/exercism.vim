@@ -7,6 +7,8 @@ function! s:ExercismTest()
     ! ruby %:h/*_test.rb
   elseif &filetype == "javascript"
     ! jasmine-node %:h
+  elseif &filetype == "coffee"
+    ! jasmine-node --coffee %:h
   elseif &filetype == "python"
     ! python %:h/*_test.py
   endif
