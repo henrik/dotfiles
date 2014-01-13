@@ -34,10 +34,7 @@ alias sc="[ -f script/console ] && script/console || bundle exec rails console"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
 alias ss="[ -f script/server ] && script/server || rails server"
 alias mig="rake db:migrate"
-# The bare essentials, for slower machines like MacBook Airs.
-alias f="bundle exec foreman start -f=Procfile.lite"
-# Everything, when we need it, or on faster machines.
-alias ff="bundle exec foreman start"
+alias f="script/foreman_turbux"
 
 alias be="bundle exec"
 
