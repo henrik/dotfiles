@@ -31,6 +31,7 @@ alias rsync?="echo 'rsync -az --progress server:/path/ path (Slashes are signifi
 
 # Ruby on Rails
 alias sc="[ -f script/console ] && script/console || bundle exec rails console"
+alias sx="[ -f script/console ] && script/console --sandbox || bundle exec rails console --sandbox"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
 alias ss="[ -f script/server ] && script/server || rails server"
 alias mig="rake db:migrate"
