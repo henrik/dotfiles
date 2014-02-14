@@ -12,7 +12,7 @@ alias text='cd ~/Dropbox/PlainText && vim'
 # Shell
 alias la='ls -alh'
 alias cdd='cd -'  # back to last directory
-alias pg='ps aux | grep '
+alias pg='ps aux | head -n1; ps aux | grep -i'
 alias tf='tail -F -n200'
 alias top='top -ocpu'
 alias ..='cd ..'
