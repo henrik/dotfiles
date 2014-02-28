@@ -7,7 +7,7 @@ alias pair='echo Committing as: `getpair`'
 alias unpair="git config --remove-section user 2> /dev/null; echo Unpaired.; pair"
 
 # Amend the last commit with the current pair (when you forget to set the pair until after committing.)
-alias pairamend='git commit --amend -C HEAD --author="`getpair`"'
+alias pairamend='git commit --amend -C HEAD --author="`getpair`"; git show --format="Author: %an <%ae>" --quiet'
 
 setpair() { git config user.pair "$1" && git config user.name "$2" && git config user.email "$3"; pair; }
 
