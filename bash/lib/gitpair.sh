@@ -9,10 +9,10 @@ alias unpair="git config --remove-section user 2> /dev/null; echo Unpaired.; pai
 # Amend the last commit with the current pair (when you forget to set the pair until after committing.)
 alias pair!='git commit --amend -C HEAD --author="`getpair`"; git show --format="Author: %an <%ae>" --quiet'
 
-setpair() { git config user.pair "$1" && git config user.name "$2" && git config user.email "$3"; pair; }
+setpair() { git config user.pair "$1" && git config user.email "$2" && git config user.name "$3"; pair; }
 
-# Add one of these for every pair.
-alias pairj='setpair  "HN+JK"  "Henrik Nyh and Joakim Kolsjö"   "all+henrik+jocke@barsoom.se"'
-alias pairk='setpair  "HN+KP"  "Henrik Nyh and Kim Persson"     "all+henrik+kim@barsoom.se"'
-alias pairt='setpair  "HN+TS"  "Henrik Nyh and Tomas Skogberg"  "all+henrik+tomas@barsoom.se"'
-alias pairv='setpair  "HN+VA"  "Henrik Nyh and Victor Arias"    "all+henrik+victor@barsoom.se"'
+# Add one of these for every pair. Each pair should be in alphabetical order by first name.
+alias pairj='setpair  HN+JK  all+henrik+jocke@barsoom.se   "Henrik Nyh and Joakim Kolsjö"'
+alias pairk='setpair  HN+KP  all+henrik+kim@barsoom.se     "Henrik Nyh and Kim Persson"'
+alias pairt='setpair  HN+TS  all+henrik+tomas@barsoom.se   "Henrik Nyh and Tomas Skogberg"'
+alias pairv='setpair  HN+VA  all+henrik+victor@barsoom.se  "Henrik Nyh and Victor Arias"'
