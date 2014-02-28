@@ -1,16 +1,15 @@
 # Simple git pair. Like "hitch" but simpler/less buggy for me.
 # Also see prompt.sh.
 
-alias pair='echo "Committing as: `git config user.name` <`git config user.email`>"'
+getpair() { echo "`git config user.name` <`git config user.email`>"; }
+
+alias pair='echo "Committing as: `getpair`"'
 alias unpair="git config --remove-section user 2> /dev/null; echo Unpaired.; pair"
 
 # Amend the last commit with the current pair (when you forget to set the pair until after committing.)
-alias pairamend='git commit --amend -C HEAD --author="`git config user.name` <`git config user.email`>"'
+alias pairamend='git commit --amend -C HEAD --author="`getpair`"'
 
-setpair() {
-  git config user.pair "$1" && git config user.name "$2" && git config user.email "$3"
-  pair
-}
+setpair() { git config user.pair "$1" && git config user.name "$2" && git config user.email "$3"; pair; }
 
 # Add one of these for every pair.
 alias pairj='setpair "HN+JK" "Henrik Nyh and Joakim Kolsjö" "all+henrik+jocke@barsoom.se"'
