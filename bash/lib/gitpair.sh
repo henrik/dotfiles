@@ -3,7 +3,7 @@
 
 getpair() { echo "`git config user.name` <`git config user.email`>"; }
 
-alias pair='echo "Committing as: `getpair`"'
+alias pair='echo Committing as: `getpair`'
 alias unpair="git config --remove-section user 2> /dev/null; echo Unpaired.; pair"
 
 # Amend the last commit with the current pair (when you forget to set the pair until after committing.)
