@@ -12,6 +12,7 @@ alias pair!='git commit --amend -C HEAD --author="`getpair`"; git show --format=
 setpair() { git config user.pair "$1" && git config user.email "$2" && git config user.name "$3"; pair; }
 
 # Add one of these for every pair. Each pair should be in alphabetical order by first name.
+alias paira='setpair  AR+HN  all+albert+henrik@barsoom.se  "Albert Ramstedt and Henrik Nyh"'
 alias pairj='setpair  HN+JK  all+henrik+jocke@barsoom.se   "Henrik Nyh and Joakim Kolsjö"'
 alias pairk='setpair  HN+KP  all+henrik+kim@barsoom.se     "Henrik Nyh and Kim Persson"'
 alias pairt='setpair  HN+TS  all+henrik+tomas@barsoom.se   "Henrik Nyh and Tomas Skogberg"'
