@@ -14,7 +14,11 @@ function o {
 # With no argument, opens an editor that also shows the diff (-v).
 
 function gco {
-  [ -z "$1" ] && git commit -v || git commit -m "$1"
+  if [ -z "$1" ]; then
+    git commit -v
+  else
+    git commit -m "$1"
+  fi
 }
 
 
