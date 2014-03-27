@@ -32,16 +32,6 @@ function gca {
 }
 
 
-# cd gem
-#
-#     henrik@Nyx ~$ cdgem thor
-#     henrik@Nyx ~/.rvm/gems/ree-1.8.7-2010.02/gems/thor-0.14.6$
-
-function cdgem {
-  cd `rvm gemdir`/gems; cd `ls|grep $1|sort|tail -1`
-}
-
-
 # Print working file.
 #
 #     henrik@Henrik ~/.dotfiles[master]$ pwf ackrc
