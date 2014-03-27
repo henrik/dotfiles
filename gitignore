@@ -4,6 +4,9 @@
 # Vim bundles as submodules.
 doc/tags
 
+# Bundler crap.
+bundle/install.log
+
 # iPhone development.
 # http://www.adminmyserver.com/articles/gitignore-for-iphone-xcode-development
 
