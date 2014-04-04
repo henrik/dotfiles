@@ -52,7 +52,8 @@ alias gw^^="git show HEAD^^"
 alias gd="git diff-index HEAD -p --color"  # What's changed? Both staged and unstaged.
 alias gdo="git diff --cached"  # What's changed? Only staged (added) changes.
 # for gco ("git commit only") and gca ("git commit all"), see functions.sh.
-alias gcaf="git add --all && git commit --no-verify -m"
+alias gcaf="git add --all && gcof"
+alias gcof="git commit --no-verify -m"
 alias gcac="gca Cleanup."
 alias gcoc="gco Cleanup."
 alias gcaw="gca Whitespace."
@@ -68,6 +69,7 @@ alias grr="git branch -D"
 alias gcp="git cherry-pick"
 alias gam="git commit --amend"
 alias gamm="git add --all && git commit --amend -C HEAD"
+alias gammf="gamm --no-verify"
 alias gba="git rebase --abort"
 alias gbc="git add -A && git rebase --continue"
 alias gbm="git fetch origin master && git rebase origin/master"
