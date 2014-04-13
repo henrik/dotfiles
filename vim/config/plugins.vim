@@ -15,6 +15,10 @@ let g:ctrlp_show_hidden = 0
 let g:ctrlp_max_files = 0
 let g:ctrlp_switch_buffer = 0
 
+" Use https://github.com/JazzCore/ctrlp-cmatcher
+" for a faster, better matching algorithm.
+let g:ctrlp_match_func = { 'match' : 'matcher#cmatch' }
+
 " Only cache if we're over this number of files.
 let g:ctrlp_use_caching = 2000
 
