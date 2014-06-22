@@ -101,6 +101,3 @@
 [submodule "vim/bundle/CamelCaseMotion"]
 	path = vim/bundle/CamelCaseMotion
 	url = git@github.com:henrik/CamelCaseMotion.git
-[submodule "vim/bundle/ctrlp-cmatcher"]
-	path = vim/bundle/ctrlp-cmatcher
-	url = https://github.com/JazzCore/ctrlp-cmatcher.git

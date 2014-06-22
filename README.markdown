@@ -22,13 +22,6 @@ Install plugins from submodules:
 
     git submodule update --init
 
-Compile [ctrlp-cmatcher](https://github.com/JazzCore/ctrlp-cmatcher) for faster, better matching:
-
-    # Fix compilation on OS X: http://stackoverflow.com/a/22322645/6962
-    export CFLAGS=-Qunused-arguments
-    export CPPFLAGS=-Qunused-arguments
-    cd vim/bundle/ctrlp-cmatcher/
-    ./install_linux.sh
 
 ## tmux
 
