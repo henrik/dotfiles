@@ -62,3 +62,33 @@ function sshkey {
   ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_?sa.pub  # '?sa' is a glob, not a typo!
   echo "sshkey done."
 }
+
+
+# Attach or create a tmux session.
+#
+# You can provide a name as the first argument, otherwise it defaults to the current directory name.
+# The argument tab completes among existing tmux session names.
+#
+# Example usage:
+#
+#   tat some-project
+#
+#   tat s<tab>
+#
+#   cd some-project
+#   tat
+#
+# Based on https://github.com/thoughtbot/dotfiles/blob/master/bin/tat
+# and http://krauspe.eu/r/tmux/comments/25mnr7/how_to_switch_sessions_faster_preferably_with/
+
+function tat() {
+  session_name=`basename ${1:-$PWD}`
+  tmux new-session -As "$session_name"
+}
+
+function _tmux_complete_session() {
+  local IFS=$'\n'
+  local cur=${COMP_WORDS[COMP_CWORD]}
+  COMPREPLY=( ${COMPREPLY[@]:-} $(compgen -W "$(tmux -q list-sessions | cut -f 1 -d ':')" -- "${cur}") )
+}
+complete -F _tmux_complete_session tat
