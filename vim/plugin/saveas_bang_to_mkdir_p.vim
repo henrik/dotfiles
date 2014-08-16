@@ -1,12 +1,30 @@
-" ':SaveAs foo/bar.txt' without any exclamation marks works just like ':saveas'.
-" ':SaveAs! foo/bar.txt' with an initial bang works just like ':saveas!'.
-" ':SaveAs foo/bar.txt!' with a trailing bang creates directories if they don't exist.
-"
 " By Henrik Nyh <http://henrik.nyh.se> under the MIT license.
+"
+" :SaveAs works mostly like the built-in :saveas, but improves on some things.
+" You can actually keep typing ':saveas'; when you hit the spacebar, it will
+" be transformed into a ':SaveAs '.
+"
+" # BANG AFTER FILENAME
+"
+" ':SaveAs foo/bar.txt' without any exclamation marks works like ':saveas'.
+" If the 'foo' directory doesn't exist, it will complain.
+" If a 'foo/bar.txt' file already exists, it will complain.
+"
+" ':SaveAs foo/bar.txt!' with a trailing bang creates directories if they don't
+" exist, and overwrites any existing file.
+"
+" The bang goes AFTER the filename so you can add it with a simple ':<up>!'.
+"
+" # SPLIT-BUFFER FRIENDLY
+"
+" I often create new files based on old files by splitting a buffer into two
+" windows, then doing ':saveas new_name.vim' in one of them. With regular
+" ':saveas', both windows will then show the new file. With ':SaveAs',
+" it only updates one of the windows.
 
-command! -nargs=1 -complete=file -bang SaveAs :call SaveAs(<f-args>, '<bang>')
+command! -nargs=1 -complete=file SaveAs :call SaveAs(<f-args>)
 
-function! SaveAs(filename, bang)
+function! SaveAs(filename)
   if a:filename =~ "!$"
     let l:filename = substitute(a:filename, "!$", "", "")
     let l:bang = 1
@@ -27,8 +45,18 @@ function! SaveAs(filename, bang)
     endif
   end
 
-  exe "saveas" . (l:bang ? "!" : "") . " " . l:filename
-  filetype detect
+  if !l:bang && filereadable(l:filename)
+    echohl ErrorMsg
+    echomsg 'File exists (use ! to override).'
+    echohl None
+    return 0
+  end
+
+  " Instead of :saveas, we do :w and :e.
+  " If you split a buffer and :saveas one of the two, both windows change.
+  " If you :w and :e, only the buffer you are in will change.
+  exe "w" . (l:bang ? "!" : "") . " " . l:filename
+  exe "e " . l:filename
 endfunction
 
 
