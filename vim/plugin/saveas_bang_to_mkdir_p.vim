@@ -19,7 +19,7 @@
 " # SPLIT-BUFFER FRIENDLY
 "
 " I often create new files based on old files by splitting a buffer into two
-" windows, then doing ':saveas new_name.vim' in one of them. With regular
+" windows, then doing ':saveas new_name' in one of them. With regular
 " ':saveas', both windows will then show the new file. With ':SaveAs',
 " it only updates one of the windows.
 
