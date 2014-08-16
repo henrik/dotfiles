@@ -1,8 +1,9 @@
 " By Henrik Nyh <http://henrik.nyh.se> under the MIT license.
 "
 " :SaveAs works mostly like the built-in :saveas, but improves on some things.
-" You can actually keep typing ':saveas'; when you hit the spacebar, it will
-" be transformed into a ':SaveAs '.
+"
+" (You can actually keep typing ':saveas'; when you hit the spacebar, it will
+" be transformed into a ':SaveAs '.)
 "
 " # BANG AFTER FILENAME
 "
