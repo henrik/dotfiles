@@ -23,9 +23,9 @@
 " ':saveas', both windows will then show the new file. With ':SaveAs',
 " it only updates one of the windows.
 
-command! -nargs=1 -complete=file SaveAs :call SaveAs(<f-args>)
+command! -nargs=1 -complete=file SaveAs :call <SID>SaveAs(<f-args>)
 
-function! SaveAs(filename)
+function! s:SaveAs(filename)
   if a:filename =~ "!$"
     let l:filename = substitute(a:filename, "!$", "", "")
     let l:bang = 1
@@ -39,17 +39,13 @@ function! SaveAs(filename)
     if l:bang
       call mkdir(l:dir, "p")
     else
-      echohl ErrorMsg
-      echomsg 'The directory does not exist (use trailing ! to create).'
-      echohl None
+      call <SID>EchoError("The directory does not exist (use trailing ! to create).")
       return 0
     endif
   end
 
   if !l:bang && filereadable(l:filename)
-    echohl ErrorMsg
-    echomsg 'File exists (use trailing ! to override).'
-    echohl None
+    call <SID>EchoError("File exists (use trailing ! to override).")
     return 0
   end
 
@@ -57,18 +53,27 @@ function! SaveAs(filename)
   " If you split a buffer and :saveas one of the two, both windows change.
   " If you :write and :edit, only the window you are in will change.
 
-
+  " If there's any error with :write, don't :edit.
   try
-    exe "write" . (l:bang ? "!" : "") . " " . l:filename
+    if l:bang
+      " 'silent!' so we can write even if there's a swapfile.
+      " http://vimdoc.sourceforge.net/htmldoc/message.html#E768
+      exe "silent! write! " . l:filename
+    else
+      exe "write " . l:filename
+    endif
   catch
-    " If there's an error with :write, don't :edit.
-    echohl ErrorMsg
-    echomsg v:exception
-    echohl None
+    call <SID>EchoError(v:exception)
     return 0
   endtry
 
   exe "edit " . l:filename
+endfunction
+
+function! s:EchoError(message)
+  echohl ErrorMsg
+  echomsg a:message
+  echohl None
 endfunction
 
 
