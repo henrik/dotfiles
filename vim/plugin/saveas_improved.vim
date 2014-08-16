@@ -40,7 +40,7 @@ function! SaveAs(filename)
       call mkdir(l:dir, "p")
     else
       echohl ErrorMsg
-      echomsg 'The directory does not exist (use ! to create).'
+      echomsg 'The directory does not exist (use trailing ! to create).'
       echohl None
       return 0
     endif
@@ -48,14 +48,14 @@ function! SaveAs(filename)
 
   if !l:bang && filereadable(l:filename)
     echohl ErrorMsg
-    echomsg 'File exists (use ! to override).'
+    echomsg 'File exists (use trailing ! to override).'
     echohl None
     return 0
   end
 
   " Instead of :saveas, we do :w and :e.
   " If you split a buffer and :saveas one of the two, both windows change.
-  " If you :w and :e, only the buffer you are in will change.
+  " If you :w and :e, only the window you are in will change.
   exe "w" . (l:bang ? "!" : "") . " " . l:filename
   exe "e " . l:filename
 endfunction
