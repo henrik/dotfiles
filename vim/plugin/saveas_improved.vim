@@ -53,11 +53,22 @@ function! SaveAs(filename)
     return 0
   end
 
-  " Instead of :saveas, we do :w and :e.
+  " Instead of :saveas, we do :write and :edit.
   " If you split a buffer and :saveas one of the two, both windows change.
-  " If you :w and :e, only the window you are in will change.
-  exe "w" . (l:bang ? "!" : "") . " " . l:filename
-  exe "e " . l:filename
+  " If you :write and :edit, only the window you are in will change.
+
+
+  try
+    exe "write" . (l:bang ? "!" : "") . " " . l:filename
+  catch
+    " If there's an error with :write, don't :edit.
+    echohl ErrorMsg
+    echomsg v:exception
+    echohl None
+    return 0
+  endtry
+
+  exe "edit " . l:filename
 endfunction
 
 
