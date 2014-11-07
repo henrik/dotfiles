@@ -4,6 +4,7 @@
 [core]
 	excludesfile = /Users/henrik/.gitignore
 	ignorecase = false
+	pager = less -r
 [color]
 	status = auto
 	diff = auto
