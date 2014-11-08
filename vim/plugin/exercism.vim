@@ -11,9 +11,10 @@ function! s:ExercismTest()
     ! jasmine-node --coffee %:h
   elseif &filetype == "python"
     ! python %:h/*_test.py
+  elseif &filetype == "elixir"
+    ! elixir %:h/*_test.exs
   endif
 endfunction
 
 command! ExercismTest call <SID>ExercismTest()
 command! ExercismSubmit ! exercism submit %
-command! ExercismOpen ! exercism open
