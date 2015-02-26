@@ -95,4 +95,4 @@ alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
 # Straight into console-in-screen.
 # Assumes there is only one screen running.
-alias prodc="ssh pa -t screen -RD"
+alias prodc="ssh anpa -t screen -RD"
