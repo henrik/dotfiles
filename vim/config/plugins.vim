@@ -98,3 +98,7 @@ map § :ExercismTest<CR>
 
 " Shift+§ to run additional tests inlined in the exercise file.
 map ° :! ruby %<CR>
+
+" vim-markdown
+
+let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
