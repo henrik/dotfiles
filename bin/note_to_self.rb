@@ -14,8 +14,11 @@ PW = File.read(File.expand_path("~/.gmailpw")).chop
 
 # Intended to be used with an Alfred.app extension like:
 #
+# ESCAPING: [ ] Spaces   [x] Backquotes [x] Double quotes [x] Backslashes
+#           [ ] Brackets [ ] Semicolons [x] Dollars
+#
 #   source ~/.rvm/scripts/rvm
-#   ~/.bin/note_to_self.rb {query}
+#   ~/.bin/note_to_self.rb "{query}"
 
 begin
   # https://github.com/nu7hatch/gmail
