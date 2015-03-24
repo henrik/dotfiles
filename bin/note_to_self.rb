@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# encoding: utf-8
-
 # Command-line tool to mail notes to self with Gmail.
 #
 # Install gems if you haven't:
