@@ -21,3 +21,8 @@ Control-k: menu-complete-backward
 # shift+left, shift+right
 "\e[1;2D": backward-word
 "\e[1;2C": forward-word
+
+# https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
+# E.g. type "cd" and hit up arrow to search through history for that prefix.
+"\e[A": history-search-backward
+"\e[B": history-search-forward
