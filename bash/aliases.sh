@@ -18,6 +18,7 @@ alias top='top -ocpu'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias ip="ifconfig|grep broadcast"  # List IPs
 
 # Portable ls with colors
 if ls --color -d . >/dev/null 2>&1; then
