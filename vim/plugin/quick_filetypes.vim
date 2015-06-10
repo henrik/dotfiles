@@ -12,3 +12,4 @@ command! FS set filetype=slim
 command! FR set filetype=ruby
 command! FV set filetype=vim
 command! FM set filetype=markdown
+command! FE set filetype=elixir
