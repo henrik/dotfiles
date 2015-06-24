@@ -8,5 +8,5 @@ au FileType elixir map <buffer> <leader>r :RunElixir<CR>
 command! RunElixir call <SID>RunElixir()
 
 function! s:RunElixir()
-  exe "! elixir -e " . shellescape(join(getline(1, "$"), "\n"))
+  exe "! elixir -e " . shellescape(join(getline(1, "$"), "\n"), 1)
 endfunction
