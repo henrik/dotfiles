@@ -7,4 +7,3 @@ command! RunElixir call <SID>RunElixir()
 function! s:RunElixir()
   exe "! elixir -e " . shellescape(join(getline(1, "$"), "\n"))
 endfunction
-
