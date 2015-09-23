@@ -17,3 +17,4 @@ alias pairj='setpair  HN+JK  all+henrik+jocke@barsoom.se   "Henrik Nyh and Joaki
 alias pairk='setpair  HN+KP  all+henrik+kim@barsoom.se     "Henrik Nyh and Kim Persson"'
 alias pairt='setpair  HN+TS  all+henrik+tomas@barsoom.se   "Henrik Nyh and Tomas Skogberg"'
 alias pairv='setpair  HN+VA  all+henrik+victor@barsoom.se  "Henrik Nyh and Victor Arias"'
+alias pairl='setpair  HN+LF  all+henrik+lennart@barsoom.se  "Henrik Nyh and Lennart Fridén"'
