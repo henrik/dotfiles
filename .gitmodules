@@ -110,3 +110,6 @@
 [submodule "vim/bundle/vim-projectionist"]
 	path = vim/bundle/vim-projectionist
 	url = git://github.com/tpope/vim-projectionist.git
+[submodule "vim/bundle/vim-mix"]
+	path = vim/bundle/vim-mix
+	url = git@github.com:mattreduce/vim-mix.git
