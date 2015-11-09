@@ -38,7 +38,11 @@ alias ss="[ -f script/server ] && script/server || rails server"
 alias mig="rake db:migrate"
 alias f="script/foreman_turbux"
 
+# Ruby
 alias be="bundle exec"
+
+# Elixir
+alias miex="iex -S mix"
 
 # Tests
 alias rsua="bundle exec rake spec:unit:all"
