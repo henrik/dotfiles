@@ -42,7 +42,7 @@ alias f="script/foreman_turbux"
 alias be="bundle exec"
 
 # Elixir
-alias miex="iex -S mix"
+alias smix="iex -S mix"
 
 # Tests
 alias rsua="bundle exec rake spec:unit:all"
