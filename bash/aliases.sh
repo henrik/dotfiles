@@ -35,8 +35,10 @@ alias sc="[ -f script/console ] && script/console || bundle exec rails console"
 alias sx="[ -f script/console ] && script/console --sandbox || bundle exec rails console --sandbox"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
 alias ss="[ -f script/server ] && script/server || rails server"
-alias mig="rake db:migrate"
 alias f="script/foreman_turbux"
+
+# Ruby on Rails or Phoenix
+alias mig="[ -f mix.exs ] && mix ecto.migrate || rake db:migrate"
 
 # Ruby
 alias be="bundle exec"
