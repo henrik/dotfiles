@@ -28,6 +28,7 @@ let g:ctrlp_working_path_mode = 0
 set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx,vim/backup
 set wildignore+=.themes  " Octopress.
+set wildignore+=deps,node_modules  " Phoenix
 
 map <C-b> :CtrlPBuffer<CR>
 
