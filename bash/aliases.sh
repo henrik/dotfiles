@@ -59,6 +59,7 @@ alias gw^^="git show HEAD^^"
 alias gd="git diff HEAD"  # What's changed? Both staged and unstaged.
 alias gdo="git diff --cached"  # What's changed? Only staged (added) changes.
 # for gco ("git commit only") and gca ("git commit all"), see functions.sh.
+# for gget (git clone and cd), see functions.sh.
 alias gcaf="git add --all && gcof"
 alias gcof="git commit --no-verify -m"
 alias gcac="gca Cleanup."

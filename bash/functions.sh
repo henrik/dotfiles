@@ -32,6 +32,13 @@ function gca {
 }
 
 
+# "git get"
+# Clones the given repo and then cd:s into that directory.
+function gget {
+  git clone $1 && cd $(basename $1 .git)
+}
+
+
 # Print working file.
 #
 #     henrik@Henrik ~/.dotfiles[master]$ pwf ackrc
