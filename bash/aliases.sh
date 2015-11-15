@@ -36,9 +36,9 @@ alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundl
 alias f="script/foreman_turbux"
 
 # Phoenix or Ruby on Rails
-alias mig="[ -f mix.exs ] && mix ecto.migrate || rake db:migrate"
-alias ss="[ -f mix.exs ] && mix phoenix.server || ([ -f script/server ] && script/server || rails server)"
-alias sc="[ -f mix.exs ] && iex -S mix || ([ -f script/console ] && script/console || bundle exec rails console)"
+alias mig="([ -f mix.exs ] && mix ecto.migrate) || ([ -f Rakefile ] && rake db:migrate)"
+alias ss="([ -f mix.exs ] && mix phoenix.server) || ([ -f script/server ] && script/server || rails server)"
+alias sc="([ -f mix.exs ] && iex -S mix) || ([ -f script/console ] && script/console || bundle exec rails console)"
 
 # Ruby
 alias be="bundle exec"
