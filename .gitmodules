@@ -113,3 +113,6 @@
 [submodule "vim/bundle/vim-mix"]
 	path = vim/bundle/vim-mix
 	url = git@github.com:mattreduce/vim-mix.git
+[submodule "vim/bundle/vim-yaml-helper"]
+	path = vim/bundle/vim-yaml-helper
+	url = git@github.com:lmeijvogel/vim-yaml-helper.git
