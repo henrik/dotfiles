@@ -36,5 +36,3 @@
 	trustExitCode = true
 [branch]
 	autosetuprebase = always
-[gc]
-	pruneexpire = 90 days
