@@ -115,4 +115,4 @@
 	url = git@github.com:mattreduce/vim-mix.git
 [submodule "vim/bundle/vim-yaml-helper"]
 	path = vim/bundle/vim-yaml-helper
-	url = git@github.com:lmeijvogel/vim-yaml-helper.git
+	url = git@github.com:henrik/vim-yaml-helper.git
