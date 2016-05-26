@@ -15,7 +15,7 @@
 	who = shortlog -s -n --no-merges
 	standup = shortlog --since=yesterday
 	today = shortlog --since=midnight
-	uncommit = reset --soft HEAD^
+	uncommit = !git reset --soft HEAD^ && git reset HEAD .
 	unamend = reset --soft HEAD@{1}
 	subs = submodule foreach git pull origin master
 	hist = for-each-ref --count=5 --sort=-committerdate --format='%(refname:short)' refs/heads/
