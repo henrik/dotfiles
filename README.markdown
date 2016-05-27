@@ -15,6 +15,8 @@ This rake task will not replace existing files, but it will replace existing sym
 
 The dotfiles will be symlinked, e.g. `~/.bash_profile` symlinked to `~/.dotfiles/bash_profile`.
 
+Don't forget to **replace the name and email in gitconfig** if you're not Henrik :p
+
 
 ## Vim
 
