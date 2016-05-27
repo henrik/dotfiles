@@ -116,3 +116,6 @@
 [submodule "vim/bundle/vim-yaml-helper"]
 	path = vim/bundle/vim-yaml-helper
 	url = git@github.com:henrik/vim-yaml-helper.git
+[submodule "vim/bundle/elm.vim"]
+	path = vim/bundle/elm.vim
+	url = git@github.com:lambdatoast/elm.vim.git
