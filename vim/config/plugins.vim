@@ -103,3 +103,7 @@ map ° :! ruby %<CR>
 " vim-markdown
 
 let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
+
+" Rainbow Parentheses Improved
+
+let g:rainbow_active = 0

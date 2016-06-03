@@ -119,3 +119,6 @@
 [submodule "vim/bundle/elm.vim"]
 	path = vim/bundle/elm.vim
 	url = git@github.com:lambdatoast/elm.vim.git
+[submodule "vim/bundle/rainbow"]
+	path = vim/bundle/rainbow
+	url = git@github.com:luochen1990/rainbow.git
