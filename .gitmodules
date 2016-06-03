@@ -116,9 +116,9 @@
 [submodule "vim/bundle/vim-yaml-helper"]
 	path = vim/bundle/vim-yaml-helper
 	url = git@github.com:henrik/vim-yaml-helper.git
-[submodule "vim/bundle/elm.vim"]
-	path = vim/bundle/elm.vim
-	url = git@github.com:lambdatoast/elm.vim.git
 [submodule "vim/bundle/rainbow"]
 	path = vim/bundle/rainbow
 	url = git@github.com:luochen1990/rainbow.git
+[submodule "vim/bundle/elm.vim"]
+	path = vim/bundle/elm.vim
+	url = git@github.com:orderthruchaos/elm.vim.git
