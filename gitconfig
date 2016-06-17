@@ -36,3 +36,5 @@
 	trustExitCode = true
 [branch]
 	autosetuprebase = always
+[diff]
+ 	compactionHeuristic = true
