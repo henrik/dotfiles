@@ -77,6 +77,7 @@ alias grb="git rebase -i origin/master"
 alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
+alias gcpp="git cherry-pick HEAD@{1}"  # "cherry-pick previous", e.g. the head of the branch we just left
 alias gam="git commit --amend"
 alias gamm="git add --all && git commit --amend -C HEAD"
 alias gammf="gamm --no-verify"
