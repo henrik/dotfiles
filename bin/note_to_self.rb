@@ -32,6 +32,10 @@ end
 def init
   message = ARGV.first
 
+  # It's UTF-8, not ASCII-8BIT. Without this, it will look borked.
+  message = message.dup
+  message.force_encoding("UTF-8")
+
   # Alfred passes decomposed characters which cause the mail to silently fail.
   message = message.mb_chars.normalize
 
