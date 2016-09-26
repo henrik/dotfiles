@@ -28,11 +28,11 @@ killall SystemUIServer
 
 # TODO: broken on macOS Sierra: https://github.com/mathiasbynens/dotfiles/issues/687 Set it manually in UI for now.
 echo "Set a blazingly fast keyboard repeat rate."
-defaults write NSGlobalDomain KeyRepeat -int 0.02
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # TODO: broken on macOS Sierra: https://github.com/mathiasbynens/dotfiles/issues/687 Set it manually in UI for now.
 echo "Set a shorter Delay until key repeat."
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 echo "Increase window resize speed for Cocoa applications."
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -77,5 +77,7 @@ echo "Changed defaults. Restarting apps…"
 
 echo "Restart Finder."
 killall Finder
+
+echo "Please lock your account and log back in to make the keyboard repeat settings take on macOS Sierra."
 
 echo "All done."
