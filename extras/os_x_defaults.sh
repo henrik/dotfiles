@@ -26,9 +26,11 @@ mkdir -p ~/Desktop/Screenshots
 defaults write com.apple.screencapture location ~/Desktop/Screenshots/
 killall SystemUIServer
 
+# TODO: broken on macOS Sierra: https://github.com/mathiasbynens/dotfiles/issues/687 Set it manually in UI for now.
 echo "Set a blazingly fast keyboard repeat rate."
 defaults write NSGlobalDomain KeyRepeat -int 0.02
 
+# TODO: broken on macOS Sierra: https://github.com/mathiasbynens/dotfiles/issues/687 Set it manually in UI for now.
 echo "Set a shorter Delay until key repeat."
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
