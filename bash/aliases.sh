@@ -89,11 +89,10 @@ alias gbm="git fetch origin master && git rebase origin/master"
 
 # Heroku
 alias h="heroku"
-alias hp="git push heroku"
 alias hmig="heroku run rake db:migrate"
 alias ho="heroku open"
-alias hc="heroku run console"
-alias hlog="heroku logs -t"
+alias hsc="heroku run rails console -r heroku"  # Explicit remote, for apps with a staging as well.
+alias hlog="heroku logs -t -r heroku"
 
 # tmux
 alias ta="tmux attach"
