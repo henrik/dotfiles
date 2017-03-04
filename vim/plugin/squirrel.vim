@@ -21,14 +21,17 @@
 "
 " # Opening the list
 "
-"     :Squirrel
-"
 " All squirreled-away data is stored in a .squirrel file in Vim's current directory.
 " You may want to ignore that file in your VCS, e.g. in .gitignore.
 "
-" This command opens the .squirrel file in a new tab.
+" Run
 "
-" You can use the "gf" command on a "file/path:123" line to jump straight there.
+"     :Squirrel
+"
+" to open the .squirrel file in a new tab.
+"
+" It also sets things up so you can use the "gf" command on a "file/path:123"
+" line (instead of having to type "gF") to jump straight to that file and line.
 " Keep in mind that lines may have shifted since.
 "
 " If you want to remove or change something, just edit the .squirrel file.
