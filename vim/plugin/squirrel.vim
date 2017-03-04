@@ -24,7 +24,7 @@
 "     :Squirrel
 "
 " All squirreled-away data is stored in a .squirrel file in Vim's current directory.
-" (You may want to ignore that file in your VCS, e.g. in .gitignore.)
+" You may want to ignore that file in your VCS, e.g. in .gitignore.
 "
 " This command opens the .squirrel file in a new tab.
 "
@@ -50,6 +50,7 @@
 "     instead, or you can make a quick sketch of the change you want.
 "
 " - Some way to get it in a quickfix list?
+" - Don't have an extra trailing newline at end of .squirrel file
 
 command! -nargs=? -bang Squirrel call <SID>Squirrel(<bang>0, "<args>")
 
