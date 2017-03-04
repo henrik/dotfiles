@@ -31,7 +31,9 @@
 " to open the .squirrel file in a new tab.
 "
 " It also sets things up so you can use the "gf" command on a "file/path:123"
-" line (instead of having to type "gF") to jump straight to that file and line.
+" line in that buffer to jump straight to that file and line. (Instead of
+" having to type "gF".)
+"
 " Keep in mind that lines may have shifted since.
 "
 " If you want to remove or change something, just edit the .squirrel file.
