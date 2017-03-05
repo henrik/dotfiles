@@ -28,3 +28,6 @@ bundle/install.log
 *.mode2v3
 *.pbxuser
 *.perspectivev3
+
+# https://github.com/henrik/dotfiles/blob/master/vim/plugin/squirrel.vim
+.squirrel
