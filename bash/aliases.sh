@@ -64,10 +64,10 @@ alias gdo="git diff --cached"  # What's changed? Only staged (added) changes.
 # for gget (git clone and cd), see functions.sh.
 alias gcaf="git add --all && gcof"
 alias gcof="git commit --no-verify -m"
-alias gcac="gca Cleanup."
-alias gcoc="gco Cleanup."
-alias gcaw="gca Whitespace."
-alias gcow="gco Whitespace."
+alias gcac="gca Cleanup"
+alias gcoc="gco Cleanup"
+alias gcaw="gca Whitespace"
+alias gcow="gco Whitespace"
 alias gpp='git pull --rebase && git push'
 alias gppp="git push -u"  # Can't pull because you forgot to track? Run this.
 alias gps='(git stash --include-untracked | grep -v "No local changes to save") && gpp && git stash pop || echo "Fail!"'
