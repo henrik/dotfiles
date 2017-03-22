@@ -37,6 +37,7 @@
 " Keep in mind that lines may have shifted since.
 "
 " If you want to remove or change something, just edit the .squirrel file.
+" You can remove an entire paragraph with "dap" (delete all paragraph).
 "
 " Unless you have other commands that start with "Sq" you can probably get
 " away with abbreviating them:
