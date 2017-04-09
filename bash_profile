@@ -12,3 +12,7 @@ source ~/.bash/functions.sh
 source ~/.bash/prompt.sh
 
 source ~/.bash/lib/gitpair.sh
+
+# For the "asdf" extendable version manager (https://github.com/asdf-vm/asdf).
+. ~/.asdf/asdf.sh
+. ~/.asdf/completions/asdf.bash

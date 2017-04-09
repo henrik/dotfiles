@@ -15,7 +15,8 @@ PW = File.read(File.expand_path("~/.gmailpw")).chop
 # ESCAPING: [ ] Spaces   [x] Backquotes [x] Double quotes [x] Backslashes
 #           [ ] Brackets [ ] Semicolons [x] Dollars
 #
-#   source ~/.rvm/scripts/rvm
+#   source ~/.rvm/scripts/rvm  # If you use RVM
+#   source ~/.asdf/asdf.sh     # If you use asdf
 #   ~/.bin/note_to_self.rb "{query}"
 
 begin

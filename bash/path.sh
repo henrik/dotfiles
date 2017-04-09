@@ -10,9 +10,6 @@ export PATH=/var/lib/gems/1.8/bin:$PATH
 # MySQL
 export PATH=/usr/local/mysql/bin:$PATH
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Make autojump's "j" available.
 # brew install autojump
 # https://github.com/joelthelion/autojump
