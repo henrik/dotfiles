@@ -92,6 +92,7 @@ alias h="heroku"
 alias hmig="heroku run rake db:migrate"
 alias ho="heroku open"
 alias hsc="heroku run rails console -r heroku"  # Explicit remote, for apps with a staging as well.
+alias hscs="heroku run rails console -r staging"
 alias hlog="heroku logs -t -r heroku"
 
 # tmux

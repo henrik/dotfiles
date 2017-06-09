@@ -13,6 +13,13 @@ source ~/.bash/prompt.sh
 
 source ~/.bash/lib/gitpair.sh
 
-# For the "asdf" extendable version manager (https://github.com/asdf-vm/asdf).
-. ~/.asdf/asdf.sh
-. ~/.asdf/completions/asdf.bash
+if [[ "$DEVBOX" ]]; then
+  # Auctionet's "Devbox" tool is quite coupled to RVM currently.
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+else
+  # For the "asdf" extendable version manager (https://github.com/asdf-vm/asdf).
+  . ~/.asdf/asdf.sh
+  . ~/.asdf/completions/asdf.bash
+fi
+
+export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.0/java"
