@@ -20,6 +20,11 @@ Don't forget to **replace the name and email in gitconfig** if you're not Henrik
 
 ## Vim
 
+Add a new plugin:
+
+    # E.g.:
+    git submodule add https://github.com/keith/swift.vim.git vim/bundle/vim-swift
+
 Install plugins from submodules:
 
     git submodule update --init
