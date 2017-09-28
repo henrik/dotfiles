@@ -73,7 +73,8 @@ vnoremap u <nop>
 vnoremap gu u
 
 " Because I often accidentally :W when I mean to :w.
-command! W w
+" Disabled to see if I can learn to do better.
+"command! W w
 
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>
