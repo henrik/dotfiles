@@ -72,9 +72,10 @@ vnoremap < <gv
 vnoremap u <nop>
 vnoremap gu u
 
-" Because I often accidentally :W when I mean to :w.
+" Used to have this mapped to ":w" because I often accidentally :W when I mean to :w.
 " Disabled to see if I can learn to do better.
-"command! W w
+" It remains as a no-op since I will otherwise trigger fzf.vim's ":Windows" " all the time.
+command! W echoerr "Use :w, not :W."
 
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>

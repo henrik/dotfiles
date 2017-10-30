@@ -15,6 +15,11 @@ This rake task will not replace existing files, but it will replace existing sym
 
 The dotfiles will be symlinked, e.g. `~/.bash_profile` symlinked to `~/.dotfiles/bash_profile`.
 
+To use [fzf](https://github.com/junegunn/fzf) in Vim (or the shell), install it with:
+
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+
 Don't forget to **replace the name and email in gitconfig** if you're not Henrik :p
 
 

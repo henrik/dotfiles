@@ -6,7 +6,19 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
+" fzf (fuzzy file finder)
+
+" Include the basic fzf Vim functionality for the fzf.vim plugin to work.
+source ~/.fzf/plugin/fzf.vim
+
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+" All files, with no respect for .gitignore or wildignore. Still blazingly fast.
+map <C-p> :Files<CR>
+
 " Ctrl-P
+
+let g:ctrlp_map = '<Nop>'
 
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0

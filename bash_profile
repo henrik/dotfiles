@@ -3,6 +3,9 @@
 # Work environment: https://github.com/barsoom/bs
 [[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
 
+# Fuzzy file finder used by Vim: https://github.com/junegunn/fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 source ~/.bash/path.sh
 source ~/.bash/env.sh
 source ~/.bash/completion.sh

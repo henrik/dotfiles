@@ -122,3 +122,6 @@
 [submodule "vim/bundle/vim-swift"]
 	path = vim/bundle/vim-swift
 	url = https://github.com/keith/swift.vim.git
+[submodule "vim/bundle/fzf.vim"]
+	path = vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
