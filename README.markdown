@@ -29,6 +29,10 @@ Install plugins from submodules:
 
     git submodule update --init
 
+Update all plugins to latest:
+
+    git submodule update --recursive --remote
+
 
 ## tmux
 
