@@ -20,6 +20,8 @@ To use [fzf](https://github.com/junegunn/fzf) in Vim (or the shell), install it 
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 
+At the time of writing, Vim will complain without fzf. TODO: Make it optional?
+
 Don't forget to **replace the name and email in gitconfig** if you're not Henrik :p
 
 
