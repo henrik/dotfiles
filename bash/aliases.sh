@@ -112,3 +112,5 @@ alias mobstation='ps ax|grep ssh|grep 9933|grep localhost|awk '\''{ print $1 }'\
 # Assumes there is only one screen running.
 alias prodc="ssh anpa -t screen -RD"
 
+# Sometimes the camera in my Cinema Display stops working. This fixes it.
+alias fixcam="sudo killall VDCAssistant"
