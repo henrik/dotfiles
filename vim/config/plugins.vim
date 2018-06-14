@@ -13,8 +13,9 @@ source ~/.fzf/plugin/fzf.vim
 
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-" All files, with no respect for .gitignore or wildignore. Still blazingly fast.
-map <C-p> :Files<CR>
+" Only files not excluded by .gitignore, for speed. This means it won't show non-version-controlled files.
+" Ideally we'd use wildignore. See: https://github.com/junegunn/fzf.vim/issues/133
+map <C-p> :GFiles<CR>
 
 " Ctrl-P
 
