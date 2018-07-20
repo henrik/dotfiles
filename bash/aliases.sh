@@ -86,6 +86,7 @@ alias gammf="gamm --no-verify"
 alias gba="git rebase --abort"
 alias gbc="git add -A && git rebase --continue"
 alias gbm="git fetch origin master && git rebase origin/master"
+alias gap="git add --intent-to-add . && git add -p"  # Like "git add -p" but also ask about any newly added files.
 
 # Heroku
 alias h="heroku"
