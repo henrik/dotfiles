@@ -106,7 +106,7 @@ alias tcopy="tmux show-buffer | pbcopy"
 
 # Push to WTI until it sticks.
 # It tends to refuse pushes of a target language until it's processed the source language push.
-alias wpus="ruby -e 'loop { x = \`wti push; wti push -l en; wti push -l de\`; puts x; break unless x.include?(%{Locked}); puts; puts %{#{Time.now.strftime(%{%H:%M:%S})}: Retrying in a bit…}; puts; sleep 15 }'"
+alias wpus="ruby -e 'loop { x = \`wti push; wti push -l en; wti push -l de; wti push -l es\`; puts x; break unless x.include?(%{Locked}); puts; puts %{#{Time.now.strftime(%{%H:%M:%S})}: Retrying in a bit…}; puts; sleep 15 }'"
 
 # Servers
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
