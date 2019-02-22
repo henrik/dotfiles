@@ -121,3 +121,6 @@ alias prodc="ssh anpa -t screen -RD"
 
 # Sometimes the camera in my Cinema Display stops working. This fixes it.
 alias fixcam="sudo killall VDCAssistant"
+
+# Sometimes the time in my VM is off. This fixes it.
+alias fixtime="sudo service ntp stop; sudo ntpd -gq; sudo service ntp start"
