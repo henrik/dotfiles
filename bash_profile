@@ -2,8 +2,8 @@
 
 # Work environment: https://github.com/barsoom/bs
 [[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
-# Expected by https://github.com/barsoom/devbox: https://auctionet.slack.com/archives/CF9SAN79V/p1552987988719300
-[[ -s "$HOME/.bash_local" ]] && source "$HOME/.bash_local"
+# Expected by https://github.com/barsoom/devbox: https://auctionet.slack.com/archives/CF9SAN79V/p1552987988719300, https://auctionet.slack.com/archives/CF9SAN79V/p1553006327787000?thread_ts=1552987988.719300&cid=CF9SAN79V
+[[ -s "$HOME/.shell_local" ]] && source "$HOME/.shell_local"
 
 # Fuzzy file finder used by Vim: https://github.com/junegunn/fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
