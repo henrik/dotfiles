@@ -19,4 +19,5 @@ alias pairt='setpair  HN+TS  all+henrik+tomas@barsoom.se   "Henrik Nyh and Tomas
 alias pairv='setpair  HN+VA  all+henrik+victor@barsoom.se  "Henrik Nyh and Victor Arias"'
 alias pairl='setpair  HN+LF  all+henrik+lennart@barsoom.se  "Henrik Nyh and Lennart Fridén"'
 alias pairf='setpair  FH+HN  all+fabian+henrik@barsoom.se  "Fabian Hoffmann and Henrik Nyh"'
+alias pairc='setpair  CE+HN  all+calle+henrik@barsoom.se  "Calle Erlandsson and Henrik Nyh"'
 alias pairmob='setpair MOB devs@auctionet.com "Mob"'
