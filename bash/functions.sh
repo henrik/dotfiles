@@ -90,8 +90,9 @@ function sshkey {
 
 function tat() {
   session_name=`basename ${1:-$PWD}`
-  fixed_session_name=${session_name/auctionet_/an_}
-  tmux new-session -As "$fixed_session_name"
+  session_name=${session_name/auctionet_/an_}
+  session_name=${session_name/\./_}
+  tmux new-session -As "$session_name"
 }
 
 function _tmux_complete_session() {
