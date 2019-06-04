@@ -16,7 +16,8 @@ PW = File.read(File.expand_path("~/.gmailpw")).chop
 #           [ ] Brackets [ ] Semicolons [x] Dollars
 #
 #   source ~/.rvm/scripts/rvm  # If you use RVM
-#   source ~/.asdf/asdf.sh     # If you use asdf
+#   source ~/.asdf/asdf.sh     # If you use asdf installed in .asdf
+#   source $(/usr/local/bin/brew --prefix asdf)/asdf.sh  # If you use asdf installed via Homebrew
 #   ~/.bin/note_to_self.rb "{query}"
 
 begin

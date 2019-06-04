@@ -23,8 +23,7 @@ if [[ "$DEVBOX" ]]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 else
   # For the "asdf" extendable version manager (https://github.com/asdf-vm/asdf).
-  . ~/.asdf/asdf.sh
-  . ~/.asdf/completions/asdf.bash
+  . $(brew --prefix asdf)/asdf.sh
 fi
 
 export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.0/java"
