@@ -12,7 +12,4 @@ export PATH=/usr/local/mysql/bin:$PATH
 
 # Make autojump's "j" available.
 # brew install autojump
-# https://github.com/joelthelion/autojump
-if command -v brew >/dev/null && [ -f `brew --prefix`/etc/autojump.sh ]; then
-  . `brew --prefix`/etc/autojump.sh
-fi
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
