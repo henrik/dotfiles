@@ -38,3 +38,4 @@
 	autosetuprebase = always
 [diff]
  	compactionHeuristic = true
+	noprefix = true
