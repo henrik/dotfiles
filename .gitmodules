@@ -116,9 +116,6 @@
 [submodule "vim/bundle/rainbow"]
 	path = vim/bundle/rainbow
 	url = git@github.com:luochen1990/rainbow.git
-[submodule "vim/bundle/elm.vim"]
-	path = vim/bundle/elm.vim
-	url = git@github.com:orderthruchaos/elm.vim.git
 [submodule "vim/bundle/vim-swift"]
 	path = vim/bundle/vim-swift
 	url = https://github.com/keith/swift.vim.git
@@ -128,3 +125,6 @@
 [submodule "vim/bundle/vim-rhubarb"]
 	path = vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "vim/bundle/elm-vim"]
+	path = vim/bundle/elm-vim
+	url = https://github.com/ElmCast/elm-vim.git
