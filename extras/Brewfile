@@ -26,6 +26,7 @@ cask "imageoptim"
 cask "licecap"
 cask "dash"
 cask "vlc"
+cask "firefox"
 cask "vagrant"
 cask "virtualbox"
 
