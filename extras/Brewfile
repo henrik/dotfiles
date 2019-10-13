@@ -13,6 +13,7 @@ brew "asdf"
 # If https://github.com/asdf-vm/asdf/pull/575 is merged, try using that in the command above (to get latest Ruby without hard-coding a number into this file).
 brew "vim"
 
+# Find more with `brew search my_guess_at_the_name`.
 cask "google-chrome"
 cask "iterm2"
 cask "spotify"
@@ -31,6 +32,7 @@ cask "vagrant"
 cask "virtualbox"
 
 # Mac App Store
+# "Copy Link" from the App Store UI to get the ID.
 mas "Divvy", id: 413857545
 mas "1Password", id: 1333542190
 mas "Slack", id: 803453959
