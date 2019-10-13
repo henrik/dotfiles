@@ -26,6 +26,8 @@ cask "imageoptim"
 cask "licecap"
 cask "dash"
 cask "vlc"
+cask "vagrant"
+cask "virtualbox"
 
 # Mac App Store
 mas "Divvy", id: 413857545
