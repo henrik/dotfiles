@@ -25,6 +25,7 @@ cask "backblaze"
 cask "imageoptim"
 cask "licecap"
 cask "dash"
+cask "vlc"
 
 # Mac App Store
 mas "Divvy", id: 413857545
