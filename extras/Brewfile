@@ -1,0 +1,37 @@
+# https://github.com/Homebrew/homebrew-bundle
+
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew "git"
+brew "autojump"
+
+# Version manager used for Ruby and Elixir.
+brew "asdf"
+
+# May need to re-run `brew install vim` after installing Ruby with e.g. `asdf install ruby 2.6.5; asdf global ruby 2.6.5`, so it's compiled against the right Ruby.
+# If https://github.com/asdf-vm/asdf/pull/575 is merged, try using that in the command above (to get latest Ruby without hard-coding a number into this file).
+brew "vim"
+
+cask "google-chrome"
+cask "iterm2"
+cask "spotify"
+cask "zoom"
+cask "mailplane"
+cask "fantastical"
+cask "alfred"
+cask "istat-menus"
+cask "backblaze"
+cask "imageoptim"
+cask "licecap"
+cask "dash"
+
+# Mac App Store
+mas "Divvy", id: 413857545
+mas "1Password", id: 1333542190
+mas "Slack", id: 803453959
+mas "Shush", id: 496437906
+mas "The Unarchiver", id: 425424353
+mas "Pages", id: 409201541
+mas "Numbers", id: 409203825
+mas "Xcode", id: 497799835
