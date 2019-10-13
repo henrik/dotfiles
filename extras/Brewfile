@@ -16,7 +16,7 @@ brew "vim"
 cask "google-chrome"
 cask "iterm2"
 cask "spotify"
-cask "zoom"
+cask "zoomus"  # https://zoom.us
 cask "mailplane"
 cask "fantastical"
 cask "alfred"
