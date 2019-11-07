@@ -28,7 +28,6 @@ module RubyRC
   end
 
   def rails_console?
-    ($0 == "irb" && ENV["RAILS_ENV"]) ||  # Rails 2.
     $0 == "script/rails" ||  # Rails 3.
     $0 == "bin/rails"  # Rails 4.
   end
