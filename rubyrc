@@ -19,7 +19,7 @@ module RubyRC
   # Quick benchmarking
   # http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123834#123834
   def bench(repetitions=100, &block)
-    require 'benchmark'
+    require "benchmark"
 
     Benchmark.bmbm do |b|
       b.report {repetitions.times &block}
@@ -28,12 +28,12 @@ module RubyRC
   end
 
   def rails_console?
-    ($0 == 'irb' && ENV['RAILS_ENV']) ||  # Rails 2.
-    $0 == 'script/rails' ||  # Rails 3.
-    $0 == 'bin/rails'  # Rails 4.
+    ($0 == "irb" && ENV["RAILS_ENV"]) ||  # Rails 2.
+    $0 == "script/rails" ||  # Rails 3.
+    $0 == "bin/rails"  # Rails 4.
   end
 
 end
 
 # Load .railsrc for Rails.
-load File.dirname(__FILE__) + '/.railsrc' if RubyRC.rails_console?
+load File.dirname(__FILE__) + "/.railsrc" if RubyRC.rails_console?
