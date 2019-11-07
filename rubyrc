@@ -29,7 +29,8 @@ module RubyRC
 
   def rails_console?
     $0 == "script/rails" ||  # Rails 3.
-    $0 == "bin/rails"  # Rails 4.
+    $0 == "bin/rails" ||  # Rails 4.
+    $0 == "rails_console"  # Rails 4 (or later?) with Spring.
   end
 
 end
