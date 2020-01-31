@@ -11,7 +11,8 @@ alias text='cd ~/Dropbox/PlainText && vim'
 
 # Shell
 alias la='ls -alh'
-alias cdd='cd -'  # back to last directory
+alias cdd='cd -'  # Back to last directory
+alias cdr='cd $(git rev-parse --show-toplevel)'  # Back to git root - from https://twitter.com/thorstenball/status/1223218245592911878
 alias pg='ps aux | head -n1; ps aux | grep -i'
 alias tf='tail -F -n200'
 alias top='top -ocpu'
