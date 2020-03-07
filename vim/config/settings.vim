@@ -58,5 +58,8 @@ set autowrite
 " http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
 au BufLeave,FocusLost * silent! wa
 
+" Treat Nunjucks as HTML. (Templates used with e.g. the Eleventy blog engine.)
+au BufRead,BufNewFile *.njk setfiletype html
+
 set exrc   " Enable per-directory .vimrc files.
 set secure " Disable unsafe commands in per-directory .vimrc files.
