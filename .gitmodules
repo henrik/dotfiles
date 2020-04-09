@@ -22,9 +22,6 @@
 [submodule "vim/bundle/vim-ruby-runner"]
 	path = vim/bundle/vim-ruby-runner
 	url = http://github.com/henrik/vim-ruby-runner.git
-[submodule "vim/bundle/vim-yaml-flattener"]
-	path = vim/bundle/vim-yaml-flattener
-	url = http://github.com/henrik/vim-yaml-flattener.git
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = http://github.com/kchmck/vim-coffee-script.git
