@@ -40,3 +40,12 @@
 [diff]
  	compactionHeuristic = true
 	noprefix = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /Users/henrik/.netlify/helper/git-config
