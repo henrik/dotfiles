@@ -12,13 +12,13 @@ alias pair!='git commit --amend -C HEAD --author="`getpair`"; git show --format=
 setpair() { git config user.pair "$1" && git config user.email "$2" && git config user.name "$3"; pair; }
 
 # Add one of these for every pair. Each pair should be in alphabetical order by first name.
-alias paira='setpair  AR+HN  all+albert+henrik@barsoom.se  "Albert Ramstedt and Henrik Nyh"'
-alias pairap='setpair  AR+HN+PW  all+albert+henrik+peter@barsoom.se   "Albert Ramstedt and Henrik Nyh and Peter Wall"'
-alias pairj='setpair  HN+JK  all+henrik+jocke@barsoom.se   "Henrik Nyh and Joakim Kolsjö"'
-alias pairk='setpair  HN+KE  all+henrik+kenneth@barsoom.se "Henrik Nyh and Kenneth Eriksson"'
-alias pairp='setpair  HN+PW  all+henrik+peter@barsoom.se   "Henrik Nyh and Peter Wall"'
-alias pairpt='setpair  HN+PW+TS  all+henrik+peter+tomas@barsoom.se   "Henrik Nyh and Peter Wall and Tomas Skogberg"'
-alias pairt='setpair  HN+TS  all+henrik+tomas@barsoom.se   "Henrik Nyh and Tomas Skogberg"'
-alias pairl='setpair  HN+LF  all+henrik+lennart@barsoom.se  "Henrik Nyh and Lennart Fridén"'
-alias pairc='setpair  CE+HN  all+calle+henrik@barsoom.se  "Calle Erlandsson and Henrik Nyh"'
+alias paira='setpair  AR+HN  devs+albert+henrik@auctionet.com  "Albert Ramstedt and Henrik Nyh"'
+alias pairap='setpair  AR+HN+PW  devs+albert+henrik+peter@auctionet.com   "Albert Ramstedt and Henrik Nyh and Peter Wall"'
+alias pairj='setpair  HN+JK  devs+henrik+jocke@auctionet.com   "Henrik Nyh and Joakim Kolsjö"'
+alias pairk='setpair  HN+KE  devs+henrik+kenneth@auctionet.com "Henrik Nyh and Kenneth Eriksson"'
+alias pairp='setpair  HN+PW  devs+henrik+peter@auctionet.com   "Henrik Nyh and Peter Wall"'
+alias pairpt='setpair  HN+PW+TS  devs+henrik+peter+tomas@auctionet.com   "Henrik Nyh and Peter Wall and Tomas Skogberg"'
+alias pairt='setpair  HN+TS  devs+henrik+tomas@auctionet.com   "Henrik Nyh and Tomas Skogberg"'
+alias pairl='setpair  HN+LF  devs+henrik+lennart@auctionet.com  "Henrik Nyh and Lennart Fridén"'
+alias pairc='setpair  CE+HN  devs+calle+henrik@auctionet.com  "Calle Erlandsson and Henrik Nyh"'
 alias pairmob='setpair MOB devs@auctionet.com "Mob"'
