@@ -31,3 +31,6 @@ bundle/install.log
 
 # https://github.com/henrik/dotfiles/blob/master/vim/plugin/squirrel.vim
 .squirrel
+
+# https://serverfault.com/questions/201294/nfsxxxx-files-appearing-what-are-those
+.nfs*
