@@ -92,6 +92,7 @@ alias gap="git add --intent-to-add . && git add -p"  # Like "git add -p" but als
 
 # Heroku
 alias h="heroku"
+alias hdep="git push heroku"
 alias hmig="heroku run rake db:migrate"
 alias ho="heroku open"
 alias hsc="heroku run rails console -r heroku"  # Explicit remote, for apps with a staging as well.
