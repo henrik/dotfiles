@@ -5,18 +5,16 @@ function! s:RelatedFileForPhoenixLiveView()
   let l:path = expand("%")
   if l:path =~ "/live/.*\\.ex$"
     let l:rel = substitute(l:path, "\\.ex$", ".html.leex", "")
-    if filereadable(l:rel)
-      execute "edit" l:rel
-    else
-      echoerr "No such related file: " l:rel
-    endif
   elseif l:path =~ "\\.html\\.leex$"
     let l:rel = substitute(l:path, "\\.html\\.leex$", ".ex", "")
-    if filereadable(l:rel)
-      execute "edit" l:rel
-    else
-      echoerr "No such related file: " l:rel
-    endif
+  else
+    return
+  end
+
+  if filereadable(l:rel)
+    execute "edit" l:rel
+  else
+    echoerr "No such related file: " l:rel
   endif
 endfunction
 
