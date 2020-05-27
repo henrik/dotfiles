@@ -11,14 +11,17 @@ alias pair!='git commit --amend -C HEAD --author="`getpair`"; git show --format=
 
 setpair() { git config user.pair "$1" && git config user.email "$2" && git config user.name "$3"; pair; }
 
-# Add one of these for every pair. Each pair should be in alphabetical order by first name.
-alias paira='setpair  AR+HN  devs+albert+henrik@auctionet.com  "Albert Ramstedt and Henrik Nyh"'
-alias pairap='setpair  AR+HN+PW  devs+albert+henrik+peter@auctionet.com   "Albert Ramstedt and Henrik Nyh and Peter Wall"'
-alias pairj='setpair  HN+JK  devs+henrik+jocke@auctionet.com   "Henrik Nyh and Joakim Kolsjö"'
-alias pairp='setpair  HN+PW  devs+henrik+peter@auctionet.com   "Henrik Nyh and Peter Wall"'
-alias pairpt='setpair  HN+PW+TS  devs+henrik+peter+tomas@auctionet.com   "Henrik Nyh and Peter Wall and Tomas Skogberg"'
-alias pairt='setpair  HN+TS  devs+henrik+tomas@auctionet.com   "Henrik Nyh and Tomas Skogberg"'
-alias pairl='setpair  HN+LF  devs+henrik+lennart@auctionet.com  "Henrik Nyh and Lennart Fridén"'
-alias pairc='setpair  CE+HN  devs+calle+henrik@auctionet.com  "Calle Erlandsson and Henrik Nyh"'
-alias pairo='setpair  HN+OJ  devs+henrik+olle@auctionet.com  "Henrik Nyh and Olle Jonsson"'
+# Add one of these for every pair.
+# For pair commits, use plus addressing with the exact GitHub username. Our review tool relies on this.
+# Each pair should be in alphabetical order: by username in the email, and by first name in the name string.
+# (The order of the abbreviated names shown in the prompt is completely up to you.)
+alias paira='setpair  AR+HN  devs+henrik+soma@auctionet.com  "Albert Ramstedt and Henrik Nyh"'
+alias pairap='setpair  AR+HN+PW  devs+henrik+peter+soma@auctionet.com   "Albert Ramstedt and Henrik Nyh and Peter Wall"'
+alias pairj='setpair  HN+JK  devs+henrik+joakimk@auctionet.com   "Henrik Nyh and Joakim Kolsjö"'
+alias pairp='setpair  HN+PW  devs+henrik+p-wall@auctionet.com   "Henrik Nyh and Peter Wall"'
+alias pairpt='setpair  HN+PW+TS  devs+henrik+p-wall+tskogberg@auctionet.com   "Henrik Nyh and Peter Wall and Tomas Skogberg"'
+alias pairt='setpair  HN+TS  devs+henrik+tskogberg@auctionet.com   "Henrik Nyh and Tomas Skogberg"'
+alias pairl='setpair  HN+LF  devs+devl+henrik@auctionet.com  "Henrik Nyh and Lennart Fridén"'
+alias pairc='setpair  CE+HN  devs+calleerlandsson+henrik@auctionet.com  "Calle Erlandsson and Henrik Nyh"'
+alias pairo='setpair  HN+OJ  devs+henrik+olleolleolle@auctionet.com  "Henrik Nyh and Olle Jonsson"'
 alias pairmob='setpair MOB devs@auctionet.com "Mob"'
