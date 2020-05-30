@@ -28,6 +28,9 @@ fi
 
 export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.0/java"
 
+# Stop macOS from saying zsh is the new default.
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # nvm (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
