@@ -52,6 +52,10 @@ hi gitcommitWarning       guifg=#C23621 ctermfg=130  gui=NONE cterm=NONE
 hi gitcommitBranch        guifg=#FFDE00 ctermfg=220  gui=NONE cterm=NONE
 hi gitcommitHeader        guifg=#84A7C1 ctermfg=109  gui=NONE cterm=NONE
 
+" Make `defp` stand out from `def` in Elixir.
+hi elixirPrivateDefine ctermfg=172
+hi elixirPrivateFunctionDeclaration ctermfg=172
+
 hi link htmlTag              Type
 hi link htmlEndTag           Type
 hi link htmlTagName          Type
