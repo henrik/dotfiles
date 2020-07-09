@@ -1,27 +1,7 @@
 # http://blog.bitfluent.com/post/27983389/git-utilities-you-cant-live-without
 # http://superuser.com/questions/31744/how-to-get-git-completion-bash-to-work-on-mac-os-x
-# http://tammersaleh.com/posts/a-better-rvm-bash-prompt
-# https://rvm.beginrescueend.com/workflow/prompt/
 
-# 17:39:15 henrik@Nyx project_dir ree-1.8.7@project master*$ 
-
-function __rvm_prompt {
-  if hash rvm-prompt 2>&- ; then
-    echo "`rvm-prompt i v g s`"
-  fi
-}
-
-function __asdf_prompt {
-  echo "ruby-`asdf current ruby | awk '{print $1}'`"
-}
-
-function __ruby_prompt {
-  if [[ "$DEVBOX" ]]; then
-    __rvm_prompt
-  else
-    __asdf_prompt
-  fi
-}
+# 17:39:15 henrik@Nyx project_dir master*$ 
 
 function __git_prompt {
   GIT_PS1_SHOWDIRTYSTATE=1
@@ -61,7 +41,7 @@ bash_prompt() {
   # reset
   local RESET="\[\033[0;37m\]"
 
-  PS1="\t $BY\$(__name_and_server)$Y\W$G \$(__ruby_prompt)$G\$(__git_prompt)$RESET$ "
+  PS1="\t $BY\$(__name_and_server)$Y\W $G\$(__git_prompt)$RESET$ "
 
 }
 
