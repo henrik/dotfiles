@@ -24,4 +24,5 @@ alias pairt='setpair  HN+TS  devs+henrik+tskogberg@auctionet.com   "Henrik Nyh a
 alias pairl='setpair  HN+LF  devs+devl+henrik@auctionet.com  "Henrik Nyh and Lennart Fridén"'
 alias pairc='setpair  CE+HN  devs+calleerlandsson+henrik@auctionet.com  "Calle Erlandsson and Henrik Nyh"'
 alias pairo='setpair  HN+OJ  devs+henrik+olleolleolle@auctionet.com  "Henrik Nyh and Olle Jonsson"'
+alias pairop='setpair  HN+OJ+PW  devs+henrik+olleolleolle+p-wall@auctionet.com  "Henrik Nyh and Olle Jonsson and Peter Wall"'
 alias pairmob='setpair MOB devs@auctionet.com "Mob"'
