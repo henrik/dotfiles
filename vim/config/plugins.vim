@@ -1,56 +1,49 @@
-" Pathogen.vim
+call plug#begin('~/.vim/vim-plug-plugins')
+" Make sure you use single quotes.
 
-" Must turn filetype off and then back on.
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
+Plug 'barsoom/vim-turbux'           " Lets you run the current test in a tmux split via Vimux.
+Plug 'benmills/vimux'               " Lets you run commands in a tmux split.
+Plug 'bogado/file-line'             " Can open myfile.xy:123 to jump to that line.
+Plug 'henrik/CamelCaseMotion'       " Motions like ,w and ,b for camelCase and snake_case sub-words.
+Plug 'henrik/git-grep-vim'          " Adds :GitGrep.
+Plug 'henrik/rename.vim'            " Adds :Rename to rename both the buffer and the file on disk.
+Plug 'henrik/vim-indexed-search'    " Show e.g. 'match 1 of 3' in searches.
+Plug 'henrik/vim-open-url'          " Open URLs.
+Plug 'henrik/vim-reveal-in-finder'  " Adds :Reveal to reveal the current file in macOS Finder.
+Plug 'henrik/vim-ruby-runner'       " Execute Ruby into an output buffer.
+Plug 'henrik/vim-yaml-helper'       " Adds :GitGrep.
+Plug 'henrik/vim-qargs'             " https://thepugautomatic.com/2012/07/project-wide-search-and-replace-in-vim-with-qdo/
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " Dependency of fzf.vim. Ensures the fzf binary is installed.
+Plug 'junegunn/fzf.vim'             " File navigation.
+Plug 'preservim/nerdtree'           " File tree drawer.
+Plug 'tpope/vim-commentary'         " Toggle comments.
+Plug 'tpope/vim-endwise'            " Add 'end' automatically to Ruby and Elixir blocks etc.
+Plug 'tpope/vim-fugitive'           " Vim commands like :Gwrite and :Gblame.
+Plug 'tpope/vim-projectionist'      " :A alternate file navigation.
+Plug 'tpope/vim-rake'               " vim-projectionist support in non-Rails Ruby projects.
+Plug 'tpope/vim-repeat'             " Lets you use '.' to repeat vim-surround commands.
+Plug 'tpope/vim-surround'           " Change, add or remove surrounding characters like quotes or brackets.
+Plug 'vim-scripts/argtextobj.vim'   " Argument text objects, like daa to delete a function argument.
+
+" Languages/frameworks.
+Plug 'elixir-editors/vim-elixir'
+Plug 'elmcast/elm-vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'keith/swift.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
+Plug 'slim-template/vim-slim'
+Plug 'vim-ruby/vim-ruby'
+
+call plug#end()
 
 " fzf (fuzzy file finder)
-
-" Include the basic fzf Vim functionality for the fzf.vim plugin to work.
-source ~/.fzf/plugin/fzf.vim
 
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " Only files not excluded by .gitignore, for speed. This means it won't show non-version-controlled files.
 " Ideally we'd use wildignore. See: https://github.com/junegunn/fzf.vim/issues/133
 map <C-p> :GFiles<CR>
-
-" Ctrl-P
-
-let g:ctrlp_map = '<Nop>'
-
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_max_height = 20
-let g:ctrlp_show_hidden = 0
-let g:ctrlp_max_files = 0
-let g:ctrlp_switch_buffer = 0
-
-" Only cache if we're over this number of files.
-let g:ctrlp_use_caching = 2000
-
-" Don't let ctrlp change the working directory. Instead it now uses
-" the directory where vim was started. This fixes issues with some
-" projects that have nested git directories.
-let g:ctrlp_working_path_mode = 0
-
-" Files to skip.
-" Possibly used by other plugins, like Command-T.
-set wildignore+=*.o,*.obj,.git,tmp
-set wildignore+=public/uploads,db/sphinx,vim/backup
-set wildignore+=.themes  " Octopress.
-set wildignore+=deps,node_modules  " Phoenix
-
-map <C-b> :CtrlPBuffer<CR>
-
-" Syntastic
-
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-" Slow, so only run on :SyntasticCheck
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 
 " NERDTree
 
@@ -98,11 +91,6 @@ nmap ci,w ci,e
 " ,b is taken by CamelCaseMotion.
 let g:blockle_mapping = '<leader>B'
 
-" Ack.vim
-
-" Use The Silver Searcher.
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
 " vim-coffee-script
 let g:coffee_compile_vert = 1
 
@@ -117,14 +105,5 @@ map ° :! ruby %<CR>
 
 let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
 
-" Rainbow Parentheses Improved
-
-let g:rainbow_active = 0
-
-
 " elm-vim
 let g:elm_format_autosave = 1
-
-" vim-mix-format (Elixir)
-let g:mix_format_on_save = 1
-let g:mix_format_silent_errors = 1

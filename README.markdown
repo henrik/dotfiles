@@ -15,30 +15,28 @@ This rake task will not replace existing files, but it will replace existing sym
 
 The dotfiles will be symlinked, e.g. `~/.bash_profile` symlinked to `~/.dotfiles/bash_profile`.
 
-To use [fzf](https://github.com/junegunn/fzf) in Vim (or the shell), install it with:
+In Vim, run this to install plugins:
 
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-
-At the time of writing, Vim will complain without fzf. TODO: Make it optional?
+    :PlugInstall
 
 Don't forget to **replace the name and email in gitconfig** if you're not Henrik :p
 
 
 ## Vim
 
-Add a new plugin:
+Uses [vim-plug](https://github.com/junegunn/vim-plug) for plugins.
 
-    # E.g.:
-    git submodule add https://github.com/keith/swift.vim.git vim/bundle/vim-swift
+To add plugins:
 
-Install plugins from submodules:
+* Edit `~/.vim/config/plugins.vim`
+* `:source ~/.vimrc`
+* `:PlugInstall`
 
-    git submodule update --init
+To remove plugins:
 
-Update all plugins to latest:
-
-    git submodule update --recursive --remote
+* Edit `~/.vim/config/plugins.vim`
+* `:source ~/.vimrc`
+* `:PlugClean`
 
 
 ## tmux
