@@ -15,8 +15,7 @@ function! s:Lab()
 
   " Some boilerplate please.
   " Lab + Run so you can e.g. implement a macro in Lab and require it in Run.
-  let @x = "defmodule Lab do\nend\n\ndefmodule Run do\n  def run do\n  end\nend\n\nRun.run"
-  -1put x
+  call append(0, ["defmodule Lab do", "end", "", "defmodule Run do", "  def run do", "  end", "end", "", "Run.run"])
 
   " Delete blank line at end.
   $d
