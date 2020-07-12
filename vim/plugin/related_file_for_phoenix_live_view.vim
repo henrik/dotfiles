@@ -18,4 +18,7 @@ function! s:RelatedFileForPhoenixLiveView()
   endif
 endfunction
 
-autocmd BufNewFile,BufRead */live/*.ex,*.html.leex command! -buffer R call <SID>RelatedFileForPhoenixLiveView()
+augroup related_file_for_phoenix_live_view
+  autocmd!
+  autocmd BufNewFile,BufRead */live/*.ex,*.html.leex command! -buffer R call <SID>RelatedFileForPhoenixLiveView()
+augroup END
