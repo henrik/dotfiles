@@ -80,29 +80,15 @@ map M <Plug>SendTestToTmux
 map m <Plug>SendFocusedTestToTmux
 
 " CamelCaseMotion
-
 " Make c,w not include the trailing underscore:
 " https://github.com/bkad/CamelCaseMotion/issues/10
 nmap c,w c,e
 nmap ci,w ci,e
 
-" Blockle
-
-" ,b is taken by CamelCaseMotion.
-let g:blockle_mapping = '<leader>B'
-
 " vim-coffee-script
 let g:coffee_compile_vert = 1
 
-" exercism
-
-map § :ExercismTest<CR>
-
-" Shift+§ to run additional tests inlined in the exercise file.
-map ° :! ruby %<CR>
-
 " vim-markdown
-
 let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
 
 " elm-vim
