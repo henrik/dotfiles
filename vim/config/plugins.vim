@@ -13,7 +13,7 @@ Plug 'henrik/vim-reveal-in-finder'  " Adds :Reveal to reveal the current file in
 Plug 'henrik/vim-ruby-runner'       " Execute Ruby into an output buffer.
 Plug 'henrik/vim-yaml-helper'       " Adds :GitGrep.
 Plug 'henrik/vim-qargs'             " https://thepugautomatic.com/2012/07/project-wide-search-and-replace-in-vim-with-qdo/
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " Dependency of fzf.vim. Ensures the fzf binary is installed.
+Plug 'junegunn/fzf'                 " Dependency of fzf.vim.
 Plug 'junegunn/fzf.vim'             " File navigation.
 Plug 'preservim/nerdtree'           " File tree drawer.
 Plug 'tpope/vim-commentary'         " Toggle comments.
