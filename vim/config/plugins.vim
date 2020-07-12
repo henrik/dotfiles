@@ -7,7 +7,6 @@ Plug 'benmills/vimux'               " Lets you run commands in a tmux split.
 Plug 'bogado/file-line'             " Can open myfile.xy:123 to jump to that line.
 Plug 'henrik/CamelCaseMotion'       " Motions like ,w and ,b for camelCase and snake_case sub-words.
 Plug 'henrik/git-grep-vim'          " Adds :GitGrep.
-Plug 'henrik/rename.vim'            " Adds :Rename to rename both the buffer and the file on disk.
 Plug 'henrik/vim-indexed-search'    " Show e.g. 'match 1 of 3' in searches.
 Plug 'henrik/vim-open-url'          " Open URLs.
 Plug 'henrik/vim-reveal-in-finder'  " Adds :Reveal to reveal the current file in macOS Finder.
@@ -19,6 +18,7 @@ Plug 'junegunn/fzf.vim'             " File navigation.
 Plug 'preservim/nerdtree'           " File tree drawer.
 Plug 'tpope/vim-commentary'         " Toggle comments.
 Plug 'tpope/vim-endwise'            " Add 'end' automatically to Ruby and Elixir blocks etc.
+Plug 'tpope/vim-eunuch'             " UNIX shell commands like :Delete, :Move, :Rename, :Chmod
 Plug 'tpope/vim-fugitive'           " Vim commands like :Gwrite and :Gblame.
 Plug 'tpope/vim-projectionist'      " :A alternate file navigation.
 Plug 'tpope/vim-rake'               " vim-projectionist support in non-Rails Ruby projects.
