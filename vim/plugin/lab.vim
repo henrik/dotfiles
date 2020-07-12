@@ -8,7 +8,7 @@ function! s:Lab()
   set filetype=elixir
 
   " Make it a scratch (temporary) buffer.
-  "setlocal buftype=nofile bufhidden=wipe noswapfile
+  setlocal buftype=nofile bufhidden=wipe noswapfile
 
   " Close on q.
   "map <buffer> q ZZ
