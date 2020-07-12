@@ -56,7 +56,6 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFindIfFindable<CR>
 
 " Commentary
-
 xmap <leader>c <Plug>Commentary
 nmap <leader>c <Plug>Commentary
 nmap <leader>cc <Plug>CommentaryLine
