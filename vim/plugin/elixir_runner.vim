@@ -3,7 +3,10 @@
 "
 " By Henrik Nyh 2015-06-24 under the MIT license.
 
-au FileType elixir map <buffer> <leader>r :RunElixir<CR>
+augroup run_elixir
+  autocmd!
+  autocmd FileType elixir map <buffer> <leader>r :RunElixir<CR>
+augroup END
 
 command! RunElixir call <SID>RunElixir()
 
