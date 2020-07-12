@@ -29,13 +29,13 @@ Uses [vim-plug](https://github.com/junegunn/vim-plug) for plugins.
 To add plugins:
 
 * Edit `~/.vim/config/plugins.vim`
-* `:source ~/.vimrc`
+* `:so %`
 * `:PlugInstall`
 
 To remove plugins:
 
 * Edit `~/.vim/config/plugins.vim`
-* `:source ~/.vimrc`
+* `:so %`
 * `:PlugClean`
 
 
