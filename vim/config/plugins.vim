@@ -63,18 +63,15 @@ nmap <leader>cc <Plug>CommentaryLine
 nmap <leader>cu <Plug>CommentaryUndo
 
 " Git grep
-
-" Using "a" because it used to be :Ack.
+" Using 'a' because it used to be :Ack.
 " We need the trailing space.
 exe "nnoremap <leader>a :GitGrep "
 
 " vimux
-
 let g:VimuxOrientation = "h"
 let g:VimuxUseNearestPane = 1
 
 " turbux
-
 let g:no_turbux_mappings = 1
 map M <Plug>SendTestToTmux
 map m <Plug>SendFocusedTestToTmux
