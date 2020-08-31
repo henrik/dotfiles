@@ -25,6 +25,7 @@
 	extension = rb
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [push]
 	default = current
 [web]
