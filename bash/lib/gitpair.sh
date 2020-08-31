@@ -20,6 +20,7 @@ alias pairap='setpair  AR+HN+PW  devs+henrik+peter+soma@auctionet.com   "Albert 
 alias pairj='setpair  HN+JK  devs+henrik+joakimk@auctionet.com   "Henrik Nyh and Joakim Kolsjö"'
 alias pairp='setpair  HN+PW  devs+henrik+p-wall@auctionet.com   "Henrik Nyh and Peter Wall"'
 alias pairpt='setpair  HN+PW+TS  devs+henrik+p-wall+tskogberg@auctionet.com   "Henrik Nyh and Peter Wall and Tomas Skogberg"'
+alias pairjt='setpair  HN+JK+TS  devs+henrik+joakimk+tskogberg@auctionet.com   "Henrik Nyh and Joakim Kolsjö and Tomas Skogberg"'
 alias pairt='setpair  HN+TS  devs+henrik+tskogberg@auctionet.com   "Henrik Nyh and Tomas Skogberg"'
 alias pairl='setpair  HN+LF  devs+devl+henrik@auctionet.com  "Henrik Nyh and Lennart Fridén"'
 alias pairc='setpair  CE+HN  devs+calleerlandsson+henrik@auctionet.com  "Calle Erlandsson and Henrik Nyh"'
