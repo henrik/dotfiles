@@ -118,10 +118,6 @@ alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
 alias mobstation='ps ax|grep ssh|grep 9933|grep localhost|awk '\''{ print $1 }'\''|xargs kill; ssh mob -L 9933:localhost:5900 -nNT 2> /dev/null & (sleep 1; open vnc://localhost:9933)'
 
-# Straight into console-in-screen.
-# Assumes there is only one screen running.
-alias prodc="ssh anpa -t screen -RD"
-
 # Sometimes the camera in my Cinema Display stops working. This fixes it.
 alias fixcam="sudo killall VDCAssistant"
 
