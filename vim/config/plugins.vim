@@ -10,6 +10,7 @@ Plug 'henrik/git-grep-vim'          " Adds :GitGrep.
 Plug 'henrik/vim-indexed-search'    " Show e.g. 'match 1 of 3' in searches.
 Plug 'henrik/vim-open-url'          " Open URLs.
 Plug 'henrik/vim-reveal-in-finder'  " Adds :Reveal to reveal the current file in macOS Finder.
+Plug 'henrik/rename.vim'            " 'Rename newname.txt' and 'Rename newdir/newname.txt'
 Plug 'henrik/vim-ruby-runner'       " Execute Ruby into an output buffer.
 Plug 'henrik/vim-yaml-helper'       " YAML utilities like :YamlFullPath and :YAMLGoToKey.
 Plug 'henrik/vim-qargs'             " https://thepugautomatic.com/2012/07/project-wide-search-and-replace-in-vim-with-qdo/
@@ -18,7 +19,6 @@ Plug 'junegunn/fzf.vim'             " File navigation.
 Plug 'preservim/nerdtree'           " File tree drawer.
 Plug 'tpope/vim-commentary'         " Toggle comments.
 Plug 'tpope/vim-endwise'            " Add 'end' automatically to Ruby and Elixir blocks etc.
-Plug 'tpope/vim-eunuch'             " UNIX shell commands like :Delete, :Move, :Rename, :Chmod
 Plug 'tpope/vim-fugitive'           " Vim commands like :Gwrite and :Gblame.
 Plug 'tpope/vim-projectionist'      " :A alternate file navigation.
 Plug 'tpope/vim-rake'               " vim-projectionist support in non-Rails Ruby projects.
