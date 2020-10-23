@@ -1,0 +1,9 @@
+# Make git's diff context more language-aware.
+# https://tekin.co.uk/2020/10/better-git-diff-output-for-ruby-python-elixir-and-more
+*.css   diff=css
+*.html  diff=html
+*.ex    diff=elixir
+*.exs   diff=elixir
+*.md    diff=markdown
+*.rb    diff=ruby
+*.rake  diff=ruby
