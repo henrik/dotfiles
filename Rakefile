@@ -48,6 +48,4 @@ task :install do
     FileUtils.ln_s(source, target)
     info "Creating symlink: #{target} --> #{source}"
   end
-
-  system "git submodule update --init"
 end

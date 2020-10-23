@@ -1,9 +1,6 @@
 # OS X.
 .DS_Store
 
-# Vim bundles as submodules.
-doc/tags
-
 # Bundler crap.
 bundle/install.log
 
