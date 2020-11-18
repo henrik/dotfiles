@@ -16,8 +16,6 @@ source ~/.bash/aliases.sh
 source ~/.bash/functions.sh
 source ~/.bash/prompt.sh
 
-source ~/.bash/lib/gitpair.sh
-
 if [[ "$DEVBOX" ]]; then
   # Auctionet's "Devbox" tool is quite coupled to RVM currently.
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
