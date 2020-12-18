@@ -12,8 +12,15 @@
 "
 "   let(:foo) { x }
 "
+" If you run it on a line that already does `let(:foo)`, it goes the other
+" way, making it a local variable.
+
 function! s:PromoteToLet()
-  .s/@\?\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  if getline('.') =~ 'let(:'
+    .s/let(:\(\w\+\)) { \(.*\) }/\1 = \2/
+  else
+    .s/@\?\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  endif
 endfunction
 
 command! -range Let execute '<line1>,<line2>call <SID>PromoteToLet()'
