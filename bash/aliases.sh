@@ -92,6 +92,7 @@ alias gap="git add --intent-to-add . && git add -p"  # Like "git add -p" but als
 
 # Pairing (via https://github.com/barsoom/devbox/blob/master/bin/pair)
 alias pairo="pair olle"
+alias pairp="pair peter"
 
 # Heroku
 alias h="heroku"
