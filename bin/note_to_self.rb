@@ -2,7 +2,7 @@
 # Command-line tool to mail notes to self with Gmail.
 #
 # Install gems if you haven't:
-#   gem install gmail activesupport
+#   gem install gmail
 #
 # Configure:
 
@@ -23,9 +23,6 @@ PW = File.read(File.expand_path("~/.gmailpw")).chop
 begin
   # https://github.com/nu7hatch/gmail
   require "gmail"
-
-  # To fix Alfred.app encoding :(
-  require "active_support/all"
 rescue LoadError => e
   puts e.message
   exit 1
@@ -39,7 +36,7 @@ def init
   message.force_encoding("UTF-8")
 
   # Alfred passes decomposed characters which cause the mail to silently fail.
-  message = message.mb_chars.normalize
+  message = message.unicode_normalize
 
   note_to_self(message)
 end
@@ -62,7 +59,7 @@ def send_mail(login, pw, _to, _subject, _body)
       to _to
       subject _subject
       text_part do
-        content_type 'text/plain; charset=UTF-8'
+        content_type "text/plain; charset=UTF-8"
         body _body
       end
     end
