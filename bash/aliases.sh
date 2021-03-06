@@ -51,6 +51,9 @@ alias smix="iex -S mix"
 alias rsua="bundle exec rake spec:unit:all"
 alias rsp="rake testbot:spec"
 
+# Docker Compose (as seen e.g. in https://thoughtbot.com/blog/rails-on-docker)
+alias dew="docker-compose exec web"
+
 # Git
 alias g="git"
 alias gs="git status"
