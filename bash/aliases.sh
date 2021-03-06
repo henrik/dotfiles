@@ -28,9 +28,6 @@ elif ls -G -d . >/dev/null 2>&1; then
   alias ls='ls -G'  # BSD/OS X
 fi
 
-# I always forget the common options.
-alias rsync?="echo 'rsync -az --progress server:/path/ path (Slashes are significant.)'"
-
 # Ruby on Rails
 alias sx="[ -f script/console ] && script/console --sandbox || bundle exec rails console --sandbox"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
@@ -46,10 +43,6 @@ alias be="bundle exec"
 
 # Elixir
 alias smix="iex -S mix"
-
-# Tests
-alias rsua="bundle exec rake spec:unit:all"
-alias rsp="rake testbot:spec"
 
 # Docker Compose (as seen e.g. in https://thoughtbot.com/blog/rails-on-docker)
 alias dew="docker-compose exec web"
@@ -118,12 +111,7 @@ alias tcopy="tmux show-buffer | pbcopy"
 # It tends to refuse pushes of a target language until it's processed the source language push.
 alias wpus="ruby -e 'loop { x = \`wti push; wti push -l en; wti push -l de; wti push -l es; wti push -l da\`; puts x; break unless x.include?(%{Locked}); puts; puts %{#{Time.now.strftime(%{%H:%M:%S})}: Retrying in a bit…}; puts; sleep 15 }'"
 
-# Servers
-alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
-
 # Work
-
-alias mobstation='ps ax|grep ssh|grep 9933|grep localhost|awk '\''{ print $1 }'\''|xargs kill; ssh mob -L 9933:localhost:5900 -nNT 2> /dev/null & (sleep 1; open vnc://localhost:9933)'
 
 # Sometimes the camera in my Cinema Display stops working. This fixes it.
 alias fixcam="sudo killall VDCAssistant"
