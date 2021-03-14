@@ -79,8 +79,8 @@ alias gps='(git stash --include-untracked | grep -v "No local changes to save") 
 alias go="git checkout"
 alias gb="git checkout -b"
 alias got="git checkout -"
-alias gom="git checkout `git_main_branch`"
-alias grb="git rebase -i origin/`git_main_branch`"
+alias gom='git checkout `git_main_branch`'
+alias grb='git rebase -i origin/`git_main_branch`'
 alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
@@ -90,7 +90,7 @@ alias gamm="git add --all && git commit --amend --allow-empty --no-edit"
 alias gammf="gamm --no-verify"
 alias gba="git rebase --abort"
 alias gbc="git add -A && git rebase --continue"
-alias gbm="git fetch origin `git_main_branch` && git rebase origin/`git_main_branch`"
+alias gbm='git fetch origin `git_main_branch` && git rebase origin/`git_main_branch`'
 alias gap="git add --intent-to-add . && git add -p"  # Like "git add -p" but also ask about any newly added files.
 
 # Pairing (via https://github.com/barsoom/devbox/blob/master/bin/pair)
