@@ -91,7 +91,7 @@ function sshkey {
 function tat() {
   session_name=`basename ${1:-$PWD}`
   session_name=${session_name/auctionet_/an_}
-  session_name=${session_name/\./_}
+  session_name=${session_name//\./_}
   tmux new-session -As "$session_name"
 }
 
