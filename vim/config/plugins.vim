@@ -25,6 +25,7 @@ Plug 'tpope/vim-rake'               " vim-projectionist support in non-Rails Rub
 Plug 'tpope/vim-repeat'             " Lets you use '.' to repeat vim-surround commands.
 Plug 'tpope/vim-surround'           " Change, add or remove surrounding characters like quotes or brackets.
 Plug 'vim-scripts/argtextobj.vim'   " Argument text objects, like daa to delete a function argument.
+Plug 'ap/vim-css-color'             " Color name highlighter.
 
 " Languages/frameworks.
 Plug 'elixir-editors/vim-elixir'
