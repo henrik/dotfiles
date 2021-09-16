@@ -22,6 +22,8 @@ To use [fzf](https://github.com/junegunn/fzf) in Vim (or the shell), install it 
 
 I intentionally do not install fzf via Vim, because I couldn't get it working well when sharing dotfiles beteeen a macOS host and a Linux guest.
 
+You are expected to have Node installed with a new-enough version to make [coc.nvim](https://github.com/neoclide/coc.nvim) happy.
+
 In Vim, run this to install plugins:
 
     :PlugInstall

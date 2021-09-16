@@ -26,6 +26,7 @@ Plug 'tpope/vim-repeat'             " Lets you use '.' to repeat vim-surround co
 Plug 'tpope/vim-surround'           " Change, add or remove surrounding characters like quotes or brackets.
 Plug 'vim-scripts/argtextobj.vim'   " Argument text objects, like daa to delete a function argument.
 Plug 'ap/vim-css-color'             " Color name highlighter.
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Supports VSCode features, language servers etc.
 
 " Languages/frameworks.
 Plug 'elixir-editors/vim-elixir'
@@ -91,3 +92,10 @@ let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', '
 
 " elm-vim
 let g:elm_format_autosave = 1
+
+" coc.nvim
+
+" In Devbox, use the global node, since per-project nodes may be too old for coc.nvim.
+if exists('$DEVBOX')
+  let g:coc_node_path = '/devbox/tmp/devbox/binwrappers/node'
+endif
