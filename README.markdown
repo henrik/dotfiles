@@ -24,6 +24,8 @@ I intentionally do not install fzf via Vim, because I couldn't get it working we
 
 You are expected to have Node installed with a new-enough version to make [coc.nvim](https://github.com/neoclide/coc.nvim) happy.
 
+You are expected to have the `solargraph` gem installed to use coc.nvim with Ruby. If you use [asdf](https://asdf-vm.com/), you should get this automatically when you install a new Ruby version via [.default-gems](https://github.com/asdf-vm/asdf-ruby#default-gems). Otherwise use `gem install solargraph`.
+
 In Vim, run this to install plugins:
 
     :PlugInstall

@@ -1,1 +1,7 @@
+# https://github.com/asdf-vm/asdf-ruby#default-gems
+# Note that this file can have line comments but not end-of-line comments.
+
 bundler
+
+# Ruby language server used in Vim.
+solargraph
