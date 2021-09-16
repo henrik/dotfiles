@@ -102,3 +102,6 @@ let g:coc_global_extensions = ['coc-solargraph']
 if exists('$DEVBOX')
   let g:coc_node_path = '/devbox/tmp/devbox/binwrappers/node'
 endif
+
+" Rename symbol in project.
+ nmap <leader>s <Plug>(coc-rename)
