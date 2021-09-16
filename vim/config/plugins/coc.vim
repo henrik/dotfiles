@@ -1,5 +1,6 @@
-" coc-solargraph: Ruby language server.
-let g:coc_global_extensions = ['coc-solargraph']
+" https://github.com/neoclide/coc-solargraph (Ruby)
+" https://github.com/neoclide/coc-eslint
+let g:coc_global_extensions = ['coc-solargraph', 'coc-eslint']
 
 " In Devbox, use the global node, since per-project nodes may be too old for coc.nvim.
 if exists('$DEVBOX')
