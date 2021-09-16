@@ -7,4 +7,8 @@ if exists('$DEVBOX')
 endif
 
 " Rename symbol in project.
- nmap <leader>s <Plug>(coc-rename)
+nmap <leader>s <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
