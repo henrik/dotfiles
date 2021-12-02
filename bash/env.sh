@@ -7,3 +7,6 @@ export HISTCONTROL=ignoredups
 
 # Colors in Vim.
 export TERM='xterm-256color'
+
+# Auctionet Devbox
+export DEV_HOST='192.168.50.51'
