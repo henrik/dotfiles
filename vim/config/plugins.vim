@@ -7,7 +7,6 @@ Plug 'benmills/vimux'               " Lets you run commands in a tmux split.
 Plug 'bogado/file-line'             " Can open myfile.xy:123 to jump to that line.
 Plug 'henrik/CamelCaseMotion'       " Motions like ,w and ,b for camelCase and snake_case sub-words.
 Plug 'henrik/git-grep-vim'          " Adds :GitGrep.
-Plug 'henrik/vim-indexed-search'    " Show e.g. 'match 1 of 3' in searches.
 Plug 'henrik/vim-open-url'          " Open URLs.
 Plug 'henrik/vim-reveal-in-finder'  " Adds :Reveal to reveal the current file in macOS Finder.
 Plug 'henrik/rename.vim'            " 'Rename newname.txt' and 'Rename! newdir/newname.txt'

@@ -28,6 +28,7 @@ set gdefault                          " Global search by default (/g turns it of
 set hlsearch                          " Highlight results.
 set incsearch                         " Search-as-you-type.
 set ignorecase smartcase              " Case-insensitive unless we include uppercase.
+set shortmess-=S                      " Show result counts like '[1/4]'. Vim 8.1.1270+.
 
 " Can autocomplete CSS classes etc with dashes.
 " Also changes the "w" small word motion not to stop at dashes,
