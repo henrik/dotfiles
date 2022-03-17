@@ -70,12 +70,8 @@ alias gcaf="git add --all && gcof"
 alias gcof="git commit --no-verify -m"
 alias gcac="gca Cleanup"
 alias gcoc="gco Cleanup"
-alias gcaw="gca 'Whitespace
-
-[skip ci]'"
-alias gcow="gco 'Whitespace
-
-[skip ci]'"
+alias gcaw="gca $'Whitespace\n\n[skip ci]'"
+alias gcow="gco $'Whitespace\n\n[skip ci]'"
 alias gl="git pull --rebase"
 alias gpp="git pull --rebase && git push"
 alias gppp="git push -u"  # Can't pull because you forgot to track? Run this.
