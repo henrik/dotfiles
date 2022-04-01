@@ -12,4 +12,4 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export TERM='xterm-256color'
 
 # Auctionet Devbox
-export DEV_HOST='192.168.50.51'
+export DEV_HOST='localhost'
