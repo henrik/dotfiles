@@ -1,7 +1,5 @@
 [[ -s ~/.profile ]] && source ~/.profile
 
-# Work environment: https://github.com/barsoom/bs
-[[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
 # Expected by https://github.com/barsoom/devbox: https://auctionet.slack.com/archives/CF9SAN79V/p1552987988719300, https://auctionet.slack.com/archives/CF9SAN79V/p1553006327787000?thread_ts=1552987988.719300&cid=CF9SAN79V
 [[ -s "$HOME/.shell_local" ]] && source "$HOME/.shell_local"
 
