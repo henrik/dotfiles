@@ -28,8 +28,6 @@ cask "licecap"
 cask "dash"
 cask "vlc"
 cask "firefox"
-cask "vagrant"
-cask "virtualbox"
 
 # Mac App Store
 # "Copy Link" from the App Store UI to get the ID.
