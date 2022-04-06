@@ -3,7 +3,7 @@ call plug#begin('~/.vim/vim-plug-plugins')
 
 Plug 'AndrewRadev/splitjoin.vim'    " Language-aware toggle between single-line and multi-line versions.
 Plug 'barsoom/vim-turbux'           " Lets you run the current test in a tmux split via Vimux.
-Plug 'benmills/vimux'               " Lets you run commands in a tmux split.
+Plug 'preservim/vimux', { 'tag': '1.1.0' } " Lets you run commands in a tmux split.
 Plug 'bogado/file-line'             " Can open myfile.xy:123 to jump to that line.
 Plug 'henrik/CamelCaseMotion'       " Motions like ,w and ,b for camelCase and snake_case sub-words.
 Plug 'henrik/git-grep-vim'          " Adds :GitGrep.
