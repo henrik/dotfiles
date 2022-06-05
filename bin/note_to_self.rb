@@ -2,12 +2,14 @@
 # Command-line tool to mail notes to self with Gmail.
 #
 # Install gems if you haven't:
-#   gem install gmail
+#   (sudo) gem install gmail
 #
 # Configure:
 
 TO = "henrik@nyh.se"
-LOGIN = "robot@nyh.se"
+LOGIN = "henrik@nyh.se"
+
+# This needs to be a "Generated app password" to avoid the need for 2FA.
 PW = File.read(File.expand_path("~/.gmailpw")).chop
 
 # Intended to be used with an Alfred.app extension like:
@@ -43,7 +45,8 @@ end
 
 def note_to_self(message)
   log(message)  # So we have it even if it errors out.
-  send_mail(LOGIN, PW, TO, message, message)
+  subject = "[note to self] #{message}"
+  send_mail(LOGIN, PW, TO, subject, message)
   puts "Sent: #{message}"
 rescue StandardError => e
   puts "Error sending: #{e.class.name}: #{e.message}"
