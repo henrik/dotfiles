@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
+
 # Command-line tool to mail notes to self with Gmail.
-#
-# Install gems if you haven't:
-#   (sudo) gem install gmail
 #
 # Configure:
 
@@ -22,12 +20,13 @@ PW = File.read(File.expand_path("~/.gmailpw")).chop
 #   source $(/usr/local/bin/brew --prefix asdf)/asdf.sh  # If you use asdf installed via Homebrew
 #   ~/.bin/note_to_self.rb "{query}"
 
-begin
-  # https://github.com/nu7hatch/gmail
-  require "gmail"
-rescue LoadError => e
-  puts e.message
-  exit 1
+require "net/imap"
+require "net/smtp"
+
+require "bundler/inline"
+gemfile do
+  source "https://rubygems.org"
+  gem "gmail"
 end
 
 def init
