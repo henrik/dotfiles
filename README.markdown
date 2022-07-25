@@ -2,6 +2,10 @@
 
 ## Install
 
+On a Mac, switch the shell to bash:
+
+    chsh -s /bin/bash
+
 Clone this repo into `~/.dotfiles`:
 
     git clone git@github.com:henrik/dotfiles.git ~/.dotfiles
