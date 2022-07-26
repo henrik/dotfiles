@@ -1,13 +1,13 @@
 # Dotfile bins.
 export PATH=~/.bin:$PATH
 
-# So homebrew /usr/local/bin is preferrable to /usr/bin.
-export PATH=/usr/local/bin:$PATH
+# Homebrew.
+export PATH=/opt/homebrew/bin:$PATH
 
-# Ubuntu Ruby gem binaries
+# Ubuntu Ruby gem binaries.
 export PATH=/var/lib/gems/1.8/bin:$PATH
 
-# MySQL
+# MySQL.
 export PATH=/usr/local/mysql/bin:$PATH
 
 # Make autojump's "j" available.
