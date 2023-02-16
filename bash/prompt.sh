@@ -3,6 +3,8 @@
 
 # 17:39:15 henrik@Nyx project_dir master*$ 
 
+. ~/.dotfiles/bash/lib/git-prompt.sh
+
 function __git_prompt {
   GIT_PS1_SHOWDIRTYSTATE=1
   [ `git config user.pair` ] && GIT_PS1_PAIR="`git config user.pair`@"

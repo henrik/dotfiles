@@ -1,6 +1,5 @@
 # Bash completion for git commands and branch names.
-# Also required for the prompt.
-. ~/.dotfiles/bash/lib/git-completion.bash
+. ~/.dotfiles/bash/lib/git-completion.sh
 
 # Rake task completion.
 complete -C ~/.bash/lib/rake-completion.rb -o default rake
