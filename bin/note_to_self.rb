@@ -17,7 +17,8 @@ PW = File.read(File.expand_path("~/.gmailpw")).chop
 #
 #   source ~/.rvm/scripts/rvm  # If you use RVM
 #   source ~/.asdf/asdf.sh     # If you use asdf installed in .asdf
-#   source $(/usr/local/bin/brew --prefix asdf)/asdf.sh  # If you use asdf installed via Homebrew
+#   source $(/opt/homebrew/bin/brew --prefix asdf)/asdf.sh  # If you use asdf installed via newer Homebrew
+#   source $(/usr/local/bin/brew --prefix asdf)/asdf.sh  # If you use asdf installed via older Homebrew
 #   ~/.bin/note_to_self.rb "{query}"
 
 require "net/imap"
