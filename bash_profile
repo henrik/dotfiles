@@ -1,4 +1,4 @@
-# .bash_profile is loaded in login shells (also see .bashrc).
+# .bash_profile is loaded in login shells.
+# .bashrc is loaded in non-login shells. It includes all the good stuff, so we source it.
 
-[[ -s ~/.profile ]] && source ~/.profile
 [[ -s ~/.bashrc ]] && source ~/.bashrc

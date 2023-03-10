@@ -1,4 +1,8 @@
-# .bashrc is loaded in non-login shells (also see .bash_profile).
+# .bashrc is loaded in non-login shells.
+# It's also loaded by .bash_profile (which is loaded in login shells).
+
+# Devbox (https://github.com/barsoom/devbox) provides a ~/.profile that we want both in login and non-login shells.
+[[ -s ~/.profile ]] && source ~/.profile
 
 # Expected by https://github.com/barsoom/devbox: https://auctionet.slack.com/archives/CF9SAN79V/p1552987988719300, https://auctionet.slack.com/archives/CF9SAN79V/p1553006327787000?thread_ts=1552987988.719300&cid=CF9SAN79V
 [[ -s "$HOME/.shell_local" ]] && source "$HOME/.shell_local"
