@@ -5,6 +5,7 @@ Plug 'AndrewRadev/splitjoin.vim'    " Language-aware toggle between single-line 
 Plug 'barsoom/vim-turbux'           " Lets you run the current test in a tmux split via Vimux.
 Plug 'preservim/vimux', { 'tag': '1.1.0' } " Lets you run commands in a tmux split.
 Plug 'bogado/file-line'             " Can open myfile.xy:123 to jump to that line.
+Plug 'github/copilot.vim', {'branch': 'main'} " GitHub Copilot.
 Plug 'henrik/CamelCaseMotion'       " Motions like ,w and ,b for camelCase and snake_case sub-words.
 Plug 'henrik/git-grep-vim'          " Adds :GitGrep.
 Plug 'henrik/vim-open-url'          " Open URLs.
