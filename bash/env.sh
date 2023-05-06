@@ -10,3 +10,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Colors in Vim.
 export TERM='xterm-256color'
+
+# Auctionet Devbox
+export DEV_HOST='devbox'
