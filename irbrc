@@ -14,7 +14,11 @@ class IRB::Irb
   end
 end
 
-IRB.conf[:PROMPT][:SIMPLE].merge!(:PROMPT_I => lambda {
-  PROMPT.call(">>")
-})
+# Fixed-width prompt to avoid issues: https://ruby.social/@henrik/110694557615313865
+IRB.conf[:PROMPT][:SIMPLE].merge!(
+  PROMPT_I: -> { PROMPT.call(">>") },  # Initial prompt.
+  PROMPT_S: -> { PROMPT.call(' "') },  # String.
+  PROMPT_C: -> { PROMPT.call(" >") },
+  PROMPT_N: -> { PROMPT.call(" >") },
+)
 IRB.conf[:PROMPT_MODE] = :SIMPLE
