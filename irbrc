@@ -17,7 +17,7 @@ end
 # Fixed-width prompt to avoid issues: https://ruby.social/@henrik/110694557615313865
 IRB.conf[:PROMPT][:SIMPLE].merge!(
   PROMPT_I: -> { PROMPT.call(">>") },  # Initial prompt.
-  PROMPT_S: -> { PROMPT.call(' "') },  # String.
+  PROMPT_S: -> { PROMPT.call(" %l") },  # String.
   PROMPT_C: -> { PROMPT.call(" >") },
   PROMPT_N: -> { PROMPT.call(" >") },
 )
