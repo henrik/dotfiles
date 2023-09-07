@@ -2,7 +2,7 @@
 export PATH=~/.bin:$PATH
 
 # Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Ubuntu Ruby gem binaries.
 export PATH=/var/lib/gems/1.8/bin:$PATH
