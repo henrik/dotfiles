@@ -50,3 +50,7 @@
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
   path = /Users/henrik/.netlify/helper/git-config
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
