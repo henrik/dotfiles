@@ -71,6 +71,12 @@ defaults write com.apple.iTunes disablePingSidebar -bool true
 echo "Disable all the other Ping stuff in iTunes."
 defaults write com.apple.iTunes disablePing -bool true
 
+echo "Disable smart quotes as they’re annoying when typing code."
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+echo "Disable smart dashes as they’re annoying when typing code."
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
 echo "Changed defaults. Restarting apps…"
 
 echo "Restart Finder."
