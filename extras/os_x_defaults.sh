@@ -65,12 +65,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 echo "Show the ~/Library folder."
 chflags nohidden ~/Library
 
-echo "Disable the Ping sidebar in iTunes."
-defaults write com.apple.iTunes disablePingSidebar -bool true
-
-echo "Disable all the other Ping stuff in iTunes."
-defaults write com.apple.iTunes disablePing -bool true
-
 echo "Disable smart quotes as they’re annoying when typing code."
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
