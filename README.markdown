@@ -69,4 +69,4 @@ The `extras` directory contains additional configuration files that are not dotf
 
  * On a new Mac:
    * Run `brew bundle --file ~/.dotfiles/extras/Brewfile` to install the apps I want.
-   * Run `~/.dotfiles/extras/os_x_defaults.sh` in the Terminal to change some silly defaults.
+   * Run `~/.dotfiles/extras/mac_os_defaults.sh` in the Terminal to change some silly defaults.
