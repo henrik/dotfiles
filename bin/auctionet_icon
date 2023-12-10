@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+# Usage:
+#
+#   auctionet_icon ☕
+
+# Generates an Auctionet icon with the given emoji, suitable as a Slack workspace icon.
+# (Not suitable for public-facing use since Apple emojis likely aren't free to use.)
+#
+# I started with this funky Cloudinary setup mostly for fun, but found that rendering Apple emoji is tricky in e.g. RMagick, too, so might as well stick with this 🤷
+
+require "base64"
+require "open-uri"
+
+emoji = ARGV.first
+
+unless emoji.match?(/\A\p{Emoji_presentation}\z/)
+  abort "Please provide a single emoji as the first argument."
+end
+
+codepoints = emoji.codepoints.map { _1.to_s(16) }.join("-")
+emoji_url = "https://github.com/iamcal/emoji-data/blob/master/img-apple-160/#{codepoints}.png?raw=true"
+base64 = Base64.strict_encode64(emoji_url).sub("/", "_")
+
+image_url = "https://res.cloudinary.com/pairicon/image/upload/l_fetch:#{base64}/_auctionet_base_icon.png"
+
+File.write(File.expand_path("~/Downloads/auctionet_#{emoji}.png"), URI.open(image_url).read)
