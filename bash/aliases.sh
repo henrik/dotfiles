@@ -101,7 +101,7 @@ alias h="heroku"
 alias hdep="git push heroku"
 alias hmig="heroku run rake db:migrate"
 alias ho="heroku open"
-alias hsc="heroku run rails console -r heroku"  # Explicit remote, for apps with a staging as well.
+alias hsc="heroku run AUCTIONET_CORE_EMPLOYEE_ID=2 rails console -r heroku"  # Explicit remote, for apps with a staging as well.
 alias hscs="heroku run rails console -r staging"
 alias hlog="heroku logs -t -r heroku"
 
