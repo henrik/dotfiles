@@ -105,6 +105,10 @@ alias hsc="heroku run AUCTIONET_CORE_EMPLOYEE_ID=2 rails console -r heroku"  # E
 alias hscs="heroku run rails console -r staging"
 alias hlog="heroku logs -t -r heroku"
 
+# The Stack
+alias ssc="dev console prod"
+alias sscs="dev console staging"
+
 # tmux
 alias ta="tmux attach"
 # With tmux mouse mode on, just select text in a pane to copy.
