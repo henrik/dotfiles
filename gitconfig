@@ -18,7 +18,7 @@
 	today = shortlog --since=midnight
 	uncommit = reset HEAD^
 	unamend = reset --soft HEAD@{1}
-	hist = for-each-ref --count=10 --sort=-committerdate --format='%(refname:short)' refs/heads/
+	hist = for-each-ref --count=20 --sort=-committerdate --format='%(refname:short)' refs/heads/
 	redate = commit --amend --date=now --no-edit
 [gist]
 	private = yes
