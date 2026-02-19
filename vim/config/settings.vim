@@ -59,6 +59,12 @@ set autowrite
 " http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
 au BufLeave,FocusLost * silent! wa
 
+" Dim background when tmux pane loses focus.
+if $TMUX != ""
+  au FocusLost * hi Normal ctermbg=235
+  au FocusGained * hi Normal ctermbg=233
+endif
+
 " Treat Nunjucks as HTML. (Templates used with e.g. the Eleventy blog engine.)
 au BufRead,BufNewFile *.njk setfiletype html
 
