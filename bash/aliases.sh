@@ -128,3 +128,6 @@ alias fixcam="sudo killall VDCAssistant"
 
 # Sometimes the time in my VM is off. This fixes it.
 alias fixtime="sudo service ntp stop; sudo ntpd -gq; sudo service ntp start"
+
+# Port-forward for ~/.bin/ssh_sound_server.sh.
+alias devbox="ssh -R 19998:localhost:19998 devbox"
