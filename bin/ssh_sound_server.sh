@@ -9,10 +9,10 @@ while true; do
   request=$(echo -e "HTTP/1.1 200 OK\r\n" | nc -l 19998)
   if echo "$request" | grep -q "GET /done"; then
     echo "done"
-    afplay -v 0.3 /System/Library/Sounds/Ping.aiff &
+    afplay -v 0.5 /Users/henrik/.claude/sounds/SND01_sine/transition_up.wav &
   elif echo "$request" | grep -q "GET /ask"; then
     echo "ask"
-    afplay -v 0.3 /System/Library/Sounds/Hero.aiff &
+    afplay -v 0.5 /Users/henrik/.claude/sounds/SND01_sine/transition_down.wav &
   else
     echo "Unknown request: $request"
   fi

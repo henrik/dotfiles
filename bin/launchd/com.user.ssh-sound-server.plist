@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.user.claude-sound-server</string>
+    <string>com.user.ssh-sound-server</string>
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
@@ -14,6 +14,6 @@
     <key>KeepAlive</key>
     <true/>
     <key>StandardErrorPath</key>
-    <string>/tmp/claude-sound-server.err</string>
+    <string>/tmp/ssh-sound-server.err</string>
 </dict>
 </plist>
