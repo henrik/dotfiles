@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Copy stdin to the host clipboard via OSC 52 escape sequence.
+# Works over SSH and inside tmux (with allow-passthrough on).
+
+if [ -t 0 ]; then
+  echo "Usage: echo 'text' | $(basename $0)" >&2
+  echo "   or: $(basename $0) < file" >&2
+  exit 1
+fi
+
+encoded=$(base64 | tr -d '\n')
+
+if [ -n "$TMUX" ]; then
+  printf "\033Ptmux;\033\033]52;c;%s\a\033\\" "$encoded"
+else
+  printf "\033]52;c;%s\a" "$encoded"
+fi

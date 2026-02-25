@@ -111,9 +111,6 @@ alias sscs="dev console staging"
 
 # tmux
 alias ta="tmux attach"
-# With tmux mouse mode on, just select text in a pane to copy.
-# Then run tcopy to put it in the OS X clipboard (assuming reattach-to-user-namespace).
-alias tcopy="tmux show-buffer | pbcopy"
 
 # WTI (translation service)
 

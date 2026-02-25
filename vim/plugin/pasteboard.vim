@@ -19,9 +19,17 @@ augroup pasteboard
         \ endif
 augroup END
 
+function! s:tcopy_buffer()
+  silent write !tcopy
+  redraw
+  echo "Copied buffer."
+endfunction
+
+command! Tcopy call s:tcopy_buffer()
+
 if <SID>is_over_ssh()
-  nnoremap <leader>y :echoerr "Can't yank to OS X pasteboard :("<CR>
-  vnoremap <leader>y :echoerr "Can't yank to OS X pasteboard :("<CR>
+  nnoremap <leader>y :Tcopy<CR>
+  vnoremap <leader>y :silent write !tcopy<CR>:redraw<CR>:echo "Copied selection."<CR>
 
   " Paste from OS X pasteboard without messing up indent.
   " Stores away current paste/nopaste, sets "paste", goes into insert mode.
