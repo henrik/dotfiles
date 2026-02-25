@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+
+# Download file from remote server via iTerm2 file download escape sequence.
+# Based on https://iterm2.com/utilities/it2dl
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $(basename $0) file ..."
+  exit 1
+fi
+
+# tmux requires unrecognized OSC sequences to be wrapped with DCS tmux;
+# <sequence> ST, and for all ESCs in <sequence> to be replaced with ESC ESC. It
+# only accepts ESC backslash for ST.
+in_tmux() {
+  [ -n "$TMUX" ]
+}
+
+print_osc() {
+  if in_tmux; then
+    printf "\033Ptmux;\033\033]"
+  else
+    printf "\033]"
+  fi
+}
+
+print_st() {
+  if in_tmux; then
+    printf "\a\033\\"
+  else
+    printf "\a"
+  fi
+}
+
+load_version() {
+  if [ -z ${IT2DL_BASE64_VERSION+x} ]; then
+    export IT2DL_BASE64_VERSION=$(base64 --version 2>&1)
+  fi
+}
+
+b64_encode() {
+  load_version
+  if [[ "$IT2DL_BASE64_VERSION" =~ GNU ]]; then
+    base64 -w0
+  else
+    base64
+  fi
+}
+
+for fn in "$@"
+do
+  if [ -r "$fn" ] ; then
+    [ -d "$fn" ] && { echo "$fn is a directory"; continue; }
+    if in_tmux; then
+      print_osc
+      printf '1337;MultipartFile=name=%s;' $(echo -n "$fn" | b64_encode)
+      wc -c "$fn" | awk '{printf "size=%d",$1}'
+      print_st
+
+      parts=$(b64_encode < "$fn" | fold -w 200)
+      for part in $parts; do
+        print_osc
+        printf '1337;FilePart=%s' "$part"
+        print_st
+      done
+      print_osc
+      printf '1337;FileEnd'
+      print_st
+    else
+      printf '\033]1337;File=name=%s;' $(echo -n "$fn" | b64_encode)
+      wc -c "$fn" | awk '{printf "size=%d",$1}'
+      printf ":"
+      base64 < "$fn"
+      printf '\a'
+    fi
+  else
+    echo "File $fn does not exist or is not readable."
+  fi
+done
