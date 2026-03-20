@@ -2,6 +2,7 @@
 
 # Opens URLs (e.g. auth URLs) automagically when they show up in iTerm2, via triggers: https://iterm2.com/triggers.html
 # Only open unique URLs once since the detection can trigger multiple times otherwise.
+# Note that the script needs to be executable.
 #
 # iTerm setup:
 # - Go to Preferences > Profiles > (select profile) > Advanced > Triggers
