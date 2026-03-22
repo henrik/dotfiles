@@ -1,6 +1,8 @@
 # A little server to run on a Mac host and play sound on request e.g. from Claude via a port-forwarding SSH session like:
 # ssh -R 19998:localhost:19998 some-server
 #
+# Also works locally on the Mac host as the port is the same.
+#
 # Inspired by https://www.peonping.com/.
 
 echo "Starting SSH sound server on port 19998..."
