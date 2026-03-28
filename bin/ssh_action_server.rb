@@ -13,16 +13,14 @@
 #
 # Recommended to run via a launchd service on the Mac host; see the `launchd` subdirectory.
 #
-# Uses asdf Ruby (not /usr/bin/ruby) so macOS prompts for folder access
-# scoped to this process, rather than needing blanket Full Disk Access.
+# Uses asdf Ruby (not /usr/bin/ruby) so macOS prompts for folder access scoped to this process, rather than needing blanket Full Disk Access.
 # The prompt will reappear after Ruby version upgrades, which is fine.
 
 require "webrick"
 
 PORT = 19998
-HOME = Dir.home
-DOWNLOADS_DIR = File.join(HOME, "Downloads")
-SOUNDS_DIR = File.join(HOME, ".claude/sounds/SND01_sine")
+DOWNLOADS_DIR = File.join(Dir.home, "Downloads")
+SOUNDS_DIR = File.join(Dir.home, ".claude/sounds/SND01_sine")
 DONE_SOUND = File.join(SOUNDS_DIR, "transition_up.wav")
 ASK_SOUND = File.join(SOUNDS_DIR, "transition_down.wav")
 
