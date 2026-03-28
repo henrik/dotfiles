@@ -1,5 +1,11 @@
 # A little server to run on a Mac host and play sound on request e.g. from Claude via a port-forwarding SSH session like:
-# ssh -R 19998:localhost:19998 some-server
+#
+#     ssh -R 19998:localhost:19998 some-server
+#
+# Recommended to put in ~/.ssh/config:
+#
+#     Host some-server
+#       RemoteForward 19998 localhost:19998
 #
 # Also works locally on the Mac host as the port is the same.
 #
