@@ -4,10 +4,15 @@
 <dict>
     <key>Label</key>
     <string>com.user.ssh-action-server</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/bin:/bin</string>
+    </dict>
     <key>ProgramArguments</key>
     <array>
-        <string>/bin/bash</string>
-        <string>/Users/henrik/.bin/ssh_action_server.sh</string>
+        <string>/Users/henrik/.asdf/shims/ruby</string>
+        <string>/Users/henrik/.bin/ssh_action_server.rb</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
