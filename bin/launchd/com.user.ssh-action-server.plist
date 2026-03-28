@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.user.ssh-sound-server</string>
+    <string>com.user.ssh-action-server</string>
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/henrik/.bin/ssh_sound_server.sh</string>
+        <string>/Users/henrik/.bin/ssh_action_server.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>
     <true/>
     <key>StandardErrorPath</key>
-    <string>/tmp/ssh-sound-server.err</string>
+    <string>/tmp/ssh-action-server.err</string>
 </dict>
 </plist>

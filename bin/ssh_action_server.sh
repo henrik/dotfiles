@@ -1,4 +1,4 @@
-# A little server to run on a Mac host and play sound on request e.g. from Claude via a port-forwarding SSH session like:
+# A little server to run on a Mac host and perform actions on request e.g. from Claude via a port-forwarding SSH session like:
 #
 #     ssh -R 19998:localhost:19998 some-server
 #
@@ -11,7 +11,7 @@
 #
 # Inspired by https://www.peonping.com/.
 
-echo "Starting SSH sound server on port 19998..."
+echo "Starting SSH action server on port 19998..."
 
 while true; do
   request=$(echo -e "HTTP/1.1 200 OK\r\n" | nc -l 19998)
@@ -25,4 +25,3 @@ while true; do
     echo "Unknown request: $request"
   fi
 done
-
