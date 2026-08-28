@@ -31,3 +31,5 @@ bundle/install.log
 
 # https://serverfault.com/questions/201294/nfsxxxx-files-appearing-what-are-those
 .nfs*
+
+**/.claude/settings.local.json
