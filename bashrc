@@ -1,6 +1,12 @@
 # .bashrc is loaded in non-login shells.
 # It's also loaded by .bash_profile (which is loaded in login shells).
 
+# Ghostty shell integration for Bash. This should be at the top of your bashrc!
+# https://ghostty.org/docs/features/shell-integration
+if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
+    builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/bash/ghostty.bash"
+fi
+
 # Devbox (https://github.com/barsoom/devbox) provides a ~/.profile that we want both in login and non-login shells.
 [[ -s ~/.profile ]] && source ~/.profile
 
