@@ -26,7 +26,7 @@ DONE_SOUND = File.join(SOUNDS_DIR, "transition_up.wav")
 ASK_SOUND = File.join(SOUNDS_DIR, "transition_down.wav")
 
 # Directories /file will serve from. Anything with a shell on the remote server can reach this port, so don't widen this to the whole home directory.
-# Deliberately not Dir.tmpdir: the only reason to want it was dragging a screenshot preview thumbnail, and macOS blocks this process from reading the TemporaryItems dir that drag creates.
+# No use allowing Dir.tmpdir (for screenshot preview thumbnails) as macOS blocks access.
 ALLOWED_ROOTS = [
   DOWNLOADS_DIR,
   File.join(Dir.home, "Desktop"),
