@@ -8,7 +8,6 @@ Plug 'bogado/file-line'             " Can open myfile.xy:123 to jump to that lin
 Plug 'github/copilot.vim'           " GitHub Copilot.
 Plug 'henrik/CamelCaseMotion'       " Motions like ,w and ,b for camelCase and snake_case sub-words.
 Plug 'henrik/git-grep-vim'          " Adds :GitGrep.
-Plug 'henrik/vim-open-url'          " Open URLs.
 Plug 'henrik/vim-reveal-in-finder'  " Adds :Reveal to reveal the current file in macOS Finder.
 Plug 'henrik/rename.vim'            " 'Rename newname.txt' and 'Rename! newdir/newname.txt'
 Plug 'henrik/vim-ruby-runner'       " Execute Ruby into an output buffer.

@@ -41,9 +41,6 @@ noremap <S-Right> :tabn<CR>
 " Un-highlight search matches
 nnoremap <leader><leader> :noh<CR>
 
-" Open URL from this line (OS X only).
-map <leader>u :call OpenURI()<CR>
-
 " Ack/Quickfix windows
 map <leader>q :cclose<CR>
 " Center line on previous/next fix.
