@@ -10,3 +10,13 @@ rows = [
 [theme]
 name = "gruvbox"
 auto_switch = false
+
+[keys]
+focus_pane_left = ["prefix+h", "prefix+left"]
+focus_pane_down = ["prefix+j", "prefix+down"]
+focus_pane_up = ["prefix+k", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+right"]
+swap_pane_left = ["prefix+shift+h", "prefix+shift+left"]
+swap_pane_down = ["prefix+shift+j", "prefix+shift+down"]
+swap_pane_up = ["prefix+shift+k", "prefix+shift+up"]
+swap_pane_right = ["prefix+shift+l", "prefix+shift+right"]
