@@ -4,10 +4,6 @@ alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 
 alias hosts='sudo vim /etc/hosts'
-alias vrb='vim -c "setf ruby"'
-
-# http://www.hogbaysoftware.com/products/plaintext
-alias text='cd ~/Dropbox/PlainText && vim'
 
 # Shell
 alias la='ls -alh'
@@ -31,7 +27,6 @@ fi
 # Ruby on Rails
 alias sx="[ -f script/console ] && script/console --sandbox || bundle exec rails console --sandbox"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
-alias f="script/foreman_turbux"
 
 # Phoenix or Ruby on Rails
 alias mig="if [ -f mix.exs ]; then mix ecto.migrate; elif [ -f Rakefile ]; then bundle exec rake db:migrate; else echo 'Did not detect Phoenix or Rails.'; fi"
@@ -91,15 +86,6 @@ alias gba="git rebase --abort"
 alias gbc="git add -A && git rebase --continue"
 alias gbm='git fetch origin `git_main_branch` && git rebase origin/`git_main_branch`'
 alias gap="git add --intent-to-add . && git add -p"  # Like "git add -p" but also ask about any newly added files.
-
-# Heroku
-alias h="heroku"
-alias hdep="git push heroku"
-alias hmig="heroku run rake db:migrate"
-alias ho="heroku open"
-alias hsc="heroku run rails console -r heroku"  # Explicit remote, for apps with a staging as well.
-alias hscs="heroku run rails console -r staging"
-alias hlog="heroku logs -t -r heroku"
 
 # tmux
 alias ta="tmux attach"
