@@ -2,8 +2,6 @@ call plug#begin('~/.vim/vim-plug-plugins')
 " Make sure you use single quotes.
 
 Plug 'AndrewRadev/splitjoin.vim'    " Language-aware toggle between single-line and multi-line versions.
-Plug 'barsoom/vim-turbux'           " Lets you run the current test in a tmux split via Vimux.
-Plug 'preservim/vimux', { 'tag': '1.1.0' } " Lets you run commands in a tmux split.
 Plug 'bogado/file-line'             " Can open myfile.xy:123 to jump to that line.
 Plug 'github/copilot.vim'           " GitHub Copilot.
 Plug 'henrik/CamelCaseMotion'       " Motions like ,w and ,b for camelCase and snake_case sub-words.
@@ -24,6 +22,7 @@ Plug 'tpope/vim-rake'               " vim-projectionist support in non-Rails Rub
 Plug 'tpope/vim-repeat'             " Lets you use '.' to repeat vim-surround commands.
 Plug 'tpope/vim-surround'           " Change, add or remove surrounding characters like quotes or brackets.
 Plug 'vim-scripts/argtextobj.vim'   " Argument text objects, like daa to delete a function argument.
+Plug 'vim-test/vim-test'            " Lets you run the current test in a herdr split.
 Plug 'ap/vim-css-color'             " Color name highlighter.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Supports VSCode features, language servers etc.
 
@@ -68,14 +67,12 @@ nmap <leader>cu <Plug>CommentaryUndo
 " We need the trailing space.
 exe "nnoremap <leader>a :GitGrep "
 
-" vimux
-let g:VimuxOrientation = "h"
-let g:VimuxUseNearestPane = 1
-
-" turbux
-let g:no_turbux_mappings = 1
-map M <Plug>SendTestToTmux
-map m <Plug>SendFocusedTestToTmux
+" vim-test
+" See vim/plugin/herdr.vim.
+let g:test#strategy = "herdr"
+" :update writes the file first, if modified, like vim-turbux used to.
+map m :update<CR>:TestNearest<CR>
+map M :update<CR>:TestFile<CR>
 
 " CamelCaseMotion
 " Make c,w not include the trailing underscore:

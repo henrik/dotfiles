@@ -77,9 +77,9 @@ command! W echoerr "Use :w, not :W."
 " In command mode, type %% to insert the path of the currently edited file, as a shortcut for %:h<tab>.
 cmap %% <C-R>=expand("%:h") . "/" <CR>
 
-" Run tests in tmux.
-nmap § :call VimuxRunCommand("rake")<cr>
+" Run tests in a herdr pane.
+nmap § :call HerdrRunCommand("rake")<cr>
 autocmd BufNewFile,BufRead /Users/henrik/Dropbox/Code/exercism/* nmap § :ExercismTest<cr>
 
-" Tell other tmux pane to ctrl+c.
-nmap <leader>§ :VimuxInterruptRunner<CR>
+" Tell the herdr runner pane to ctrl+c.
+nmap <leader>§ :HerdrInterruptRunner<CR>
