@@ -101,10 +101,6 @@ alias hsc="heroku run rails console -r heroku"  # Explicit remote, for apps with
 alias hscs="heroku run rails console -r staging"
 alias hlog="heroku logs -t -r heroku"
 
-# The Stack
-alias ssc="dev console prod"
-alias sscs="dev console staging"
-
 # tmux
 alias ta="tmux attach"
 
@@ -117,6 +113,10 @@ alias wpus="ruby -e 'loop { x = \`wti push; wti push --target\`; puts x; break u
 # Work
 
 alias devbox="herdr --remote devbox"
+
+# The Stack
+alias ssc="dev console prod"
+alias sscs="dev console staging"
 
 # Sometimes the camera in my Cinema Display stops working. This fixes it.
 alias fixcam="sudo killall VDCAssistant"
