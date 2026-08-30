@@ -6,3 +6,7 @@ rows = [
     ["state_icon", "workspace", "tab"],
     ["terminal_title_stripped"],
 ]
+
+[theme]
+name = "gruvbox"
+auto_switch = false
