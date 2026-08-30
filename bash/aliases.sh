@@ -116,6 +116,8 @@ alias wpus="ruby -e 'loop { x = \`wti push; wti push --target\`; puts x; break u
 
 # Work
 
+alias devbox="herdr --remote devbox"
+
 # Sometimes the camera in my Cinema Display stops working. This fixes it.
 alias fixcam="sudo killall VDCAssistant"
 
