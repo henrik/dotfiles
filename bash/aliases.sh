@@ -92,10 +92,6 @@ alias gbc="git add -A && git rebase --continue"
 alias gbm='git fetch origin `git_main_branch` && git rebase origin/`git_main_branch`'
 alias gap="git add --intent-to-add . && git add -p"  # Like "git add -p" but also ask about any newly added files.
 
-# Pairing (via https://github.com/barsoom/devbox/blob/master/bin/pair)
-alias pairo="pair olle"
-alias pairp="pair peter"
-
 # Heroku
 alias h="heroku"
 alias hdep="git push heroku"
