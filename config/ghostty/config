@@ -1,0 +1,17 @@
+theme = Raycast Dark
+font-family = IBM Plex Mono
+font-size = 14
+adjust-cell-height = 5%
+
+macos-icon = chalkboard
+
+# Turn off ligatures.
+font-feature=-calt
+font-feature=-liga
+font-feature=-dlig
+
+# No Dock icon badge on bell.
+bell-features = no-attention
+
+keybind = global:cmd+§=toggle_quick_terminal
+quick-terminal-animation-duration = 0.1
