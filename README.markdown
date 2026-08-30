@@ -19,6 +19,8 @@ This rake task will not replace existing files, but it will replace existing sym
 
 The dotfiles will be symlinked, e.g. `~/.bash_profile` symlinked to `~/.dotfiles/bash_profile`.
 
+The `config` directory mirrors `~/.config`, e.g. `~/.config/herdr/config.toml` symlinked to `~/.dotfiles/config/herdr/config.toml`. These are symlinked file by file rather than by directory, because those directories may also hold files that shouldn't be in version control, such as logs, sockets and session state.
+
 To use [fzf](https://github.com/junegunn/fzf) in Vim (or the shell), install it with:
 
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
