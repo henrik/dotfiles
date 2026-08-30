@@ -1,3 +1,6 @@
+# E.g. herdr.
+export PATH=~/.local/bin:$PATH
+
 # Dotfile bins.
 export PATH=~/.bin:$PATH
 
@@ -16,3 +19,6 @@ export PATH=/usr/local/mysql/bin:$PATH
 # Make autojump's "j" available.
 # brew install autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# Hunk: https://hunk.dev
+export PATH=~/.hunk/bin:$PATH
