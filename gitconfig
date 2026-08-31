@@ -2,7 +2,6 @@
 	name = Henrik Nyh
 	email = henrik@nyh.se
 [core]
-	excludesfile = /Users/henrik/.gitignore
 	ignorecase = false
 	pager = less -R
 [color]
