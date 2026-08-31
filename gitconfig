@@ -52,3 +52,7 @@
 	rebase = true
 [rebase]
 	autoStash = true
+
+# Machine-local config that shouldn't be in a public repo: credential helpers, registered maintenance repos and such. Git silently ignores this if the file doesn't exist.
+[include]
+	path = ~/.gitconfig.local
