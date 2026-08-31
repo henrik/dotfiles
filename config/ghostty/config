@@ -1,4 +1,5 @@
 theme = Raycast Dark
+background = #000000
 font-family = IBM Plex Mono
 font-size = 14
 adjust-cell-height = 5%
