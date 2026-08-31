@@ -1,11 +1,15 @@
 [ui]
 agent_panel_sort = "spaces"
+status_indicators = "dots"
 
 [ui.sidebar.agents]
 rows = [
     ["state_icon", "workspace", "tab"],
     ["terminal_title_stripped"],
 ]
+
+[ui.toast]
+delivery = "herdr"
 
 [theme]
 name = "gruvbox"
