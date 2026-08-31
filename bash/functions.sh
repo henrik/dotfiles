@@ -101,3 +101,15 @@ function _tmux_complete_session() {
   COMPREPLY=( ${COMPREPLY[@]:-} $(compgen -W "$(tmux -q list-sessions | cut -f 1 -d ':')" -- "${cur}") )
 }
 complete -F _tmux_complete_session tat
+
+function presign {
+  local uri="$1"
+
+  if [[ -z "$uri" ]]; then
+    echo "Usage: presign s3://bucket/key" >&2
+    return 2
+  fi
+
+  # 604800 is 7 days (the max allowed).
+  aws s3 presign "$uri" --expires-in 604800 --region eu-west-1
+}
