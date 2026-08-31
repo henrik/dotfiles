@@ -24,11 +24,6 @@ source ~/.bash/aliases.sh
 source ~/.bash/functions.sh
 source ~/.bash/prompt.sh
 
-if [[ "$DEVBOX" ]]; then
-  # Auctionet's "Devbox" tool is quite coupled to RVM currently.
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-fi
-
 export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.0/java"
 
 # Stop macOS from saying zsh is the new default.
