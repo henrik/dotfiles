@@ -24,8 +24,6 @@ source ~/.bash/aliases.sh
 source ~/.bash/functions.sh
 source ~/.bash/prompt.sh
 
-export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.0/java"
-
 # Stop macOS from saying zsh is the new default.
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
