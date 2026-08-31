@@ -5,7 +5,6 @@
 	excludesfile = /Users/henrik/.gitignore
 	ignorecase = false
 	pager = less -R
-	hooksPath = /devbox/support/default_githooks
 [color]
 	status = auto
 	diff = auto
