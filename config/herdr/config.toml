@@ -12,6 +12,7 @@ name = "gruvbox"
 auto_switch = false
 
 [keys]
+detach = "prefix+shift+q"
 focus_pane_left = ["prefix+h", "prefix+left"]
 focus_pane_down = ["prefix+j", "prefix+down"]
 focus_pane_up = ["prefix+k", "prefix+up"]
@@ -20,3 +21,11 @@ swap_pane_left = ["prefix+shift+h", "prefix+shift+left"]
 swap_pane_down = ["prefix+shift+j", "prefix+shift+down"]
 swap_pane_up = ["prefix+shift+k", "prefix+shift+up"]
 swap_pane_right = ["prefix+shift+l", "prefix+shift+right"]
+
+[[keys.command]]
+key = "prefix+q"
+type = "popup"
+description = "Detach reminder"
+command = "echo 'Protected from tmux habits!'; echo 'Detach with prefix+shift+q.'; sleep 2"
+width = 40
+height = 5
