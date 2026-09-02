@@ -4,7 +4,10 @@ font-family = IBM Plex Mono
 font-size = 14
 adjust-cell-height = 5%
 
-macos-icon = chalkboard
+macos-icon = custom-style
+macos-icon-frame = chrome
+macos-icon-ghost-color = #fff
+macos-icon-screen-color = #000
 
 # Turn off ligatures.
 font-feature=-calt
