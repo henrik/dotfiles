@@ -44,10 +44,12 @@ alias dew="docker-compose exec web"
 
 # Git
 
-# Determine if the main Git branch is "master" or "main". (Assumes it's one of those two.)
-# https://stackoverflow.com/a/66622363/6962
+# Determine the main Git branch, e.g. "master" or "main".
+# Prefers what the remote says. If origin/HEAD is missing (e.g. in repos that weren't cloned), fix it with "git remote set-head origin --auto".
 function git_main_branch {
-  [ -f "$(git rev-parse --show-toplevel)/.git/refs/heads/master" ] && echo "master" || echo "main"
+  local ref
+  ref="$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null)" && echo "${ref#origin/}" && return
+  git show-ref --verify --quiet refs/heads/master && echo "master" || echo "main"
 }
 
 alias g="git"
@@ -86,6 +88,15 @@ alias gba="git rebase --abort"
 alias gbc="git add -A && git rebase --continue"
 alias gbm='git fetch origin `git_main_branch` && git rebase origin/`git_main_branch`'
 alias gap="git add --intent-to-add . && git add -p"  # Like "git add -p" but also ask about any newly added files.
+
+# Git worktree conveniences.
+#
+# Fetch master/main, then rebase on top of it.
+# Could be avoided by configuring master/main as the branch's upstream, but that can cause confusion if we also push the branch as a remote.
+alias wwl='git fetch origin `git_main_branch` && git rebase origin/`git_main_branch`'
+#
+# Push latest on this branch master/main.
+alias wwp='git push origin HEAD:`git_main_branch`'
 
 # tmux
 alias ta="tmux attach"
